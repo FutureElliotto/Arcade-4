@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arcade 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <button id="button">Click me</button>
+    <script>
+        $("#button").click(newWindow);
+
+        function newWindow() {
+            var html = $("#button").html(); // Correctly reference the button's HTML
+            var win = window.open('');
+            win.document.head.innerHTML = `
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Arcade 3</title>
+                <!-- Google Fonts -->
+                <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="style.css">
+                <style>
+
+ body {
+    font-family: "Pixelify Sans", sans-serif;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding-top: 60px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    z-index: 1000;
+    border-bottom: none;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+}
+
+li a:hover {
+    font-weight: bold;
+}
+
+li a.active {
+    color: #7F00FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #000000;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Game buttons container styling (updated) */
+.game-buttons-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 20px; /* Adjusts spacing between buttons */
+    margin-top: 100px; /* Ensures space below navbar */
+}
+
+/* Game button styling */
+.game-button {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+      -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.game-button:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.game-button img {
+    width: 100%; /* Makes the image fill the width of the button */
+    height: 100%; /* Makes the image fill the height of the button */
+    object-fit: cover; /* Ensures the image covers the button area without distortion */
+    border-radius: 25px;
+}
+.game-button-no-rounding {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+      -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.game-button-no-rounding:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.game-button-no-rounding img {
+    width: 100%; /* Makes the image fill the width of the button */
+    height: 100%; /* Makes the image fill the height of the button */
+}
+
+.game-title {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Iframe Styling */
+iframe {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border: none;
+}
+.search-container {
+    margin: 20px;
+    text-align: center;
+}
+
+#searchBar {
+    font-family: "Pixelify Sans", sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 2px solid white;
+    outline: none; /* Removes the default outline */
+}
+
+#searchBar:focus {
+    color: #7F00FF;
+}
+
+#searchBar:not(:focus)
+    color: white;
+}
+
+select {
+    font-family: "Pixelify Sans", sans-serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    width: 40%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 2px solid white;
+    outline: none;
+    color: white;
+    appearance: none; /* Disable the default arrow */
+    background-image: url('../images/arrow-down.svg'); /* Ensure the path is correct */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 16px;
+}
+
+select:focus {
+    border-color: #7F00FF;
+}
+
+/* Styling for the dropdown options */
+option {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Styling for disabled options */
+option:disabled {
+    color: gray;
+}       /* Content container */
+        .content-container {
+          width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border: none;
+            color: white;
+        }                </style>
+            `;
+
+            win.document.body.innerHTML = `
+                <ul>
+                    <li><a data-page="home.html" class="active" aria-label="Home" onclick="changePageContent('https://futureelliotto.github.io/arcade-3/navigation/home.html', this)">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
+                        <div class="dropdown-content">
+                            <a aria-label="All Games" onclick="changePageContent('https://futureelliotto.github.io/arcade-3/navigation/games/all.html', this)">All Games</a>
+                            <a aria-label="Popular Games" onclick="changePageContent('https://futureelliotto.github.io/arcade-3/navigation/games/popular.html', this)">Popular Games</a>
+                            <a aria-label="New Games" onclick="changePageContent('https://futureelliotto.github.io/arcade-3/navigation/games/new.html', this)">New Games</a>
+                        </div>
+                    </li>
+                    <li><a data-page="https://futureelliotto.github.io/arcade-3/navigation/apps.html" aria-label="Apps" onclick="changePageContent('https://raw.githubusercontent.com/FutureElliotto/arcade-3/refs/heads/main/games/Asteroids.html', this)">Apps</a></li>
+                    <li><a data-page="https://futureelliotto.github.io/arcade-3/navigation/settings-neo.html" aria-label="Settings" onclick="changePageContent('https://futureelliotto.github.io/arcade-3/navigation/settings-neo.html', this)">Settings</a></li>
+                </ul>
+                <div id="content-container" class="content-container"></div>
+            `;
+
+            var script = document.createElement('script');
+            script.textContent = `
+                function loadPageContent(url, callback) {
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState === 4 && this.status === 200) {
+                            callback(this.responseText);
+                        }
+                    };
+                    xhttp.open("GET", url, true);
+                    xhttp.send();
+                }
+
+                function changePageContent(url, element) {
+                    loadPageContent(url, function(content) {
+                        document.getElementById('content-container').innerHTML = content;
+                    });
+
+                    document.querySelectorAll('ul li a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+
+                    element.classList.add('active');
+                }
+
+                window.addEventListener("load", function() {
+                    const mainParameter = window.location.search;
+                    const address = "https://futureelliotto.github.io/arcade-3/navigation/home.html"; 
+                    const combined = address + mainParameter;
+                    changePageContent(combined, document.querySelector('ul li a'));
+                });
+            `;
+            win.document.head.appendChild(script);
+        }
+    </script>
+</body>
+</html>
