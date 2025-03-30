@@ -4,6 +4,7 @@ body {
     background-size: cover;
     text-align: center;
     margin: 0;
+    padding-top: 60px;
 }
 
 body, html {
@@ -118,9 +119,9 @@ li a.active {
 /* Iframe Styling */
 iframe {
     width: 100%;
-    height: calc(100vh - 60px); /* Adjusts for navbar height */
+    height: calc(100vh - 60px);
     position: absolute;
-    top: 60px; /* Starts below navbar */
+    top: 60px;
     left: 0;
     right: 0;
     border: none;
@@ -174,4 +175,15 @@ option {
 
 option:disabled {
     color: gray;
+}
+
+.content-container {
+    width: 100%;
+   height: calc(100vh - 60px);
+   position: absolute;
+   top: 60px;
+   left: 0;
+   right: 0;
+   border: none;
+   color: white;
 }
