@@ -22,7 +22,7 @@
             }
 
             win.document.head.innerHTML = `
-                 <meta charset="UTF-8">
+                <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Arcade 4</title>
                 <!-- Google Fonts -->
@@ -59,33 +59,25 @@
                     xhttp.send();
                 }
 
-// Updated loadPageContent using fetch API
-function loadPageContent(url, callback) {
-    fetch(url)
-        .then(response => {
-            if (response.ok) {
-                return response.text();
-            } else {
-                throw new Error('Failed to load page content');
-            }
-        })
-        .then(content => callback(content))
-        .catch(error => console.error(error));
-}
+                function changePageContent(url, element) {
+                    loadPageContent(url, function(content) {
+                        document.getElementById('content-container').innerHTML = content;
+                    });
 
-// Updated changePageContent with error handling
-function changePageContent(url, element) {
-    loadPageContent(url, function(content) {
-        document.getElementById('content-container').innerHTML = content;
-    });
+                    document.querySelectorAll('ul li a').forEach(link => {
+                        link.classList.remove('active');
+                    });
 
-    document.querySelectorAll('ul li a').forEach(link => {
-        link.classList.remove('active');
-    });
+                    element.classList.add('active');
+                }
 
-    element.classList.add('active');
-}
-
+                window.addEventListener("load", function() {
+                    const mainParameter = window.location.search;
+                    const address = "https://futureelliotto.github.io/arcade-3/navigation/home.html"; 
+                    const combined = address + mainParameter;
+                    changePageContent(combined, document.querySelector('ul li a'));
+                });
+            `;
             win.document.head.appendChild(script);
             window.location.href = 'https://classroom.google.com/';
         }
