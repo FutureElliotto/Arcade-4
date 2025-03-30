@@ -59,25 +59,33 @@
                     xhttp.send();
                 }
 
-                function changePageContent(url, element) {
-                    loadPageContent(url, function(content) {
-                        document.getElementById('content-container').innerHTML = content;
-                    });
+// Updated loadPageContent using fetch API
+function loadPageContent(url, callback) {
+    fetch(url)
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Failed to load page content');
+            }
+        })
+        .then(content => callback(content))
+        .catch(error => console.error(error));
+}
 
-                    document.querySelectorAll('ul li a').forEach(link => {
-                        link.classList.remove('active');
-                    });
+// Updated changePageContent with error handling
+function changePageContent(url, element) {
+    loadPageContent(url, function(content) {
+        document.getElementById('content-container').innerHTML = content;
+    });
 
-                    element.classList.add('active');
-                }
+    document.querySelectorAll('ul li a').forEach(link => {
+        link.classList.remove('active');
+    });
 
-                window.addEventListener("load", function() {
-                    const mainParameter = window.location.search;
-                    const address = "https://futureelliotto.github.io/arcade-3/navigation/home.html"; 
-                    const combined = address + mainParameter;
-                    changePageContent(combined, document.querySelector('ul li a'));
-                });
-            `;
+    element.classList.add('active');
+}
+
             win.document.head.appendChild(script);
             window.location.href = 'https://classroom.google.com/';
         }
