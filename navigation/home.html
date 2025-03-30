@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #shadowBox {
+            background-color: transparent; /* Make the background transparent */
+            border: none; /* Remove the border */
+        }
+
+        .rainbow {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 120px;
+            font-family: 'Press Start 2P', cursive; /* Use Press Start 2P font */
+            letter-spacing: 5px;
+        }
+
+        .rainbow_text_animated {
+            background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow_animation 6s ease-in-out infinite;
+            background-size: 400% 100%;
+        }
+
+        @keyframes rainbow_animation {
+            0%,100% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="shadowBox">
+    <h3 class="rainbow rainbow_text_animated">Arcade 4</h3>
+</div>
+
+</body>
+</html>
