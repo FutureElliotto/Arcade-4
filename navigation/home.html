@@ -10,10 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <style>
-        #shadowBox {
+        body {
+            height: 100vh; /* Make sure the body takes up the full height of the viewport */
+            margin: 0; /* Remove default margin */
+            display: flex;
+            justify-content: center; /* Horizontally center the content */
+            align-items: center; /* Vertically center the content */
             background-color: transparent; /* Make the background transparent */
+        }
+
+        #shadowBox {
+            background-color: transparent; /* Make the background of shadowBox transparent */
             border: none; /* Remove the border */
         }
 
