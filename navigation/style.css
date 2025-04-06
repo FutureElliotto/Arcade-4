@@ -121,16 +121,18 @@
                         margin-top: 10px;
                     }
 
-                    /* Iframe Styling */
-                    iframe {
-                        width: 100%;
-                        height: calc(100vh - 60px);
-                        position: absolute;
-                        top: 60px;
-                        left: 0;
-                        right: 0;
-                        border: none;
-                    }
+/* Iframe Styling */
+.iframe-styles {
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjusting height based on navbar height */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border: none;
+    background-color: transparent; /* Ensuring no background if content is blank */
+}
+
 
                     /* Search bar styles */
                     #searchBar {
