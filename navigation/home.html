@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,39 +8,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
     <style>
-body {
-    height: auto; /* Allow body height to adjust based on content */
-    min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
-    margin: 0; /* Remove default margin */
-    display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    background-color: transparent; /* Make the background transparent */
-}
+        body {
+            font-family: 'Press Start 2P', 'Pixelify Sans', sans-serif; /* Default font */
+            height: auto;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+        }
 
-#shadowBox {
-    background-color: transparent; /* Make the background of shadowBox transparent */
-    border: none; /* Remove the border */
-    min-height: 200px; /* Set a minimum height to accommodate content */
-    display: flex; /* Use flexbox to center content */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center children vertically */
-    align-items: center; /* Center children horizontally */
-}
-
+        #shadowBox {
+            background-color: transparent;
+            border: none;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
         .rainbow {
             text-align: center;
             text-decoration: underline;
             font-size: 120px;
-            font-family: 'Press Start 2P', cursive; /* Use Press Start 2P font */
+            font-family: 'Press Start 2P', cursive;
             letter-spacing: 5px;
         }
 
         .rainbow_text_animated {
-            background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+            background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -50,22 +49,77 @@ body {
         }
 
         @keyframes rainbow_animation {
-            0%,100% {
+            0%, 100% {
                 background-position: 0 0;
             }
-
             50% {
                 background-position: 100% 0;
             }
         }
 
+        #test {
+            font-family: 'Pixelify Sans', sans-serif; /* Quote font */
+            color: white;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
 <div id="shadowBox">
     <h3 class="rainbow rainbow_text_animated">Arcade 4</h3>
-    <p id="test"></p> <!-- Moved this line to display the random quote -->
+    <p id="test"></p>
 </div>
+
+<script>
+    var quotes = [
+        "The quick brown fox jumps over the lazy dog.",
+        "Look out! There are llamas!",
+        "No, really, don't get up.",
+        "Whatever",
+        "Etc.",
+        "egassem sdrawkcab.",
+        "retsis ym tib ecno esoom A .esoom citsejam eht gnidulcnI ,slamina yrruf gnitseretni inam dnA metsys enohpelet lufrednow eht,sekal ilevol eht ees da...",
+        "LOL",
+        "You got games on your phone?",
+        "Teeth are just tiny hardened bats sleeping upside down.",
+        "All Work and no play makes jack a dull boy.",
+        "Do not trust anyone you see wearing this costume.",
+        "You are receiving this email because Santa Claus has chosen you.",
+        "WE MUST SURVIVE.",
+        "Build a better mousetrap and get smarter mice.",
+        "Block one site and two more shall take its place.",
+        "Lorem ipsum dolor sit amet, adipiscing consequat adipiscing sit amet...",
+        "check steam",
+        "We are all E G G",
+        "Cephalopod Conundrums",
+        "SOMETHING WONDERFUL HAS HAPPNED",
+        "herding cats",
+        "As seen on TV!",
+        "Kind of dragon free!",
+        "One of a kind!",
+        "Yaaay!",
+        "The bee's knees!",
+        "Baby Yoda Is Our Leader",
+        "Random splash!",
+        "Uninflammable!",
+        "Happiness has to be fought for.",
+        "Cogito ergo sum!",
+        "and then a skeleton popped out!",
+        "I miss the cheese chain",
+        "Cow Tools!"
+    ];
+
+    // Function to display a random quote
+    function displayRandomQuote() {
+        var q = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("test").innerHTML = q;
+    }
+
+    // Display a random quote on page load
+    window.onload = displayRandomQuote;
+</script>
 </body>
 </html>
