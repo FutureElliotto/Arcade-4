@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Default favicon -->
+    <link id="dynamic-favicon" rel="icon" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">
+    <script src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/settings.js"></script>
+</head>
+<body>
+    <select id="gameDropdown" name="gameDropdown" onchange="changeFavicon(this.options[this.selectedIndex].getAttribute('favicon'));">
+        <option disabled selected value> -- Cloak -- </option>
+        <option title="Arcade 3" favicon="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">None</option>
+        <option title="Home" favicon="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classroom.png">Google Classroom</option>
+        <option title="My Apps" favicon="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classlink.ico">Classlink</option>
+        <option title="IXL | Dashboard" favicon="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/ixl.png">IXL</option>
+        <option title="Inbox" favicon="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/gmail.ico">Gmail</option>
+    </select>
+</body>
+</html>
