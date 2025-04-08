@@ -1,297 +1,190 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Arcade 4</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<title>Arcade 4</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <script>
-        // Ensure that the newWindow function runs when the page loads
-        $(document).ready(function() {
-            newWindow();  // Automatically calls newWindow when the page is loaded
-        });
+	<script>
+    	// Ensure that the newWindow function runs when the page loads
+    	$(document).ready(function() {
+        	newWindow();  // Automatically calls newWindow when the page is loaded
+    	});
 
-        function newWindow() {
-            var win = window.open('');
-            
-            // Check if the window opened successfully
-            if (!win) {
-                window.location.href = 'https://blocked.syd-1.linewize.net/blocked?url=www.math.willstrang.com/&deviceid=PHYS-SMIC-US-0000-2662&rule=R2FtZXMgQmxvY2sgfCBBbGw=&ruleid=6f5477cf-3837-4df4-9e1d-65cf291ffe6b&path=&method=rule_match&cid=NTExODgwMTczNTg0MDk4OTMyMw==';
-                return;
-            }
+    	function newWindow() {
+        	var win = window.open('');
+       	 
+        	// Check if the window opened successfully
+        	if (!win) {
+            	alert("Popup blocked! Please allow popups to view the content.");
+            	return;
+        	}
 
-            // Insert the head content with CSS links
-            win.document.head.innerHTML = `
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Arcade 4</title>
-                <!-- Google Fonts -->
-                <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-                <style>
-                    /* General body styles */
-                    body {
-                        background-image: url('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/images/background_void.png');
-                        background-attachment: fixed;
-                        background-repeat: no-repeat;
-                        background-size: cover; 
-                        font-family: "Pixelify Sans", sans-serif;
-                        text-align: center;
-                        margin: 0;
-                        padding-top: 60px;
-                    }
+        	// Insert the head content with CSS links
+        	win.document.head.innerHTML = `
+            	<meta charset="UTF-8">
+            	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+            	<title>Arcade 4</title>
+                <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">
+            	<!-- Google Fonts -->
+            	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+            	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+            	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/style.css">
+        	`;
 
-                    body, html {
-                        margin: 0;
-                        padding: 0;
-                        height: 100%;
-                    }
+        	// Insert body content with navigation and container
+        	win.document.body.innerHTML = `
+            	<!-- Navigation Bar -->
+            	<ul>
+                	<li><a class="active" aria-label="Home" onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.html')">Home</a></li>
+                	<li class="dropdown">
+                    	<a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
+                    	<div class="dropdown-content">
+                        	<a aria-label="All Games" onclick="changeIframeContent('https://futureelliotto.github.io/arcade-3/navigation/games/all.html')">All Games</a>
+                        	<a aria-label="Popular Games" onclick="changePageContent('https://raw.githubusercontent.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">Popular Games</a>
+                        	<a aria-label="New Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">New Games</a>
+                    	</div>
+                	</li>
+                	<li><a aria-label="Apps" onclick="changeIframeContent('https://futureelliotto.github.io/arcade-3/navigation/apps.html')">Apps</a></li>
+                	<li><a aria-label="Settings" onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/sk1bx/version@a82a865ade551e9ad9a3afa00ec8ccd86bbd40a3/house-of-hazards.xml')">Settings</a></li>
+                	<li><a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a></li>
+            	</ul>
 
-                    /* Navbar styles */
-                    ul {
-                        display: flex;
-                        justify-content: space-around;
-                        width: 100%;
-                        text-align: left;
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 0;
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        background-size: cover;
-                        z-index: 1000;
-                        border-bottom: none;
-                        background-image: url('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/images/background_void.png');
+            	<div id="content-container" class="content-container"></div>
 
-                    }
+            	<!-- Iframe -->
+            	<iframe id="Game" frameborder="0" allow="fullscreen"></iframe>
+        	`;
 
-                    li a {
-                        display: block;
-                        text-align: center;
-                        padding: 14px 16px;
-                        text-decoration: none;
-                        color: white;
-                        margin: 0;
-                    }
+        	// Add necessary JavaScript for dynamic content loading
+        	var script = document.createElement('script');
+        	script.textContent = `
+            	// Change the iframe content when a link is clicked
+            	function changeIframeContent(page) {
+                	document.getElementById('Game').src = page;
+                	updateActiveLink(page);
+                	const contentContainer = document.getElementById('content-container');
+                	contentContainer.style.display = 'none'; // Hide content-container
+            	}
 
-                    li a:hover {
-                        font-weight: bold;
-                    }
+            	// Load the Blob content and update the iframe
+            	function loadBlobContent(url) {
+                	loadPageContent(url, function(content) {
+                    	var blob = new Blob([content], {type: 'text/html'});
+                    	var iframe = document.getElementById('Game');
+                    	iframe.src = URL.createObjectURL(blob);
+                    	updateActiveLink(url);
+                    	const contentContainer = document.getElementById('content-container');
+                    	contentContainer.style.display = 'none'; // Hide content-container
+                    	document.getElementById("Game").style.display = "block"; // Show the iframe
+                	});
+            	}
 
-                    li a.active {
-                        color: #7F00FF;
-                    }
+// Function to load page content via XMLHttpRequest
+function loadPageContent(url, callback) {
+	const xhttp = new XMLHttpRequest();
+    
+	// Add a timestamp to the URL to prevent caching
+	const urlWithNoCache = url + (url.includes('?') ? '&' : '?') + 'nocache=' + new Date().getTime();
+    
+	xhttp.onreadystatechange = function() {
+    	if (this.readyState === 4 && this.status === 200) {
+        	callback(this.responseText);
+    	}
+	};
+	xhttp.open("GET", urlWithNoCache, true);
+	xhttp.send();
+}
 
-                    .dropdown {
-                        position: relative;
-                        display: inline-block;
-                    }
 
-                    .dropdown-content {
-                        display: none;
-                        background-color: #000000;
-                        position: absolute;
-                        min-width: 160px;
-                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                        z-index: 1;
-                    }
+// Function to trigger fullscreen mode for the iframe or content-container
+function triggerFullscreen() {
+	const contentContainer = document.querySelector('.content-container');
+	const iframe = document.getElementById('Game');
+    
+	// Check if the content container is visible
+	const isContentVisible = contentContainer && contentContainer.offsetWidth > 0 && contentContainer.offsetHeight > 0;
 
-                    .dropdown-content a {
-                        color: white;
-                        padding: 12px 16px;
-                        text-decoration: none;
-                        display: block;
-                        text-align: left;
-                    }
+	// If content-container is visible, make it fullscreen
+	if (isContentVisible) {
+    	if (contentContainer.requestFullscreen) {
+        	contentContainer.requestFullscreen();
+    	} else if (contentContainer.mozRequestFullScreen) { // Firefox
+        	contentContainer.mozRequestFullScreen();
+    	} else if (contentContainer.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        	contentContainer.webkitRequestFullscreen();
+    	} else if (contentContainer.msRequestFullscreen) { // IE/Edge
+        	contentContainer.msRequestFullscreen();
+    	}
+	}
+	// If content-container is hidden, make the iframe fullscreen
+	else if (iframe) {
+    	if (iframe.requestFullscreen) {
+        	iframe.requestFullscreen();
+    	} else if (iframe.mozRequestFullScreen) { // Firefox
+        	iframe.mozRequestFullScreen();
+    	} else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        	iframe.webkitRequestFullscreen();
+    	} else if (iframe.msRequestFullscreen) { // IE/Edge
+        	iframe.msRequestFullscreen();
+    	}
+	}
+}
 
-                    .dropdown:hover .dropdown-content {
-                        display: block;
-                    }
 
-                    /* Game buttons container styles */
-                    .game-buttons-container {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        gap: 20px;
-                        margin-top: 100px; /* Ensures space below navbar */
-                    }
+            	// Function to change page content and update the active link
+            	function changePageContent(url) {
+                	loadPageContent(url, function(content) {
+                    	document.getElementById('content-container').innerHTML = content;
+                	});
+                	updateActiveLink(url);
+                	const iframe = document.getElementById("Game");
+                	iframe.style.display = "none"; // Hide the iframe
+                	const contentContainer = document.getElementById('content-container');
+                	contentContainer.style.display = 'block'; // Show content-container
+            	}
 
-                    /* Game button styling */
-                    .game-button, .game-button-no-rounding {
-                        background-color: transparent;
-                        border: none;
-                        padding: 15px;
-                        cursor: pointer;
-                        width: 200px;
-                        height: 200px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        transform: perspective(1px) translateZ(0);
-                        transition-duration: 0.5s;
-                    }
+            	// Function to append external JavaScript files
+            	function appendScript(url) {
+                	const script = document.createElement('script');
+                	script.src = url;
+                	script.type = 'text/javascript';
+                	script.onload = () => {
+                    	console.log(\`Script loaded from \${url}\`);
+                	};
+                	script.onerror = () => {
+                    	console.error(\`Failed to load script from \${url}\`);
+                	};
+                	document.body.appendChild(script);
+            	}
 
-                    .game-button:hover, .game-button-no-rounding:hover {
-                        transform: scale(1.2);
-                        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-                    }
+            	// Update active link based on URL
+            	function updateActiveLink(url) {
+                	document.querySelectorAll('ul li a').forEach(link => {
+                    	link.classList.remove('active');
+                	});
 
-                    .game-button img, .game-button-no-rounding img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 25px;
-                    }
+                	const activeLink = document.querySelector(\`a[onclick*="\${url}"]\`);
+                	if (activeLink) {
+                    	activeLink.classList.add('active');
+                    	document.getElementById("Game").style.display = "block"; // Show the iframe
+                	}
+            	}
 
-                    .game-title {
-                        color: white;
-                        font-size: 18px;
-                        margin-top: 10px;
-                    }
-
-                    /* Iframe Styling */
-                    iframe {
-                        width: 100%;
-                        height: calc(100vh - 60px);
-                        position: absolute;
-                        top: 60px;
-                        left: 0;
-                        right: 0;
-                        border: none;
-                    }
-
-                    /* Search bar styles */
-                    #searchBar {
-                        font-family: "Pixelify Sans", sans-serif;
-                        padding: 10px;
-                        font-size: 16px;
-                        background-color: transparent;
-                        width: 80%;
-                        max-width: 400px;
-                        border-radius: 5px;
-                        border: 2px solid white;
-                        outline: none;
-                    }
-
-                    #searchBar:focus {
-                        color: #7F00FF;
-                    }
-
-                    select {
-                        font-family: "Pixelify Sans", sans-serif;
-                        padding: 10px 20px;
-                        font-size: 16px;
-                        background-color: transparent;
-                        width: 40%;
-                        max-width: 400px;
-                        border-radius: 5px;
-                        border: 2px solid white;
-                        outline: none;
-                        color: white;
-                        appearance: none;
-                        background-image: url('../images/arrow-down.svg');
-                        background-repeat: no-repeat;
-                        background-position: right 10px center;
-                        background-size: 16px;
-                    }
-
-                    select:focus {
-                        border-color: #7F00FF;
-                    }
-
-                    option {
-                        background-color: black;
-                        color: white;
-                        padding: 10px;
-                        font-size: 16px;
-                    }
-
-                    option:disabled {
-                        color: gray;
-                    }
-
-                    .content-container {
-                        width: 100%;
-                        height: calc(100vh - 60px);
-                        position: absolute;
-                        top: 60px;
-                        left: 0;
-                        right: 0;
-                        border: none;
-                        color: white;
-                    }
-                </style>
-            `;
-
-            // Insert body content with navigation and container
-            win.document.body.innerHTML = `
-                <ul>
-                    <li><a data-page="home.html" class="active" aria-label="Home" onclick="changePageContent('https://raw.githack.com/FutureElliotto/Arcade-4/main/navigation/home.html', this);appendScript('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/home.js')">Home</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
-                        <div class="dropdown-content">
-                            <a aria-label="All Games" onclick="changePageContent('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/games/all.html', this);appendScript('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/search.js')">All Games</a>
-                            <a aria-label="Popular Games" onclick="changePageContent('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/games/popular.html', this);appendScript('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/search.js')">Popular Games</a>
-                            <a aria-label="New Games" onclick="changePageContent('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/games/new.html', this);appendScript('https://raw.githack.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/search.js')">New Games</a>
-                        </div>
-                    </li>
-                    <li><a data-page="https://futureelliotto.github.io/arcade-3/navigation/apps.html" aria-label="Apps" onclick="changePageContent('https://raw.githubusercontent.com/FutureElliotto/arcade-3/main/games/Asteroids.html', this)">Apps</a></li>
-                    <li><a data-page="https://futureelliotto.github.io/arcade-3/navigation/settings-neo.html" aria-label="Settings" onclick="changePageContent('https://futureelliotto.github.io/arcade-3/navigation/settings-neo.html', this)">Settings</a></li>
-                </ul>
-                <div id="content-container" class="content-container"></div>
-            `;
-
-            // Add necessary JavaScript for dynamic content loading
-            var script = document.createElement('script');
-            script.textContent = `
-                function loadPageContent(url, callback) {
-                    const xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState === 4 && this.status === 200) {
-                            callback(this.responseText);
-                        }
-                    };
-                    xhttp.open("GET", url, true);
-                    xhttp.send();
-                }
-
-                function changePageContent(url, element) {
-                    loadPageContent(url, function(content) {
-                        document.getElementById('content-container').innerHTML = content;
-                    });
-                    document.querySelectorAll('ul li a').forEach(link => {
-                        link.classList.remove('active');
-                    });
-
-                    element.classList.add('active');
-                }
-
-                function appendScript(url) {
-                    const script = document.createElement('script');
-                    script.src = url;
-                    script.type = 'text/javascript';
-                    script.onload = () => {
-                        console.log(\`Script loaded from \${url}\`);
-                    };
-                    script.onerror = () => {
-                        console.error(\`Failed to load script from \${url}\`);
-                    };
-                    document.head.appendChild(script);
-                }
-
-                window.addEventListener("load", function() {
-                    const mainParameter = window.location.search;
-                    const address = "https://futureelliotto.github.io/arcade-3/navigation/home.html"; 
-                    const combined = address + mainParameter;
-                    changePageContent(combined, document.querySelector('ul li a'));
-                });
-            `;
-            win.document.head.appendChild(script);
-            window.location.href = 'https://classroom.google.com/';
-        }
-    </script>
+            	// Initialize the page
+            	window.onload = function() {
+                	// Load home page by default and set "Home" link active
+                	loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.html');
+            	};
+        	`;
+        	win.document.head.appendChild(script);
+    	}
+	</script>
 </body>
 </html>
+
+
+
+
+
+
