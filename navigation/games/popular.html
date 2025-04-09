@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Games</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search for a game..." onkeyup="searchGames()" />
+</div>
+
+<!-- Game Buttons Container -->
+<div class="game-buttons-container">
+    <div class="game-item">
+        <button onclick="changeIframeContent('https://forms.office.com/Pages/ResponsePage.aspx?id=KowD_LZybEGqkEEqqVqkToZONU0cJF9AorlY4eY3ptpUNU5NRzlRUkVNOUZHNE5SNFBTTkpBSDZNMi4u')" class="game-button-no-rounding" aria-label="Request a Game">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Microsoft_Forms_%282019-present%29.svg/1200px-Microsoft_Forms_%282019-present%29.svg.png" alt="Request a Game Button Image">
+        </button>
+        <p class="game-title">Request a Game/App</p>
+    </div>
+    <div class="game-item">
+        <button onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/house-of-hazards.html')" class="game-button" aria-label="House-Of-Hazards">
+            <img src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/games/house-of-hazards.jpg" alt="House-Of-Hazards Game Button Image">
+        </button>
+        <p class="game-title">House Of Hazards</p>
+    </div>
+    <div class="game-item">
+        <button onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/slope.html')" class="game-button" aria-label="Slope">
+            <img src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/games/slope.png" alt="Slope Game Button Image">
+        </button>
+        <p class="game-title">Slope</p>
+    </div>
+</div>
+
+</body>
+</html>
