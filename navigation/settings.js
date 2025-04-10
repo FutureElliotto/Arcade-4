@@ -1,4 +1,5 @@
-function changeFavicon(src) {
+
+function changeFavicon(title, src) {
     // Create a new <link> element for the favicon
     var link = document.createElement('link');
     var oldLink = document.getElementById('dynamic-favicon');
@@ -19,4 +20,5 @@ function changeFavicon(src) {
 
     // Append the new favicon to the <head> section
     document.head.appendChild(link);
+    document.title = title; // Updated to use the title parameter
 }
