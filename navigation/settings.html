@@ -13,23 +13,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <select id="gameDropdown" name="gameDropdown" onchange="changeFavicon(this.options[this.selectedIndex].title, this.options[this.selectedIndex].getAttribute('src')('title'));">
-        <option disabled selected value> -- Cloak -- </option>
+<select id="gameDropdown" name="gameDropdown"
+    onchange="changeFavicon(this.options[this.selectedIndex].getAttribute('src'), this.options[this.selectedIndex].getAttribute('title'));">        <option disabled selected value> -- Cloak -- </option>
         <option title="Arcade 3" src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">None</option>
         <option title="Home" src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classroom.png">Google Classroom</option>
         <option title="My Apps" src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classlink.ico">Classlink</option>
