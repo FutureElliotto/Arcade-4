@@ -1,6 +1,8 @@
 function changeFavicon(title, src) {
+    // Get the current favicon link element by id
     const oldLink = document.getElementById('dynamic-favicon');
 
+    // If the favicon exists, remove it
     if (oldLink && oldLink.parentNode === document.head) {
         try {
             document.head.removeChild(oldLink);
@@ -9,11 +11,15 @@ function changeFavicon(title, src) {
         }
     }
 
+    // Create a new <link> element for the new favicon
     const link = document.createElement('link');
     link.id = 'dynamic-favicon';
-    link.rel = 'icon'; // cleaner than "shortcut icon"
-    link.href = src + '?v=' + new Date().getTime(); // cache-busting
+    link.rel = 'icon';  // "icon" is more commonly used
+    link.href = src + '?v=' + new Date().getTime(); // Cache-busting query string
 
+    // Append the new favicon to the head section
     document.head.appendChild(link);
+
+    // Change the document title
     document.title = title;
 }
