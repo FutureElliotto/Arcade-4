@@ -28,6 +28,6 @@ function changeTitle(title) { // Corrected function name
 }
 
 function cloakpage(title, src) {
-    changeTitle(title); // Corrected function name
+    changeTitle(title); 
     changeFavicon(src);
 }
