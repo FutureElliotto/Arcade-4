@@ -1,4 +1,4 @@
-function changeFavicon(title, src) {
+function changeFavicon(src) {
     // Get the current favicon link element by id
     const oldLink = document.getElementById('dynamic-favicon');
 
@@ -19,7 +19,15 @@ function changeFavicon(title, src) {
 
     // Append the new favicon to the head section
     document.head.appendChild(link);
+}
 
+
+function changeTitle(title) { // Corrected function name
     // Change the document title
     document.title = title;
+}
+
+function cloakpage(title, src) {
+    changeTitle(title); // Corrected function name
+    changeFavicon(src);
 }
