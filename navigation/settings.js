@@ -1,9 +1,7 @@
-function changeFavicon(src, title) {
-    // Find the existing favicon link element (if any)
-    var oldLink = document.getElementById('dynamic-favicon');
-    
-    // If there's an existing favicon, remove it
-    if (oldLink) {
+function changeFavicon(title, src) {
+    const oldLink = document.getElementById('dynamic-favicon');
+
+    if (oldLink && oldLink.parentNode === document.head) {
         try {
             document.head.removeChild(oldLink);
         } catch (error) {
@@ -11,15 +9,11 @@ function changeFavicon(src, title) {
         }
     }
 
-    // Create a new <link> element for the favicon
-    var link = document.createElement('link');
-    link.id = 'dynamic-favicon'; // Set the ID to target it later
-    link.rel = 'shortcut icon';
-    link.href = src;  // Set the new favicon source
+    const link = document.createElement('link');
+    link.id = 'dynamic-favicon';
+    link.rel = 'icon'; // cleaner than "shortcut icon"
+    link.href = src + '?v=' + new Date().getTime(); // cache-busting
 
-    // Append the new favicon to the <head> section
     document.head.appendChild(link);
-
-    // Update the page title
-    document.title = title; // This will update the page title to match the selected option
+    document.title = title;
 }
