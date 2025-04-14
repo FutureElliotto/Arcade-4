@@ -16,8 +16,8 @@
        	 
         	// Check if the window opened successfully
         	if (!win) {
-            	alert("Popup blocked! Please allow popups to view the content.");
-            	return;
+        window.location.href = 'https://blocked.syd-1.linewize.net/blocked?url=mathisfun.glacialpower.com/&deviceid=PHYS-SMIC-US-0000-2662&rule=R2FtZXMgQmxvY2sgfCBBbGw=&ruleid=6f5477cf-3837-4df4-9e1d-65cf291ffe6b&path=&method=rule_match&cid=NTExODgwMTczNTg0MDk4OTMyMw==';
+        return;
         	}
 
         	// Insert the head content with CSS links
@@ -25,7 +25,7 @@
             	<meta charset="UTF-8">
             	<meta name="viewport" content="width=device-width, initial-scale=1.0">
             	<title>Arcade 4</title>
-                <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">
+            	<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">
             	<!-- Google Fonts -->
             	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
             	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -40,13 +40,13 @@
                 	<li class="dropdown">
                     	<a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
                     	<div class="dropdown-content">
-                        	<a aria-label="All Games" onclick="changeIframeContent('https://futureelliotto.github.io/arcade-3/navigation/games/all.html')">All Games</a>
-                        	<a aria-label="Popular Games" onclick="changePageContent('https://raw.githubusercontent.com/FutureElliotto/Arcade-4/refs/heads/main/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">Popular Games</a>
-                        	<a aria-label="New Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">New Games</a>
+                        	<a aria-label="All Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">All Games</a>
+                        	<a aria-label="Popular Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/popular.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">Popular Games</a>
+                        	<a aria-label="New Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/new.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">New Games</a>
                     	</div>
                 	</li>
-                	<li><a aria-label="Apps" onclick="changeIframeContent('https://futureelliotto.github.io/arcade-3/navigation/apps.html')">Apps</a></li>
-                	<li><a aria-label="Settings" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/settings.js')">Settings</a></li>
+                	<li><a aria-label="Apps" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/apps.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">Apps</a></li>
+                	<li><a aria-label="Settings" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/cloakpage.js')">Settings</a></li>
                 	<li><a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a></li>
             	</ul>
 
@@ -136,6 +136,8 @@ function triggerFullscreen() {
             	function changePageContent(url) {
                 	loadPageContent(url, function(content) {
                     	document.getElementById('content-container').innerHTML = content;
+                          const iframe = document.getElementById("Game");
+    					  iframe.src = "about:blank";
                 	});
                 	updateActiveLink(url);
                 	const iframe = document.getElementById("Game");
@@ -178,7 +180,11 @@ function triggerFullscreen() {
             	};
         	`;
         	win.document.head.appendChild(script);
+            window.location.href = 'https://classroom.google.com/';
+
     	}
 	</script>
 </body>
 </html>
+
+
