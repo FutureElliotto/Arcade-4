@@ -24,7 +24,3 @@
       changeFavicon(src);
     }
 
-    function changetheme(src) {
-      document.body.style.backgroundImage = `url('${src}')`;
-      ul.style.backgroundImage = `url('${src}')`;
-    }
