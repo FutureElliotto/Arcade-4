@@ -1,25 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Optional default favicon -->
+  <link id="dynamic-favicon" rel="icon" href="default.ico">
 </head>
 <body>
-<select id="gameDropdown" name="gameDropdown"
-    onchange="cloakpage(this.options[this.selectedIndex].getAttribute('title'), this.options[this.selectedIndex].getAttribute('src'));">
+
+  <!-- Cloak Dropdown -->
+  <select id="cloakDropdown" name="cloakDropdown"
+    onchange="cloakpage(this.options[this.selectedIndex].getAttribute('title'), this.options[this.selectedIndex].getAttribute('data-src'));">
     <option disabled selected value> -- Cloak -- </option>
-        <option title="Arcade 4" src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">None</option>
-        <option title="Home" src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classroom.png">Google Classroom</option>
-        <option title="My Apps" src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classlink.ico">Classlink</option>
-        <option title="IXL | Dashboard" src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/ixl.png">IXL</option>
-        <option title="Inbox" src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/gmail.ico">Gmail</option>
-    </select>
+    <option title="Arcade 4" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">None</option>
+    <option title="Home" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classroom.png">Google Classroom</option>
+    <option title="My Apps" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classlink.ico">Classlink</option>
+    <option title="IXL | Dashboard" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/ixl.png">IXL</option>
+    <option title="Inbox" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/gmail.ico">Gmail</option>
+  </select>
+
+  <!-- Background Theme Dropdown -->
+  <select id="backgroundDropdown" name="backgroundDropdown"
+    onchange="changetheme(this.options[this.selectedIndex].getAttribute('data-src'));">
+    <option disabled selected value> -- Background -- </option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/void_theme.png">Arcade</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/poki_theme.png">Poki</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/seraph_theme.png">Seraph</option>
+  </select>
 </body>
 </html>
