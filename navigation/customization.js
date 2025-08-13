@@ -92,40 +92,27 @@ function changeFocusTextColor(color) {
 
 
   // On page load
-  window.addEventListener('load', () => {
-    const savedTheme = localStorage.getItem('themeBg');
-    if (savedTheme) changetheme(savedTheme);
+  const savedTheme = localStorage.getItem('themeBg');
+  if (savedTheme) changetheme(savedTheme);
 
-    const savedTitle = localStorage.getItem('pageTitle');
-    if (savedTitle) document.title = savedTitle;
+  const savedTitle = localStorage.getItem('pageTitle');
+  if (savedTitle) document.title = savedTitle;
 
-    const savedFavicon = localStorage.getItem('faviconSrc');
-    if (savedFavicon) changeFavicon(savedFavicon);
+  const savedFavicon = localStorage.getItem('faviconSrc');
+  if (savedFavicon) changeFavicon(savedFavicon);
 
-    const savedFont = localStorage.getItem('userFont');
-    if (savedFont) {
-      changeFont(savedFont);
-    }
+  const savedFont = localStorage.getItem('userFont');
+  if (savedFont) changeFont(savedFont);
 
-    const savedColor = localStorage.getItem('textColor');
-    if (savedColor) {
-      changeTextColor(savedColor);
-      document.getElementById('textColorPicker1').value = savedColor;
-    }
+  const savedColor = localStorage.getItem('textColor');
+  if (savedColor) {
+    changeTextColor(savedColor);
+    document.getElementById('textColorPicker1').value = savedColor;
+  }
 
-const selectedTextColor = localStorage.getItem('selectedTextColor');
-if (selectedTextColor) {
-  changeSelectedTextColor(selectedTextColor);
-  document.getElementById('textColorPicker2').value = selectedTextColor;
-}
-  });
-
-  // Attach event listeners
-  document.getElementById('textColorPicker1').addEventListener('input', (e) => {
-    changeTextColor(e.target.value);
-  });
-
-  document.getElementById('textColorPicker2').addEventListener('input', (e) => {
-    changeSelectedTextColor(e.target.value);
-    changeFocusTextColor(e.target.value);
-  });
+  const selectedTextColor = localStorage.getItem('selectedTextColor');
+  if (selectedTextColor) {
+    changeSelectedTextColor(selectedTextColor);
+    changeFocusTextColor(selectedTextColor);
+    document.getElementById('textColorPicker2').value = selectedTextColor;
+  }
