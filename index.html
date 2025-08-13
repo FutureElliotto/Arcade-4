@@ -34,26 +34,58 @@
 
         	// Insert body content with navigation and container
         	win.document.body.innerHTML = `
-            	<!-- Navigation Bar -->
-            	<ul>
-                	<li><a class="active" aria-label="Home" onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.html')">Home</a></li>
-                	<li class="dropdown">
-                    	<a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
-                    	<div class="dropdown-content">
-                        	<a aria-label="All Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">All Games</a>
-                        	<a aria-label="Popular Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/popular.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">Popular Games</a>
-                        	<a aria-label="New Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/new.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">New Games</a>
-                    	</div>
-                	</li>
-                	<li><a aria-label="Apps" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/apps.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">Apps</a></li>
-                	<li><a aria-label="Settings" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/cloakpage.js')">Settings</a></li>
-                	<li><a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a></li>
-            	</ul>
+<!-- Navigation Bar -->
+<ul class="navbar">
+  <li>
+    <a class="active" aria-label="Home"
+       onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/customization.js');">
+      Home
+    </a>
+  </li>
 
-            	<div id="content-container" class="content-container"></div>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
+    <div class="dropdown-content">
+      <a aria-label="All Games"
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/customization.js');">
+         All Games
+      </a>
+      <a aria-label="Popular Games"
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/popular.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/customization.js');">
+         Popular Games
+      </a>
+      <a aria-label="New Games"
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/new.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/customization.js');">
+         New Games
+      </a>
+    </div>
+  </li>
 
-            	<!-- Iframe -->
-            	<iframe id="Game" frameborder="0" allow="fullscreen"></iframe>
+  <li>
+    <a aria-label="Apps"
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/apps.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/customization.js');">
+      Apps
+    </a>
+  </li>
+
+  <li>
+    <a aria-label="Settings"
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/customization.js');">
+      Settings
+    </a>
+  </li>
+
+  <li>
+    <a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a>
+  </li>
+</ul>
+
+<!-- Main Content Container -->
+<div id="content-container" class="content-container"></div>
+
+<!-- Game Iframe -->
+<iframe id="Game" frameborder="0" allow="fullscreen"></iframe>
+
         	`;
 
         	// Add necessary JavaScript for dynamic content loading
@@ -186,3 +218,5 @@ function triggerFullscreen() {
 	</script>
 </body>
 </html>
+
+
