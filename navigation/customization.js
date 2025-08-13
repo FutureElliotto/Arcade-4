@@ -28,6 +28,7 @@ function cloakpage(title, src) {
   changeTitle(title);
   changeFavicon(src);
 }
+
 function changetheme(src) {
   // Set background image on <body>
   document.body.style.backgroundImage = `url('${src}')`;
@@ -40,9 +41,15 @@ function changetheme(src) {
 
   localStorage.setItem('themeBg', src);
 }
+function changeFont(fontFamily) {
+  document.body.style.fontFamily = fontFamily;
+
+  // Save font choice to localStorage
+  localStorage.setItem('userFont', fontFamily);
+}
 
 window.addEventListener('load', () => {
-  // Restore background theme
+  // Restore theme
   const savedTheme = localStorage.getItem('themeBg');
   if (savedTheme) {
     changetheme(savedTheme);
@@ -59,5 +66,10 @@ window.addEventListener('load', () => {
   if (savedFavicon) {
     changeFavicon(savedFavicon);
   }
-});
 
+  // Restore font
+  const savedFont = localStorage.getItem('userFont');
+  if (savedFont) {
+    document.body.style.fontFamily = savedFont;
+  }
+});
