@@ -1,4 +1,4 @@
-function changeFavicon(src) {
+      function changeFavicon(src) {
   const oldLink = document.getElementById('dynamic-favicon');
   if (oldLink && oldLink.parentNode === document.head) {
     try {
@@ -13,7 +13,6 @@ function changeFavicon(src) {
   link.rel = 'icon';
   link.href = src + '?v=' + new Date().getTime(); // prevent caching
   document.head.appendChild(link);
-
   // Save favicon to localStorage
   localStorage.setItem('faviconSrc', src);
 }
@@ -41,12 +40,24 @@ function changetheme(src) {
 
   localStorage.setItem('themeBg', src);
 }
-function changeFont(fontFamily) {
-  document.body.style.fontFamily = fontFamily;
+function changeFont(font) {
+  document.body.style.fontFamily = font;
 
-  // Save font choice to localStorage
-  localStorage.setItem('userFont', fontFamily);
+  // Save to localStorage
+  localStorage.setItem('userFont', font);
+
+  // Apply font to all <select> dropdowns
+  const allSelects = document.querySelectorAll('select');
+  allSelects.forEach(select => {
+    select.style.fontFamily = font;
+  });
+
+  const searchBar = document.getElementById('searchBar');
+  if (searchBar) {
+    searchBar.style.fontFamily = font;
+  }
 }
+
 
 window.addEventListener('load', () => {
   // Restore theme
@@ -67,9 +78,19 @@ window.addEventListener('load', () => {
     changeFavicon(savedFavicon);
   }
 
-  // Restore font
+  // Restore font and apply to all selects
   const savedFont = localStorage.getItem('userFont');
   if (savedFont) {
     document.body.style.fontFamily = savedFont;
+
+    const allSelects = document.querySelectorAll('select');
+    allSelects.forEach(select => {
+      select.style.fontFamily = savedFont;
+    });
+
+    const searchBar = document.getElementById('searchBar');
+    if (searchBar) {
+      searchBar.style.fontFamily = savedFont;
+    }
   }
 });
