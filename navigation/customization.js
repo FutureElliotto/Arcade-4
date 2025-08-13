@@ -48,13 +48,26 @@
     }
   }
 
-  function changeTextColor(color) {
-    document.body.style.color = color;
-    document.querySelectorAll('select, li a, #searchBar').forEach(el => {
-      el.style.color = color;
-    });
-    localStorage.setItem('textColor', color);
-  }
+function changeTextColor(color) {
+  // Remove previous style block if it exists
+  const oldStyle = document.getElementById('normal-text-style');
+  if (oldStyle) oldStyle.remove();
+
+  const style = document.createElement('style');
+  style.id = 'normal-text-style';
+  style.innerHTML = `
+    body,
+    select,
+    li a:not(.active),
+    #searchBar:not(:focus),
+    .game-title {
+      color: ${color} !important;
+    }
+  `;
+  document.head.appendChild(style);
+  localStorage.setItem('textColor', color);
+}
+
 
 function changeSelectedTextColor(color) {
   // Remove previous dynamic style if any
@@ -87,6 +100,21 @@ function changeFocusTextColor(color) {
     }
   `;
   document.head.appendChild(style);
+}
+function changeActiveTextColor(color) {
+  // Remove old active text color style if any
+  const oldStyle = document.getElementById('active-text-style');
+  if (oldStyle) oldStyle.remove();
+
+  const style = document.createElement('style');
+  style.id = 'active-text-style';
+  style.innerHTML = `
+    li a.active {
+      color: ${color} !important;
+    }
+  `;
+  document.head.appendChild(style);
+  localStorage.setItem('activeTextColor', color);
 }
 
 
