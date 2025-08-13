@@ -8,9 +8,10 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/style.css"/>
 
   <!-- Optional default favicon -->
   <link id="dynamic-favicon" rel="icon" href="default.ico">
@@ -36,5 +37,15 @@
     <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/poki_theme.png">Poki</option>
     <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/seraph_theme.png">Seraph</option>
   </select>
+  
+<!-- Font Dropdown -->
+<select id="fontDropdown" name="fontDropdown"
+  onchange="changeFont(this.value);">
+  <option disabled selected value> -- Font -- </option>
+  <option value="Pixelify Sans, sans-serif">Pixelify Sans</option>
+  <option value="Arial, sans-serif">Arial</option>
+  <option value="Courier Prime, monospace">Courier New</option>
+  <option value="Comic Neue, cursive">Comic Sans</option>
+</select>
 </body>
 </html>
