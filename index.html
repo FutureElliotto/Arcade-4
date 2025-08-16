@@ -203,13 +203,11 @@ function triggerFullscreen() {
                         activeLink.classList.add('active');
                         document.getElementById("Game").style.display = "block"; // Show the iframe
                     }
+
                 }
 
-                // Initialize the page
-                window.onload = function() {
-                    // Load home page by default and set "Home" link active
-                    loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/home.html');
-                };
+loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/home.html');
+appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');
             `;
             win.document.head.appendChild(script);
             window.location.href = 'https://classroom.google.com/';
