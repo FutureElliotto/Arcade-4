@@ -1,188 +1,225 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Arcade 4</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Arcade 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-	<script>
-    	// Ensure that the newWindow function runs when the page loads
-    	$(document).ready(function() {
-        	newWindow();  // Automatically calls newWindow when the page is loaded
-    	});
+    <script>
+        // Ensure that the newWindow function runs when the page loads
+        $(document).ready(function() {
+            newWindow();  // Automatically calls newWindow when the page is loaded
+        });
 
-    	function newWindow() {
-        	var win = window.open('');
-       	 
-        	// Check if the window opened successfully
-        	if (!win) {
+        function newWindow() {
+            var win = window.open('');
+            
+            // Check if the window opened successfully
+            if (!win) {
         window.location.href = 'https://blocked.syd-1.linewize.net/blocked?url=mathisfun.glacialpower.com/&deviceid=PHYS-SMIC-US-0000-2662&rule=R2FtZXMgQmxvY2sgfCBBbGw=&ruleid=6f5477cf-3837-4df4-9e1d-65cf291ffe6b&path=&method=rule_match&cid=NTExODgwMTczNTg0MDk4OTMyMw==';
         return;
-        	}
+            }
 
-        	// Insert the head content with CSS links
-        	win.document.head.innerHTML = `
-            	<meta charset="UTF-8">
-            	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-            	<title>Arcade 4</title>
-            	<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">
-            	<!-- Google Fonts -->
-            	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
-            	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-            	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/style.css">
-        	`;
+            // Insert the head content with CSS links
+            win.document.head.innerHTML = `
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Arcade 4</title>
+                <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/images/favicon/logo.png">
+                <!-- Google Fonts -->
+                <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/style.css">
+            `;
 
-        	// Insert body content with navigation and container
-        	win.document.body.innerHTML = `
-            	<!-- Navigation Bar -->
-            	<ul>
-                	<li><a class="active" aria-label="Home" onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.html')">Home</a></li>
-                	<li class="dropdown">
-                    	<a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
-                    	<div class="dropdown-content">
-                        	<a aria-label="All Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">All Games</a>
-                        	<a aria-label="Popular Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/popular.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">Popular Games</a>
-                        	<a aria-label="New Games" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/games/new.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">New Games</a>
-                    	</div>
-                	</li>
-                	<li><a aria-label="Apps" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/apps.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/search.js')">Apps</a></li>
-                	<li><a aria-label="Settings" onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/navigation/cloakpage.js')">Settings</a></li>
-                	<li><a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a></li>
-            	</ul>
+            // Insert body content with navigation and container
+            win.document.body.innerHTML = `
+<!-- Navigation Bar -->
+<ul class="navbar">
+  <li>
+    <a class="active" aria-label="Home"
+       onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/home.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+      Home
+    </a>
+  </li>
 
-            	<div id="content-container" class="content-container"></div>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
+    <div class="dropdown-content">
+      <a aria-label="All Games"
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+         All Games
+      </a>
+      <a aria-label="Popular Games"
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/games/popular.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+         Popular Games
+      </a>
+      <a aria-label="New Games"
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/games/new.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+         New Games
+      </a>
+    </div>
+  </li>
 
-            	<!-- Iframe -->
-            	<iframe id="Game" frameborder="0" allow="fullscreen"></iframe>
-        	`;
+  <li>
+    <a aria-label="Apps"
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/games/apps.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+      Apps
+    </a>
+  </li>
 
-        	// Add necessary JavaScript for dynamic content loading
-        	var script = document.createElement('script');
-        	script.textContent = `
-            	// Change the iframe content when a link is clicked
-            	function changeIframeContent(page) {
-                	document.getElementById('Game').src = page;
-                	updateActiveLink(page);
-                	const contentContainer = document.getElementById('content-container');
-                	contentContainer.style.display = 'none'; // Hide content-container
-            	}
+  <li>
+    <a aria-label="Settings"
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+      Settings
+    </a>
+  </li>
 
-            	// Load the Blob content and update the iframe
-            	function loadBlobContent(url) {
-                	loadPageContent(url, function(content) {
-                    	var blob = new Blob([content], {type: 'text/html'});
-                    	var iframe = document.getElementById('Game');
-                    	iframe.src = URL.createObjectURL(blob);
-                    	updateActiveLink(url);
-                    	const contentContainer = document.getElementById('content-container');
-                    	contentContainer.style.display = 'none'; // Hide content-container
-                    	document.getElementById("Game").style.display = "block"; // Show the iframe
-                	});
-            	}
+  <li>
+    <a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a>
+  </li>
+</ul>
+
+<!-- Main Content Container -->
+<div id="content-container" class="content-container"></div>
+
+<!-- Game Iframe -->
+<iframe id="Game" frameborder="0" allow="fullscreen"></iframe>
+
+            `;
+
+            // Add necessary JavaScript for dynamic content loading
+            var script = document.createElement('script');
+            script.textContent = `
+                // Change the iframe content when a link is clicked
+                function changeIframeContent(page) {
+                    document.getElementById('Game').src = page;
+                    updateActiveLink(page);
+                    const contentContainer = document.getElementById('content-container');
+                    contentContainer.style.display = 'none'; // Hide content-container
+                }
+
+                // Load the Blob content and update the iframe
+                function loadBlobContent(url) {
+                    loadPageContent(url, function(content) {
+                        var blob = new Blob([content], {type: 'text/html'});
+                        var iframe = document.getElementById('Game');
+                        iframe.src = URL.createObjectURL(blob);
+                        updateActiveLink(url);
+                        const contentContainer = document.getElementById('content-container');
+                        contentContainer.style.display = 'none'; // Hide content-container
+                        document.getElementById("Game").style.display = "block"; // Show the iframe
+                    });
+                }
 
 // Function to load page content via XMLHttpRequest
 function loadPageContent(url, callback) {
-	const xhttp = new XMLHttpRequest();
+    const xhttp = new XMLHttpRequest();
     
-	// Add a timestamp to the URL to prevent caching
-	const urlWithNoCache = url + (url.includes('?') ? '&' : '?') + 'nocache=' + new Date().getTime();
+    // Add a timestamp to the URL to prevent caching
+    const urlWithNoCache = url + (url.includes('?') ? '&' : '?') + 'nocache=' + new Date().getTime();
     
-	xhttp.onreadystatechange = function() {
-    	if (this.readyState === 4 && this.status === 200) {
-        	callback(this.responseText);
-    	}
-	};
-	xhttp.open("GET", urlWithNoCache, true);
-	xhttp.send();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            callback(this.responseText);
+        }
+    };
+    xhttp.open("GET", urlWithNoCache, true);
+    xhttp.send();
 }
 
 
 // Function to trigger fullscreen mode for the iframe or content-container
 function triggerFullscreen() {
-	const contentContainer = document.querySelector('.content-container');
-	const iframe = document.getElementById('Game');
+    const contentContainer = document.querySelector('.content-container');
+    const iframe = document.getElementById('Game');
     
-	// Check if the content container is visible
-	const isContentVisible = contentContainer && contentContainer.offsetWidth > 0 && contentContainer.offsetHeight > 0;
+    // Check if the content container is visible
+    const isContentVisible = contentContainer && contentContainer.offsetWidth > 0 && contentContainer.offsetHeight > 0;
 
-	// If content-container is visible, make it fullscreen
-	if (isContentVisible) {
-    	if (contentContainer.requestFullscreen) {
-        	contentContainer.requestFullscreen();
-    	} else if (contentContainer.mozRequestFullScreen) { // Firefox
-        	contentContainer.mozRequestFullScreen();
-    	} else if (contentContainer.webkitRequestFullscreen) { // Chrome, Safari, Opera
-        	contentContainer.webkitRequestFullscreen();
-    	} else if (contentContainer.msRequestFullscreen) { // IE/Edge
-        	contentContainer.msRequestFullscreen();
-    	}
-	}
-	// If content-container is hidden, make the iframe fullscreen
-	else if (iframe) {
-    	if (iframe.requestFullscreen) {
-        	iframe.requestFullscreen();
-    	} else if (iframe.mozRequestFullScreen) { // Firefox
-        	iframe.mozRequestFullScreen();
-    	} else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
-        	iframe.webkitRequestFullscreen();
-    	} else if (iframe.msRequestFullscreen) { // IE/Edge
-        	iframe.msRequestFullscreen();
-    	}
-	}
+    // If content-container is visible, make it fullscreen
+    if (isContentVisible) {
+        if (contentContainer.requestFullscreen) {
+            contentContainer.requestFullscreen();
+        } else if (contentContainer.mozRequestFullScreen) { // Firefox
+            contentContainer.mozRequestFullScreen();
+        } else if (contentContainer.webkitRequestFullscreen) { // Chrome, Safari, Opera
+            contentContainer.webkitRequestFullscreen();
+        } else if (contentContainer.msRequestFullscreen) { // IE/Edge
+            contentContainer.msRequestFullscreen();
+        }
+    }
+    // If content-container is hidden, make the iframe fullscreen
+    else if (iframe) {
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { // Firefox
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { // IE/Edge
+            iframe.msRequestFullscreen();
+        }
+    }
 }
 
 
-            	// Function to change page content and update the active link
-            	function changePageContent(url) {
-                	loadPageContent(url, function(content) {
-                    	document.getElementById('content-container').innerHTML = content;
+                // Function to change page content and update the active link
+                function changePageContent(url) {
+                    loadPageContent(url, function(content) {
+                        document.getElementById('content-container').innerHTML = content;
                           const iframe = document.getElementById("Game");
-    					  iframe.src = "about:blank";
-                	});
-                	updateActiveLink(url);
-                	const iframe = document.getElementById("Game");
-                	iframe.style.display = "none"; // Hide the iframe
-                	const contentContainer = document.getElementById('content-container');
-                	contentContainer.style.display = 'block'; // Show content-container
-            	}
+                          iframe.src = "about:blank";
+                    });
+                    updateActiveLink(url);
+                    const iframe = document.getElementById("Game");
+                    iframe.style.display = "none"; // Hide the iframe
+                    const contentContainer = document.getElementById('content-container');
+                    contentContainer.style.display = 'block'; // Show content-container
+                }
 
-            	// Function to append external JavaScript files
-            	function appendScript(url) {
-                	const script = document.createElement('script');
-                	script.src = url;
-                	script.type = 'text/javascript';
-                	script.onload = () => {
-                    	console.log(\`Script loaded from \${url}\`);
-                	};
-                	script.onerror = () => {
-                    	console.error(\`Failed to load script from \${url}\`);
-                	};
-                	document.body.appendChild(script);
-            	}
+                // Function to append external JavaScript files
+                function appendScript(url) {
+                    const script = document.createElement('script');
+                    script.src = url;
+                    script.type = 'text/javascript';
+                    script.onload = () => {
+                        console.log(\`Script loaded from \${url}\`);
+                    };
+                    script.onerror = () => {
+                        console.error(\`Failed to load script from \${url}\`);
+                    };
+                    document.body.appendChild(script);
+                }
 
-            	// Update active link based on URL
-            	function updateActiveLink(url) {
-                	document.querySelectorAll('ul li a').forEach(link => {
-                    	link.classList.remove('active');
-                	});
+                // Update active link based on URL
+                function updateActiveLink(url) {
+                    document.querySelectorAll('ul li a').forEach(link => {
+                        link.classList.remove('active');
+                    });
 
-                	const activeLink = document.querySelector(\`a[onclick*="\${url}"]\`);
-                	if (activeLink) {
-                    	activeLink.classList.add('active');
-                    	document.getElementById("Game").style.display = "block"; // Show the iframe
-                	}
-            	}
+                    const activeLink = document.querySelector(\`a[onclick*="\${url}"]\`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                        document.getElementById("Game").style.display = "block"; // Show the iframe
+                    }
+                }
 
-            	// Initialize the page
-            	window.onload = function() {
-                	// Load home page by default and set "Home" link active
-                	loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.html');
-            	};
-        	`;
-        	win.document.head.appendChild(script);
+                // Initialize the page
+                window.onload = function() {
+                    // Load home page by default and set "Home" link active
+                    loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/home.html');
+                };
+            `;
+            win.document.head.appendChild(script);
             window.location.href = 'https://classroom.google.com/';
 
-    	}
-	</script>
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+
