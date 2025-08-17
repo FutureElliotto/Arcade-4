@@ -25,11 +25,10 @@
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Arcade 4</title>
-                <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/images/favicon/logo.png">
                 <!-- Google Fonts -->
                 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/style.css">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/style.css">
             `;
 
             // Insert body content with navigation and container
@@ -38,7 +37,7 @@
 <ul class="navbar">
   <li>
     <a class="active" aria-label="Home"
-       onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/home.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+       onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/home.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/customization.js');">
       Home
     </a>
   </li>
@@ -47,15 +46,15 @@
     <a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
     <div class="dropdown-content">
       <a aria-label="All Games"
-         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/customization.js');">
          All Games
       </a>
       <a aria-label="Popular Games"
-         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/games/popular.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/games/popular.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/customization.js');">
          Popular Games
       </a>
       <a aria-label="New Games"
-         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/games/new.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/games/new.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/customization.js');">
          New Games
       </a>
     </div>
@@ -63,14 +62,14 @@
 
   <li>
     <a aria-label="Apps"
-       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/games/apps.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/games/apps.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/customization.js');">
       Apps
     </a>
   </li>
 
   <li>
     <a aria-label="Settings"
-       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/customization.js');">
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/customization.js');">
       Settings
     </a>
   </li>
@@ -85,7 +84,10 @@
 
 <!-- Game Iframe -->
 <iframe id="Game" frameborder="0" allow="fullscreen"></iframe>
-
+<!-- Pixelated Loading Spinner -->
+<div id="spinner">
+  <div class="spinner-icon"></div>
+</div>
             `;
 
             // Add necessary JavaScript for dynamic content loading
@@ -112,21 +114,31 @@
                     });
                 }
 
-// Function to load page content via XMLHttpRequest
 function loadPageContent(url, callback) {
     const xhttp = new XMLHttpRequest();
-    
-    // Add a timestamp to the URL to prevent caching
+
+    // Show spinner
+    document.getElementById('spinner').style.display = 'flex';
+
     const urlWithNoCache = url + (url.includes('?') ? '&' : '?') + 'nocache=' + new Date().getTime();
     
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-            callback(this.responseText);
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            // Hide spinner after request completes
+            document.getElementById('spinner').style.display = 'none';
+
+            if (this.status === 200) {
+                callback(this.responseText);
+            } else {
+                console.error('Failed to load:', url);
+            }
         }
     };
+
     xhttp.open("GET", urlWithNoCache, true);
     xhttp.send();
 }
+
 
 
 // Function to trigger fullscreen mode for the iframe or content-container
@@ -203,13 +215,14 @@ function triggerFullscreen() {
                         activeLink.classList.add('active');
                         document.getElementById("Game").style.display = "block"; // Show the iframe
                     }
-                }
 
-                // Initialize the page
-                window.onload = function() {
-                    // Load home page by default and set "Home" link active
-                    loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.0/navigation/home.html');
-                };
+                }
+loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/home.html');
+appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/customization.js');
+if (localStorage.getItem("yourItem") == null) {
+    localStorage.setItem('faviconSrc', 'https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/logo.png');
+}
+
             `;
             win.document.head.appendChild(script);
             window.location.href = 'https://classroom.google.com/';
@@ -218,6 +231,9 @@ function triggerFullscreen() {
     </script>
 </body>
 </html>
+
+
+
 
 
 

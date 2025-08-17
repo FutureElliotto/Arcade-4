@@ -33,8 +33,12 @@
     if (navbar) {
       navbar.style.backgroundImage = `url('${src}')`;
     }
-    localStorage.setItem('themeBg', src);
-  }
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent) {
+      dropdownContent.style.backgroundImage = `url('${src}')`;
+    }
+        localStorage.setItem('themeBg', src);
+    }
 
   function changeFont(font) {
     document.body.style.fontFamily = font;
