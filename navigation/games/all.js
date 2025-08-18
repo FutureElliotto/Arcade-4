@@ -446,7 +446,10 @@ function createGameHTML({ title, url, img, label, mode }) {
 }
 
 // Inject the game buttons into the container
-document.getElementById('gameContainer').innerHTML = games.map(createGameHTML).join('');
+window.onload = function () {
+  document.getElementById('gameContainer').innerHTML = games.map(createGameHTML).join('');
+};
+
 
 // Handle button click based on mode
 function handleGameClick(element) {
