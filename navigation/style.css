@@ -119,14 +119,16 @@
                         display: inline-block;
                     }
 
-.dropdown-content {
-  background-image: url('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/void_theme.png');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top; /* or match navbar position if needed */
-  /* existing styles */
-}
+					.dropdown-content {
+					    background-image: url('https://cdn.jsdelivr.net/gh/						    FutureElliotto/Arcade-4@latest/images/backgrounds/						    void_theme.png');
+  					    background-attachment: fixed;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        display: none;
+                        position: absolute;
+                        min-width: 160px;
+                        z-index: 1;
+					 }
 
 
                     .dropdown-content a {
@@ -255,4 +257,3 @@
                         border: none;
                         color: white;
                     }
-
