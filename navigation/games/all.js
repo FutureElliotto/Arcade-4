@@ -425,8 +425,8 @@ const games = [
     img: "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/zuma.jpg", 
     label: "Zuma",
     mode: "blob"  
-  },
-,];
+  }
+];
 
 // This function creates the HTML for each game
 function createGameHTML({ title, url, img, label, mode }) {
