@@ -147,6 +147,7 @@ const selectedTextColor = localStorage.getItem('selectedTextColor');
 if (selectedTextColor) {
   changeSelectedTextColor(selectedTextColor);
   changeFocusTextColor(selectedTextColor);
+  changeActiveTextColor(selectedTextColor);
   const picker2 = document.getElementById('textColorPicker2');
   if (picker2) picker2.value = selectedTextColor;
 }
