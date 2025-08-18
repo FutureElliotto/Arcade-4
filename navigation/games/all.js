@@ -1,5 +1,5 @@
-const games = [
-  {
+var games = [
+    {
     title: "Feedback Form",
     url: "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games@main/apps/request.html",
     img: "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/apps/request.jpg",
