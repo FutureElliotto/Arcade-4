@@ -12,10 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/customization.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@main/navigation/style.css"/>
-
-  <!-- Optional default favicon -->
-  <link id="dynamic-favicon" rel="icon" href="default.ico">
 </head>
 <body>
 
@@ -23,31 +19,32 @@
   <select id="cloakDropdown" name="cloakDropdown"
     onchange="cloakpage(this.options[this.selectedIndex].getAttribute('title'), this.options[this.selectedIndex].getAttribute('data-src'));">
     <option disabled selected value> -- Cloak -- </option>
-    <option title="Arcade 4" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/logo.png">None</option>
-    <option title="Home" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classroom.png">Google Classroom</option>
-    <option title="My Apps" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/classlink.ico">Classlink</option>
-    <option title="IXL | Dashboard" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/ixl.png">IXL</option>
-    <option title="Inbox" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/images/favicon/gmail.ico">Gmail</option>
+    <option title="Arcade 4" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/logo.png">None</option>
+    <option title="Home" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/classroom.png">Google Classroom</option>
+    <option title="My Apps" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/classlink.ico">Classlink</option>
+    <option title="IXL | Dashboard" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/ixl.png">IXL</option>
+    <option title="Inbox" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/gmail.ico">Gmail</option>
   </select>
 
   <!-- Background Theme Dropdown -->
   <select id="backgroundDropdown" name="backgroundDropdown"
     onchange="changetheme(this.options[this.selectedIndex].getAttribute('data-src'));">
     <option disabled selected value> -- Background -- </option>
-    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/void_theme.png">Arcade</option>
-    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/poki_theme.png">Poki</option>
-    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@latest/images/backgrounds/seraph_theme.png">Seraph</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/void_theme.png">Arcade Dark(default)</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/void_light_theme.jpg">Arcade Light</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/interstellar_theme.png">Interstellar</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/seraph_theme.png">Seraph</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/poki_theme.png">Poki</option>
   </select>
 
   <!-- Font Dropdown -->
   <select id="fontDropdown" name="fontDropdown" onchange="changeFont(this.value);">
     <option disabled selected value> -- Font -- </option>
-    <option value="Pixelify Sans, sans-serif">Pixelify Sans</option>
+    <option value="Pixelify Sans, sans-serif">Pixelify Sans (default)</option>
     <option value="Arial, sans-serif">Arial</option>
     <option value="Courier Prime, monospace">Courier New</option>
     <option value="Comic Neue, cursive">Comic Sans</option>
   </select>
-
   <!-- Text Color Picker -->
   <div>
     <h3>Change Normal Text Color</h3>
@@ -68,3 +65,6 @@
   </div>
 </body>
 </html>
+
+
+
