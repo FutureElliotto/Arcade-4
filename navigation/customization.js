@@ -151,3 +151,4 @@ if (selectedTextColor) {
   const picker2 = document.getElementById('textColorPicker2');
   if (picker2) picker2.value = selectedTextColor;
 }
+
