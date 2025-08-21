@@ -121,6 +121,44 @@ function changeActiveTextColor(color) {
   localStorage.setItem('activeTextColor', color);
 }
 
+function resetToDefault() {
+  // Clear localStorage
+  localStorage.removeItem('faviconSrc');
+  localStorage.removeItem('pageTitle');
+  localStorage.removeItem('themeBg');
+  localStorage.removeItem('userFont');
+  localStorage.removeItem('textColor');
+  localStorage.removeItem('selectedTextColor');
+  localStorage.removeItem('activeTextColor');
+
+  // Reset Favicon & Title
+  changeFavicon('https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/logo.png');
+  changeTitle('Arcade 4');
+
+  // Reset Theme
+  changetheme('https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/void_theme.png');
+
+  // Reset Font
+  changeFont('Pixelify Sans, sans-serif');
+
+  // Reset Normal Text Color
+  changeTextColor('#ffffff');
+  const picker1 = document.getElementById('textColorPicker1');
+  if (picker1) picker1.value = '#ffffff';
+
+  // Reset Selected/Focus/Active Text Color
+  changeSelectedTextColor('#7F00FF');
+  changeFocusTextColor('#7F00FF');
+  changeActiveTextColor('#7F00FF');
+  const picker2 = document.getElementById('textColorPicker2');
+  if (picker2) picker2.value = '#7F00FF';
+
+  // Reset dropdown selections
+  document.getElementById('cloakDropdown').selectedIndex = 0;
+  document.getElementById('backgroundDropdown').selectedIndex = 0;
+  document.getElementById('fontDropdown').selectedIndex = 0;
+}
+
 
 
 // On page load
