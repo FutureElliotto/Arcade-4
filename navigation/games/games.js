@@ -6,27 +6,14 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 async function fetchGames() {
   try {
-    const url = "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/games.json";
-    console.log("Fetching from:", url);
-    const response = await fetch(url);
-
-    console.log("Fetch status:", response.status);
-
-    const text = await response.text();
-    console.log("Raw JSON text:", text);
-
-    try {
-      gamesData = JSON.parse(text);
-      filteredGames = [...gamesData];
-      renderPage();
-    } catch (parseErr) {
-      console.error("JSON parsing error:", parseErr);
-    }
+    const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.4/navigation/games/games.json");
+    gamesData = await response.json();
+    filteredGames = [...gamesData];
+    renderPage();
   } catch (error) {
     console.error("Failed to load games data:", error);
   }
 }
-
 
 function renderPage() {
   const container = document.getElementById("gameButtons");
