@@ -1,60 +1,49 @@
-!DOCTYPE html
-html lang=en
-head
-  meta charset=UTF-8 
-  meta name=viewport content=width=device-width, initial-scale=1.0
-  titleGamestitle
-  
-    !-- Google Fonts --
-    link rel=preconnect href=httpsfonts.googleapis.com
-    link rel=preconnect href=httpsfonts.gstatic.com crossorigin
-    link href=httpsfonts.googleapis.comcss2family=Press+Start+2P&display=swap rel=stylesheet
-    link href=httpsfonts.googleapis.comcssfamily=Pixelify+Sans rel=stylesheet
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Title</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
+</head>
+<body>
 
-head
-body
+    <!-- Search -->
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search games..." oninput="applyFilters()">
+    </div>
 
-  !-- Search --
-  div class=search-container
-    input type=text id=searchBar placeholder=Search games... oninput=applyFilters() 
-  div
+    <!-- Category + Favorites Filter -->
+    <div class="category-container">
+        <select id="categorySelect" onchange="applyFilters()">
+            <option value="All">All Games</option>
+            <option value="Popular">Popular Games</option>
+            <option value="New">New Games</option>
+            <option value="Puzzle">Puzzle</option>
+            <option value="Sports">Sports</option>
+            <option value="Clicker">Clicker</option>
+            <option value="Arcade">Arcade</option>
+            <option value="Rhythm">Rhythm</option>
+            <option value="Sandbox">Sandbox</option>
+            <option value="Shooter">Shooter</option>
+            <option value="Platformer">Platformer</option>
+        </select>
 
-  !-- Category + Favorites Filter --
-  div class=category-container
-    select id=categorySelect onchange=applyFilters()
-      option value=AllAll Gamesoption
-      option value=PopularPopular Gamesoption
-      option value=NewNew Gamesoption
-      option value=PuzzlePuzzleoption
-      option value=SportsSportsoption
-      option value=ClickerClickeroption
-      option value=ArcadeArcadeoption
-      option value=RhythmRhythmoption
-      option value=SandboxSandboxoption
-      option value=ShooterShooteroption
-      option value=PlatformerPlatformeroption
-    select
+        <label style="margin-left: 15px;">
+            <input type="checkbox" id="showFavorites" onchange="applyFilters()"> Show Favorites Only
+        </label>
+    </div>
 
-    label style=margin-left 15px;
-      input type=checkbox id=showFavorites onchange=applyFilters() Show Favorites Only
-    label
-  div
+    <!-- Game Cards -->
+    <div id="gameButtons" class="game-buttons-container"></div>
 
-  !-- Game Cards --
-  div id=gameButtons class=game-buttons-containerdiv
+    <!-- Pagination Controls -->
+    <div class="pagination" id="paginationControls"></div>
 
-  !-- Pagination Controls --
-  div class=pagination id=paginationControlsdiv
-
-body
-html
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
