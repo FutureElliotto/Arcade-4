@@ -1,0 +1,60 @@
+!DOCTYPE html
+html lang=en
+head
+  meta charset=UTF-8 
+  meta name=viewport content=width=device-width, initial-scale=1.0
+  titleGamestitle
+  
+    !-- Google Fonts --
+    link rel=preconnect href=httpsfonts.googleapis.com
+    link rel=preconnect href=httpsfonts.gstatic.com crossorigin
+    link href=httpsfonts.googleapis.comcss2family=Press+Start+2P&display=swap rel=stylesheet
+    link href=httpsfonts.googleapis.comcssfamily=Pixelify+Sans rel=stylesheet
+
+head
+body
+
+  !-- Search --
+  div class=search-container
+    input type=text id=searchBar placeholder=Search games... oninput=applyFilters() 
+  div
+
+  !-- Category + Favorites Filter --
+  div class=category-container
+    select id=categorySelect onchange=applyFilters()
+      option value=AllAll Gamesoption
+      option value=PopularPopular Gamesoption
+      option value=NewNew Gamesoption
+      option value=PuzzlePuzzleoption
+      option value=SportsSportsoption
+      option value=ClickerClickeroption
+      option value=ArcadeArcadeoption
+      option value=RhythmRhythmoption
+      option value=SandboxSandboxoption
+      option value=ShooterShooteroption
+      option value=PlatformerPlatformeroption
+    select
+
+    label style=margin-left 15px;
+      input type=checkbox id=showFavorites onchange=applyFilters() Show Favorites Only
+    label
+  div
+
+  !-- Game Cards --
+  div id=gameButtons class=game-buttons-containerdiv
+
+  !-- Pagination Controls --
+  div class=pagination id=paginationControlsdiv
+
+body
+html
+
+
+
+
+
+
+
+
+
+

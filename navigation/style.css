@@ -4,7 +4,7 @@
                         background-attachment: fixed;
                         background-repeat: no-repeat;
                         background-size: cover; 
-                        font-family: "Pixelify Sans", sans-serif; /* Default font */
+                        font-family: "Pixelify Sans", sans-serif;
                         text-align: center;
                         margin: 0;
                         padding-top: 60px;
@@ -18,6 +18,7 @@
                     body, .navbar {
                         transition: background-image 0.5s ease-in-out;
                     }
+
 /* Pixelated Spinner Container */
 #spinner {
   position: fixed;
@@ -32,7 +33,12 @@
   z-index: 9999;
   display: none;
 }
-
+.game-button button, .game-button-no-rounding button {
+  border: none;
+  background: none;
+  padding: 0;
+  outline: none;
+}
 /* Pixel block spinner */
 .spinner-icon {
   width: 16px;
@@ -153,32 +159,33 @@
                     }
 
                     /* Game button styling */
-                    .game-button, .game-button-no-rounding {
-                        background-color: transparent;
-                        border: none;
-                        padding: 15px;
-                        cursor: pointer;
-                        width: 200px;
-                        height: 200px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        transform: perspective(1px) translateZ(0);
-                        transition-duration: 0.5s;
-                    }
+.game-button, .game-button-no-rounding {
+    width: 200px;
+    height: 250px; /* image + title */
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.5s ease;
+    transform-origin: center center; /* Important */
+}
 
-                    .game-button:hover, .game-button-no-rounding:hover {
-                        transform: scale(1.2);
-                        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-                    }
+.game-button:hover, .game-button-no-rounding:hover {
+    transform: scale(1.1); /* smaller scale to reduce overlap */
+    z-index: 10; /* bring hovered button above others */
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
 
-                    .game-button img, .game-button-no-rounding img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 25px;
-                    }
+.game-button img, .game-button-no-rounding img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
 
                     .game-title {
                         color: white;
@@ -265,3 +272,46 @@
                         border: none;
                         color: white;
                     }
+                    
+    .favorite-icon {
+      cursor: pointer;
+      font-size: 1rem;
+      margin-left: 6px;
+    }
+.pagination {
+  margin: 40px 0 60px 0; /* add vertical space */
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+label {
+  color: white;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.pagination button.active-page {
+  border: 2px solid white;
+}
+
+p {
+  color: white;
+}
+
+    select, input[type="text"] {
+      padding: 5px;
+      font-size: 14px;
+    }
