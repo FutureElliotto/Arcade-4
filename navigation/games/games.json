@@ -10,121 +10,115 @@
     "title": "2048",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/2048.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/2048.html",
-    "category": "Uncategorized",
+  "category": ["Popular", "2D", "One Button", "Puzzle", "Mobile"]
     "mode": "A"
   },
   {
     "title": "Basket Bros",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/basketbros.jpg",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/basketbros.html",
-    "category": "Uncategorized"
-  },
-  {
-    "title": "Basketball Stars",
-    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/basketballstars.png",
-    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/basketball-stars.html",
-    "category": "Uncategorized"
+  "category": ["Popular", "2D", "Sports"]
   },
   {
     "title": "Bitlife",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/bitlife.jpg",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/bitlife.html",
-    "category": "Uncategorized"
+  "category": ["Popular", "2D", "Mobile"]
   },
   {
     "title": "Block Blast",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/blockblast.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/block_blast.html",
-    "category": "Uncategorized"
+  "category": ["Popular", "2D", "One Button", "Puzzle", "Mobile"]
   },
   {
     "title": "Bloons TD 4",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/bloons_td_4.jpg",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@latest/flash/bloons_td_4/index.html",
-    "category": "Uncategorized"
+  "category": ["Popular", "2D", "Tower Defence", "Flash"]
   },
   {
     "title": "Cookie Clicker",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/cookieclicker.png",
     "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/cookie_clicker.html",
-    "category": "Clicker"
-  },
+  "category": ["Popular", "2D", "Idle"]
+},
   {
     "title": "Drift Boss",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/driftboss.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/drift_boss.html",
-    "category": "Uncategorized"
+  "category": ["Popular", "3D", "One Button"]
   },
   {
     "title": "Duck Life 4",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/duck_life_4.avif",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/duck_life_4/index.html",
-    "category": "Uncategorized"
+  "category": ["Popular", "2D", "Flash"]
   },
 {
   "title": "Flappy Bird",
   "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/flappy-bird.jpg",
   "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/flappybird.html",
-  "category": ["Arcade", "Platformer"]
+  "category": ["Popular", "2D", "One Button", "Mobile"]
 },
   {
     "title": "Friday Night Funkin",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/FNF/index.html",
-    "category": "Rhythm"
+  "category": ["Popular", "2D", "Rhythm", "Flash"]
   },
   {
     "title": "House Of Hazards",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/house-of-hazards.jpg",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/house-of-hazards.html",
-    "category": "Uncategorized"
+  "category": ["Popular", "2D", "Multi Player", "Platformer"]
   },
   {
     "title": "Idle Breakout",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/idle-breakout.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/idle-breakout.html",
-    "category": "Clicker"
+  "category": ["Popular", "2D", "Idle"]
   },
   {
     "title": "Minecraft",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/Minecraft.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/minecraft.html",
-    "category": "Sandbox"
+  "category": ["Popular", "3D", "Multi Player"]
   },
   {
     "title": "Pixel Shooter",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pixelshooter.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/pixel_shooter.html",
-    "category": "Shooter"
+  "category": ["Popular", "2D", "Multi Player", "Shooter", "Platformer"]
   },
   {
     "title": "Pop The Lock",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pop-the-lock.png",
     "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/pop-the-lock.html",
-    "category": "Uncategorized"
+  "category": ["Popular", "2D", "Puzzle", "One Button", "Mobile"]
   },
   {
     "title": "Slope",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/slope.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/slope.html",
-    "category": "Arcade"
+  "category": ["Popular", "3D", "One Button", "Platformer"]
   },
   {
     "title": "Tomb of The Mask",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/tombofthemask.png",
     "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/tomb_of_the_mask.html",
-    "category": "Arcade"
+  "category": ["Popular", "2D", "Puzzle", "Platformer"]
   },
   {
     "title": "Tunnel Rush",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/tunnelrush.jpg",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/tunnelrush.html",
-    "category": "Arcade"
+  "category": ["Popular", "3D", "One Button"]
   },
   {
     "title": "Vex 6",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/vex_6.jpeg",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/vex_6/vex_6.html",
-    "category": "Platformer"
+  "category": ["2D", "Platformer"]
   }
 ]
