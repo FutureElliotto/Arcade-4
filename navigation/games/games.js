@@ -1,6 +1,6 @@
 let gamesData = [];
 let currentPage = 1;
-const itemsPerPage = 12;
+const itemsPerPage = 25;
 let filteredGames = [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
