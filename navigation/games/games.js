@@ -1,12 +1,12 @@
 let gamesData = [];
 let currentPage = 1;
-const itemsPerPage = 25;
+const itemsPerPage = 24;
 let filteredGames = [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 async function fetchGames() {
   try {
-    const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@cbaf9f5/navigation/games/games.json");
+    const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@a40e93a/navigation/games/games.json");
     gamesData = await response.json();
     filteredGames = [...gamesData];
     renderPage();
