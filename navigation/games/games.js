@@ -6,7 +6,7 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 async function fetchGames() {
   try {
-    const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@827e8c1/navigation/games/games.json");
+    const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@cbaf9f5/navigation/games/games.json");
     gamesData = await response.json();
     filteredGames = [...gamesData];
     renderPage();
