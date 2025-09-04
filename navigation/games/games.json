@@ -14,6 +14,42 @@
     "mode": "A"
   },
   {
+    "title": "Alien Hominid",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/alien_hominid.jpg",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/alien_hominid/index.html",
+  "category": ["2D", "Flash", "Shooter", "Platformer"]
+  },
+  {
+    "title": "Among Us",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/among_us.webp",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/among_us.html",
+  "category": ["2D", "New", "Multi Player"]
+  },
+  {
+    "title": "Appel",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/appel.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/appel.html",
+  "category": ["2D", "Multi Player", "Platformer"]
+  },
+  {
+    "title": "Arrow Gaem",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/arrow_gaem.jpg",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/arrow_gaem/index.html",
+  "category": ["2D", "Rhythm", "Platformer"]
+  },
+  {
+    "title": "Asteroids",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/asteroids.webp",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/asteroids/index.html",
+  "category": ["2D", "Retro", "Shooter"]
+  },
+  {
+    "title": "Bad Piggies",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/bad_piggies.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/bad_piggies/index.html",
+  "category": ["2D", "Flash", "Puzzle", "Mobile", "Platformer"]
+  },
+  {
     "title": "Basket Bros",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/basketbros.jpg",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/basketbros.html",
@@ -30,6 +66,24 @@
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/blockblast.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/block_blast.html",
   "category": ["Popular", "2D", "One Button", "Puzzle", "Mobile"]
+  },
+  {
+    "title": "Bloons TD 1",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/bloons_td_1.svg",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@latest/flash/bloons_td_1/index.html",
+  "category": ["Popular", "2D", "Tower Defence", "Flash"]
+  },
+  {
+    "title": "Bloons TD 2",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/bloons_td_2.webp",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@latest/flash/bloons_td_2/index.html",
+  "category": ["Popular", "2D", "Tower Defence", "Flash"]
+  },
+  {
+    "title": "Bloons TD 3",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/bloons_td_3.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@latest/flash/bloons_td_3/index.html",
+  "category": ["Popular", "2D", "Tower Defence", "Flash"]
   },
   {
     "title": "Bloons TD 4",
