@@ -516,7 +516,7 @@
     {
         "title": "Papa’s Bakeria",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/papa's_bakeria.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/papa's_bakeria/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/papa\'s_bakeria/index.html",
         "category": [
             "2D",
             "Flash"
@@ -525,7 +525,7 @@
     {
         "title": "Papa’s Burgeria",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/papa's_burgeria.jfif",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/papa's_burgeria/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/papa\'s_burgeria/index.html",
         "category": [
             "2D",
             "Flash"
@@ -534,7 +534,7 @@
     {
         "title": "Papa’s Cheeseria",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/papa's_cheeseria.jpg",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/papa's_cheeseria/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/papa\'s_cheeseria/index.html",
         "category": [
             "2D",
             "Flash"
@@ -543,7 +543,7 @@
     {
         "title": "Papa’s Cupcakeria",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/papa's_cupcakeria.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/papa's_cupcakeria/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/papa\'s_cupcakeria/index.html",
         "category": [
             "2D",
             "Flash"

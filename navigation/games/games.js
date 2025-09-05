@@ -6,7 +6,7 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 async function fetchGames() {
   try {
-    const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@a40e93a/navigation/games/games.json");
+    const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f8cb33d/navigation/games/games.json");
     gamesData = await response.json();
     filteredGames = [...gamesData];
     renderPage();
@@ -42,7 +42,7 @@ function renderPage() {
       </button>
       <p class="game-title">
         ${game.title}
-        <span class="favorite-icon" onclick="toggleFavorite('${game.title}')">${star}</span>
+<span class="favorite-icon" onclick="toggleFavorite(decodeURIComponent('${encodeURIComponent(game.title)}'))">${star}</span>
       </p>
     `;
 
