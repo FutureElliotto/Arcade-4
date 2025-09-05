@@ -716,6 +716,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/raft_wars/index.html",
         "category": [
             "2D",
+            "New",
             "Flash"
         ]
     },
@@ -725,15 +726,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/raft_wars_2/index.html",
         "category": [
             "2D",
-            "Flash"
-        ]
-    },
-    {
-        "title": "Raft Wars 2",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/raft_wars_2.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/raft_wars_2/index.html",
-        "category": [
-            "2D",
+            "New",
             "Flash"
         ]
     },
@@ -830,10 +823,11 @@
     {
         "title": "Run 3 Flash",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/run_3_flash.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/run_3_flash/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/flash/run_3_flash/index.html",
         "category": [
             "3D",
             "Platformer",
+            "New",
             "Flash"
         ]
     },
@@ -843,6 +837,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/run_3_scratch.html",
         "category": [
             "3D",
+            "New",
             "Platformer"
         ]
     },
@@ -907,7 +902,7 @@
     {
         "title": "Stickman Hook",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/stickmanhook.jpg",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/stickmanhook.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/stickman_hook.html",
         "category": [
             "2D",
             "One Button",
@@ -936,7 +931,7 @@
     },
     {
         "title": "Tetris",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/tetris.jpg",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/tetris.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/tetris.html",
         "category": [
             "2D",
@@ -947,7 +942,7 @@
     {
         "title": "The World's Hardest Game",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/worlds_hardest_game.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/worlds_hardest_game/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/world's_hardest_game/index.html",
         "category": [
             "2D",
             "Flash",
@@ -1033,6 +1028,8 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/vex_8/index.html",
         "category": [
             "2D",
+            "Popular",
+            "New",
             "Platformer"
         ],
         "mode": "A"
