@@ -15,7 +15,6 @@
         "category": [
             "Popular",
             "2D",
-            "One Button",
             "Puzzle",
             "Mobile"
         ],
@@ -58,8 +57,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/arrow_gaem.html",
         "category": [
             "2D",
-            "Rhythm",
-            "Platformer"
+            "Rhythm"
         ]
     },
     {
@@ -317,7 +315,7 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fruitninja.jpg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/fruitninja.html",
         "category": [
-            "2D",
+            "3D",
             "One Button",
             "Mobile"
         ],
@@ -408,7 +406,7 @@
     {
         "title": "Learn To fly 2",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/learn_to_fly_2.jpg",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@latest/flash/learn_to_fly_2/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@ab74359/flash/learn_to_fly_2/index.html",
         "category": [
             "2D",
             "New",
@@ -850,6 +848,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/run_3_turbowarp.html",
         "category": [
             "3D",
+            "New",
             "Platformer"
         ]
     },
@@ -1042,6 +1041,7 @@
         "category": [
             "2D",
             "Flash",
+            "Sports",
             "Puzzle"
         ]
     },
