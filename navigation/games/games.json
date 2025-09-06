@@ -399,6 +399,7 @@
         "category": [
             "2D",
             "Puzzle",
+            "New",
             "Flash",
             "Platformer"
         ],
@@ -407,9 +408,10 @@
     {
         "title": "Learn To fly 2",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/learn_to_fly_2.jpg",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/learn_to_fly_2/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/flash/learn_to_fly_2/index.html",
         "category": [
             "2D",
+            "New",
             "Puzzle",
             "Flash",
             "Platformer"
@@ -423,6 +425,7 @@
         "category": [
             "2D",
             "Puzzle",
+            "New",
             "Flash",
             "Platformer"
         ],
@@ -876,7 +879,6 @@
         "category": [
             "Popular",
             "3D",
-            "One Button",
             "Platformer"
         ],
         "mode": "A"
@@ -967,8 +969,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/tunnelrush.html",
         "category": [
             "Popular",
-            "3D",
-            "One Button"
+            "3D"
         ],
         "mode": "A"
     },
@@ -1036,7 +1037,7 @@
     },
     {
         "title": "Wonderputt",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wonderputt.png",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/Wonderputt.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wonderputt/index.html",
         "category": [
             "2D",
