@@ -1,21 +1,23 @@
-let gamesData = [];
+let appsData = [];
 let currentPage = 1;
 const itemsPerPage = 24;
 let filteredGames = [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-async function fetchApps() {
+async function fetchGames() {
   try {
-    const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@4de13c0/navigation/games/games.json");
-    gamesData = await response.json();
-    filteredGames = [...gamesData];
-    renderApps();
+    const response = await fetch(
+      "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f50fae4/navigation/games/apps.json"
+    );
+    appsData = await response.json();
+    filteredGames = [...appsData];
+    renderPage();
   } catch (error) {
     console.error("Failed to load games data:", error);
   }
 }
 
-function renderApps() {
+function renderPage() {
   const container = document.getElementById("gameButtons");
   container.innerHTML = "";
 
@@ -36,9 +38,25 @@ function renderApps() {
     const isFavorite = favorites.includes(game.title);
     const star = isFavorite ? "⭐" : "☆";
 
+    // Build onclick string dynamically
+    let onclickCall = "";
+    if (Array.isArray(game.functions)) {
+      // If multiple functions, add them all
+      onclickCall = game.functions
+        .map((fn) => {
+          const params = fn.params.map((p) => `'${p}'`).join(",");
+          return `${fn.name}(${params})`;
+        })
+        .join(";");
+    } else {
+      // Fallback → default behavior if no custom functions
+      onclickCall = `handleGameClick('${game.url}', '${game.mode}')`;
+    }
+
+    // Create button with fully dynamic onclick
     gameItem.innerHTML = `
-      <button onclick="handleAppClick('${game.url}', '${game.mode}')" aria-label="${game.title}">
-        <img src="${game.image}" alt="${game.title}">
+      <button onclick="${onclickCall}" aria-label="${game.title}">
+        <img src="${game.image}" alt="${game.title}" loading="lazy">
       </button>
       <p class="game-title">
         ${game.title}
@@ -49,7 +67,7 @@ function renderApps() {
     container.appendChild(gameItem);
   });
 
-  renderPaginationControlsApps();
+  renderPaginationControls();
 }
 
 function applyFilters() {
@@ -57,7 +75,7 @@ function applyFilters() {
   const selectedCategory = document.getElementById("categorySelect").value;
   const showFavorites = document.getElementById("showFavorites").checked;
 
-  filteredGames = gamesData.filter((game) => {
+  filteredGames = appsData.filter((game) => {
     const matchSearch = game.title.toLowerCase().includes(searchTerm);
     const matchCategory =
       selectedCategory === "All" ||
@@ -68,10 +86,10 @@ function applyFilters() {
   });
 
   currentPage = 1;
-  renderApps();
+  renderPage();
 }
 
-function renderPaginationControlsApps() {
+function renderPaginationControls() {
   const totalPages = Math.ceil(filteredGames.length / itemsPerPage);
   const pagination = document.getElementById("paginationControls");
   pagination.innerHTML = "";
@@ -84,11 +102,12 @@ function renderPaginationControlsApps() {
     }
     btn.onclick = () => {
       currentPage = i;
-      renderApps();
+      renderPage();
     };
     pagination.appendChild(btn);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function toggleFavorite(title) {
@@ -98,10 +117,12 @@ function toggleFavorite(title) {
     favorites.push(title);
   }
   localStorage.setItem("favorites", JSON.stringify(favorites));
-  renderApps();
+  renderPage();
 }
 
-function handleAppClick(url, mode) {
+/* === FUNCTIONS YOU CAN CALL DYNAMICALLY === */
+function handleGameClick(url, mode) {
+  console.log(`🎮 Opening ${url} in mode ${mode}`);
   if (mode === "A") {
     loadBlobContent(url);
   } else if (mode === "B") {
@@ -112,4 +133,17 @@ function handleAppClick(url, mode) {
   }
 }
 
-window.onload = fetchApps;
+function appendScript(scriptUrl) {
+  const existingScript = document.querySelector(`script[src="${scriptUrl}"]`);
+  if (!existingScript) {
+    const script = document.createElement("script");
+    script.src = scriptUrl;
+    script.defer = true;
+    document.body.appendChild(script);
+    console.log(`📜 Script loaded: ${scriptUrl}`);
+  } else {
+    console.log(`⚠️ Script already loaded: ${scriptUrl}`);
+  }
+}
+
+window.onload = fetchGames;
