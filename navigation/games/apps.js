@@ -1,4 +1,4 @@
-let gamesData = [];
+let appsData = [];
 let currentPage = 1;
 const itemsPerPage = 24;
 let filteredGames = [];
@@ -7,8 +7,8 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 async function fetchGames() {
   try {
     const response = await fetch("https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/apps.json");
-    gamesData = await response.json();
-    filteredGames = [...gamesData];
+    appsData = await response.json();
+    filteredGames = [...appsData];
     renderPage();
   } catch (error) {
     console.error("Failed to load games data:", error);
@@ -81,7 +81,7 @@ function applyFilters() {
   const selectedCategory = document.getElementById("categorySelect").value;
   const showFavorites = document.getElementById("showFavorites").checked;
 
-  filteredGames = gamesData.filter((game) => {
+  filteredGames = appsData.filter((game) => {
     const matchSearch = game.title.toLowerCase().includes(searchTerm);
     const matchCategory =
       selectedCategory === "All" ||
