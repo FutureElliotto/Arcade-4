@@ -1,118 +1,117 @@
 let appsData = [];
 let currentPage = 1;
 const itemsPerPage = 24;
-let filteredApps = [];
+let filteredGames = [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-// === Fetch JSON ===
-async function fetchApps() {
+async function fetchGames() {
   try {
     const response = await fetch(
       "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f50fae4/navigation/games/apps.json"
     );
     appsData = await response.json();
-    filteredApps = [...appsData];
-    renderAppsPage();
+    filteredGames = [...appsData];
+    renderPage();
   } catch (error) {
-    console.error("Failed to load apps data:", error);
+    console.error("Failed to load games data:", error);
   }
 }
 
-// === Render Page ===
-function renderAppsPage() {
+function renderPage() {
   const container = document.getElementById("gameButtons");
   container.innerHTML = "";
 
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
-  const appsToDisplay = filteredApps.slice(start, end);
+  const gamesToDisplay = filteredGames.slice(start, end);
 
-  if (appsToDisplay.length === 0) {
-    container.innerHTML = "<p>No apps found.</p>";
+  if (gamesToDisplay.length === 0) {
+    container.innerHTML = "<p>No games found.</p>";
     document.getElementById("paginationControls").innerHTML = "";
     return;
   }
 
-  appsToDisplay.forEach((app) => {
-    const appItem = document.createElement("div");
-    appItem.className = "game-button";
-
-    const isFavorite = favorites.includes(app.title);
+  gamesToDisplay.forEach((game) => {
+    const isFavorite = favorites.includes(game.title);
     const star = isFavorite ? "⭐" : "☆";
 
-    // === Handle Dynamic Functions ===
-    let onclickCall = "";
-    if (Array.isArray(app.functions)) {
-      onclickCall = app.functions
-        .map((fn) => {
-          const params = fn.params.map((p) => `'${p}'`).join(",");
-          return `${fn.name}(${params})`;
+    // Generate the dynamic onclick call string for functions
+    let dynamicFunctions = "";
+    if (Array.isArray(game.functions)) {
+      dynamicFunctions = game.functions
+        .map((fnObj) => {
+          if (fnObj && typeof fnObj.name === "string") {
+            const params = (fnObj.params || [])
+              .map((p) => (typeof p === "string" ? `'${p.replace(/'/g, "\\'")}'` : p))
+              .join(",");
+            return `try{window['${fnObj.name}'](${params})}catch(e){console.error(e)}`;
+          }
+          return "";
         })
+        .filter(Boolean)
         .join(";");
-    } else {
-      onclickCall = `handleGameClick('${app.url}', '${app.mode}')`;
     }
 
-    // === Build Button + Title ===
-    appItem.innerHTML = `
-      <button onclick="${onclickCall}" aria-label="${app.title}">
-        <img src="${app.image}" alt="${app.title}" loading="lazy">
+    // Build HTML for each game
+    const gameItem = document.createElement("div");
+    gameItem.className = "game-button";
+    gameItem.innerHTML = `
+      <button aria-label="${game.title}" onclick="${dynamicFunctions}">
+        <img src="${game.image}" alt="${game.title}" loading="lazy">
       </button>
       <p class="game-title">
-        ${app.title}
-        <span class="favorite-icon" onclick="toggleFavorite('${app.title}')">${star}</span>
+        ${game.title}
+        <span class="favorite-icon" data-title="${game.title}" onclick="toggleFavorite('${game.title}')">
+          ${star}
+        </span>
       </p>
     `;
-
-    container.appendChild(appItem);
+    container.appendChild(gameItem);
   });
 
   renderPaginationControls();
 }
 
-// === Apply Filters ===
-function applyFiltersApps() {
+function applyFilters() {
   const searchTerm = document.getElementById("searchBar").value.toLowerCase();
   const selectedCategory = document.getElementById("categorySelect").value;
   const showFavorites = document.getElementById("showFavorites").checked;
 
-  filteredApps = appsData.filter((app) => {
-    const matchSearch = app.title.toLowerCase().includes(searchTerm);
+  filteredGames = appsData.filter((game) => {
+    const matchSearch = game.title.toLowerCase().includes(searchTerm);
     const matchCategory =
       selectedCategory === "All" ||
-      (Array.isArray(app.category) && app.category.includes(selectedCategory)) ||
-      app.category === selectedCategory;
-    const matchFavorite = !showFavorites || favorites.includes(app.title);
+      (Array.isArray(game.category) && game.category.includes(selectedCategory)) ||
+      game.category === selectedCategory;
+    const matchFavorite = !showFavorites || favorites.includes(game.title);
     return matchSearch && matchCategory && matchFavorite;
   });
 
   currentPage = 1;
-  renderAppsPage();
+  renderPage();
 }
 
-// === Render Pagination ===
 function renderPaginationControls() {
-  const totalPages = Math.ceil(filteredApps.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredGames.length / itemsPerPage);
   const pagination = document.getElementById("paginationControls");
   pagination.innerHTML = "";
 
   for (let i = 1; i <= totalPages; i++) {
-    const btn = document.createElement("button");
-    btn.textContent = i;
-    if (i === currentPage) {
-      btn.classList.add("active-page");
-    }
-    btn.onclick = () => {
-      currentPage = i;
-      renderAppsPage();
-    };
-    pagination.appendChild(btn);
+    pagination.innerHTML += `
+      <button class="${i === currentPage ? "active-page" : ""}" onclick="changePage(${i})">
+        ${i}
+      </button>
+    `;
   }
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// === Toggle Favorites ===
+function changePage(page) {
+  currentPage = page;
+  renderPage();
+}
+
 function toggleFavorite(title) {
   if (favorites.includes(title)) {
     favorites = favorites.filter((fav) => fav !== title);
@@ -120,10 +119,11 @@ function toggleFavorite(title) {
     favorites.push(title);
   }
   localStorage.setItem("favorites", JSON.stringify(favorites));
-  renderAppsPage();
+  renderPage();
 }
 
-function handleAppClick(url, mode) {
+/* === FUNCTIONS YOU CAN CALL DYNAMICALLY === */
+function handleGameClick(url, mode) {
   console.log(`🎮 Opening ${url} in mode ${mode}`);
   if (mode === "A") {
     loadBlobContent(url);
@@ -135,4 +135,4 @@ function handleAppClick(url, mode) {
   }
 }
 
-window.onload = fetchApps;
+window.onload = fetchGames;
