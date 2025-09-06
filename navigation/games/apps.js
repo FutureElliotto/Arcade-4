@@ -1,7 +1,7 @@
 let appsData = [];
-let currentPage = 1;
-const itemsPerPage = 24;
-let filteredGames = [];
+let currentPage_apps = 1;
+const itemsPerPage_apps = 24;
+let filteredApps = [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 async function fetchGames() {
@@ -10,7 +10,7 @@ async function fetchGames() {
       "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f50fae4/navigation/games/apps.json"
     );
     appsData = await response.json();
-    filteredGames = [...appsData];
+    filteredApps = [...appsData];
     renderPage();
   } catch (error) {
     console.error("Failed to load games data:", error);
@@ -21,12 +21,12 @@ function renderPage() {
   const container = document.getElementById("gameButtons");
   container.innerHTML = "";
 
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const gamesToDisplay = filteredGames.slice(start, end);
+  const start = (currentPage_apps - 1) * itemsPerPage_apps;
+  const end = start + itemsPerPage_apps;
+  const gamesToDisplay = filteredApps.slice(start, end);
 
   if (gamesToDisplay.length === 0) {
-    container.innerHTML = "<p>No games found.</p>";
+    container.innerHTML = "<p>No apps found.</p>";
     document.getElementById("paginationControls").innerHTML = "";
     return;
   }
@@ -77,7 +77,7 @@ function applyFilters() {
   const selectedCategory = document.getElementById("categorySelect").value;
   const showFavorites = document.getElementById("showFavorites").checked;
 
-  filteredGames = appsData.filter((game) => {
+  filteredApps = appsData.filter((game) => {
     const matchSearch = game.title.toLowerCase().includes(searchTerm);
     const matchCategory =
       selectedCategory === "All" ||
@@ -87,18 +87,18 @@ function applyFilters() {
     return matchSearch && matchCategory && matchFavorite;
   });
 
-  currentPage = 1;
+  currentPage_apps = 1;
   renderPage();
 }
 
 function renderPaginationControls() {
-  const totalPages = Math.ceil(filteredGames.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredApps.length / itemsPerPage_apps);
   const pagination = document.getElementById("paginationControls");
   pagination.innerHTML = "";
 
   for (let i = 1; i <= totalPages; i++) {
     pagination.innerHTML += `
-      <button class="${i === currentPage ? "active-page" : ""}" onclick="changePage(${i})">
+      <button class="${i === currentPage_apps ? "active-page" : ""}" onclick="changePage(${i})">
         ${i}
       </button>
     `;
@@ -108,7 +108,7 @@ function renderPaginationControls() {
 }
 
 function changePage(page) {
-  currentPage = page;
+  currentPage_apps = page;
   renderPage();
 }
 
