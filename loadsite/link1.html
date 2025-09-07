@@ -24,56 +24,67 @@
             win.document.head.innerHTML = `
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Arcade 4</title>
                 <!-- Google Fonts -->
                 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@7434437/navigation/style.css">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/style.css">
             `;
 
             // Insert body content with navigation and container
             win.document.body.innerHTML = `
-<!-- Navigation Bar -->
 <ul class="navbar">
+  <!-- Home -->
   <li>
-    <a class="active" aria-label="Home"
-       onclick="loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@49367e7/navigation/home.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/customization.js');">
+    <a aria-label="Home"
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/home.html', () => {
+         appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/home.js', () => {
+           if (typeof displayRandomQuote === 'function') {
+             displayRandomQuote();
+           }
+         });
+         appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/customization.js');
+       });">
       Home
     </a>
   </li>
 
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn" aria-label="Games Dropdown">Games</a>
-    <div class="dropdown-content">
-      <a aria-label="All Games"
-         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@11f140b/navigation/games/all.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/customization.js');">
-         All Games
-      </a>
-      <a aria-label="Popular Games"
-         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@c46ffc1/navigation/games/popular.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/customization.js');">
-         Popular Games
-      </a>
-      <a aria-label="New Games"
-         onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@dbbeabe/navigation/games/new.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/customization.js');">
-         New Games
-      </a>
-    </div>
+  <!-- Games -->
+  <li>
+    <a aria-label="Games"
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/games/games.html', () => {
+         appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/games/games.js', () => {
+           if (typeof fetchGames === 'function') {
+             fetchGames('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/games/games.json');
+           }
+         });
+         appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/customization.js');
+       });">
+      Games
+    </a>
   </li>
 
+  <!-- Apps -->
   <li>
     <a aria-label="Apps"
-       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@2a156d1/navigation/games/apps.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1.1/navigation/search.js'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/customization.js');">
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/games/apps.html', () => {
+         appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/games/games.js', () => {
+           if (typeof fetchGames === 'function') {
+             fetchGames('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/games/apps.json');
+           }
+         });
+         appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f4140cf/navigation/customization.js');
+       });">
       Apps
     </a>
   </li>
 
+  <!-- Settings -->
   <li>
     <a aria-label="Settings"
-       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/customization.js');">
+       onclick="changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/settings.html'); appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/customization.js');">
       Settings
     </a>
   </li>
-
   <li>
     <a aria-label="Fullscreen" onclick="triggerFullscreen()">Fullscreen</a>
   </li>
@@ -177,32 +188,45 @@ function triggerFullscreen() {
 
 
                 // Function to change page content and update the active link
-                function changePageContent(url) {
-                    loadPageContent(url, function(content) {
-                        document.getElementById('content-container').innerHTML = content;
-                          const iframe = document.getElementById("Game");
-                          iframe.src = "about:blank";
-                    });
-                    updateActiveLink(url);
-                    const iframe = document.getElementById("Game");
-                    iframe.style.display = "none"; // Hide the iframe
-                    const contentContainer = document.getElementById('content-container');
-                    contentContainer.style.display = 'block'; // Show content-container
-                }
+function changePageContent(url, callback = null) {
+    loadPageContent(url, function(content) {
+        const container = document.getElementById('content-container');
+        container.innerHTML = content;
+        const iframe = document.getElementById("Game");
+        iframe.src = "about:blank";
+        if (callback) callback();  // Run any extra logic after content is loaded
+    });
+    updateActiveLink(url);
+    const iframe = document.getElementById("Game");
+    iframe.style.display = "none"; // Hide the iframe
+    const contentContainer = document.getElementById('content-container');
+    contentContainer.style.display = 'block'; // Show content-container
+}
+
 
                 // Function to append external JavaScript files
-                function appendScript(url) {
-                    const script = document.createElement('script');
-                    script.src = url;
-                    script.type = 'text/javascript';
-                    script.onload = () => {
-                        console.log(\`Script loaded from \${url}\`);
-                    };
-                    script.onerror = () => {
-                        console.error(\`Failed to load script from \${url}\`);
-                    };
-                    document.body.appendChild(script);
-                }
+function appendScript(url, callback = null) {
+  const script = document.createElement('script');
+  script.src = url;
+  script.type = 'text/javascript';
+  script.onload = () => {
+    if (callback) callback();
+  };
+  script.onerror = () => {
+  };
+  document.body.appendChild(script);
+}
+
+function loadGamesmenu() {
+    changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@48a3831/navigation/games/games.html', () => {
+        appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@48a3831/navigation/games/games.js', () => {
+            if (typeof fetchGames === 'function') {
+                fetchGames(); 
+            }
+        });
+        appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/customization.js');
+    });
+}
 
                 // Update active link based on URL
                 function updateActiveLink(url) {
@@ -217,10 +241,22 @@ function triggerFullscreen() {
                     }
 
                 }
-loadBlobContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@49367e7/navigation/home.html');
-appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@1e4c3f0/navigation/customization.js');
-if (localStorage.getItem("yourItem") == null) {
+changePageContent('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/home.html', () => {
+         appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/home.js', () => {
+           if (typeof displayRandomQuote === 'function') {
+             displayRandomQuote();
+           }
+         });
+         appendScript('https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@56cac32/navigation/customization.js');
+       });
+if (localStorage.getItem("faviconSrc") == null) {
     localStorage.setItem('faviconSrc', 'https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/logo.png');
+}
+if (localStorage.getItem("pageTitle") == null) {
+    localStorage.setItem('pageTitle', 'Arcade 4');
+}
+if (localStorage.getItem("userFont") == null) {
+    localStorage.setItem('userFont', 'Pixelify Sans');
 }
 
             `;
