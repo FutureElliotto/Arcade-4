@@ -35,8 +35,8 @@
         "I miss the cheese chain",
         "Deltarune Tomorrow",
         "Cow tools",
-        "Your sister knows"
-        "Grammy warned you not to talk to the wind, but you went ahead and talked to the wind, didn't you? Grammy warned you!"
+        "Your sister knows",
+        "Grammy warned you not to talk to the wind, but you went ahead and talked to the wind, didn't you? Grammy warned you!",
         "SEE HOW THE SERFS WORK THE GROUND"
     ];
 
