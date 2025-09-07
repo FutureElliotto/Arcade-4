@@ -28,12 +28,56 @@ function renderPage() {
   const end = start + itemsPerPage;
   const gamesToDisplay = filteredGames.slice(start, end);
 
+  // ✅ If no games found, reset page count to 1 and stop rendering pagination
   if (gamesToDisplay.length === 0) {
-    container.innerHTML = "<p>No games found.</p>";
-    document.getElementById("paginationControls").innerHTML = "";
+    currentPage = 1; // <-- Reset page count
+    const freshGames = filteredGames.slice(0, itemsPerPage);
+
+    if (freshGames.length === 0) {
+      // ✅ Still no games at all → show message
+      container.innerHTML = "<p>No games found.</p>";
+      document.getElementById("paginationControls").innerHTML = "";
+      return;
+    }
+
+    // ✅ If there ARE games on the first page, render them
+    freshGames.forEach((game) => {
+      const gameItem = document.createElement("div");
+      gameItem.className = "game-button";
+
+      const isFavorite = favorites.includes(game.title);
+      const star = isFavorite ? "⭐" : "☆";
+
+      let onclickCall = "";
+      if (Array.isArray(game.functions)) {
+        onclickCall = game.functions
+          .map((fn) => {
+            const params = fn.params.map((p) => `'${p}'`).join(",");
+            return `${fn.name}(${params})`;
+          })
+          .join(";");
+      } else {
+        onclickCall = `handleGameClick('${game.url}', '${game.mode}')`;
+      }
+
+      gameItem.innerHTML = `
+        <button onclick="${onclickCall}" aria-label="${game.title}">
+          <img src="${game.image}" alt="${game.title}" loading="lazy">
+        </button>
+        <p class="game-title">
+          ${game.title}
+          <span class="favorite-icon" onclick="toggleFavorite('${game.title}')">${star}</span>
+        </p>
+      `;
+
+      container.appendChild(gameItem);
+    });
+
+    renderPaginationControls();
     return;
   }
 
+  // ✅ Normal rendering if games exist on the current page
   gamesToDisplay.forEach((game) => {
     const gameItem = document.createElement("div");
     gameItem.className = "game-button";
@@ -41,10 +85,8 @@ function renderPage() {
     const isFavorite = favorites.includes(game.title);
     const star = isFavorite ? "⭐" : "☆";
 
-    // Build the onclick attribute dynamically
     let onclickCall = "";
     if (Array.isArray(game.functions)) {
-      // Multiple custom functions from JSON
       onclickCall = game.functions
         .map((fn) => {
           const params = fn.params.map((p) => `'${p}'`).join(",");
@@ -52,7 +94,6 @@ function renderPage() {
         })
         .join(";");
     } else {
-      // Fallback: default behavior
       onclickCall = `handleGameClick('${game.url}', '${game.mode}')`;
     }
 
