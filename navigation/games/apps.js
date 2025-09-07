@@ -131,4 +131,4 @@ function handleGameClick(url, mode) {
   }
 }
 
-window.onload = fetchGames;
+window.onload = fetchApps;
