@@ -29,7 +29,7 @@ function renderPage() {
   const gamesToDisplay = filteredGames.slice(start, end);
 
   if (gamesToDisplay.length === 0) {
-    container.innerHTML = "<p>No apps found.</p>";
+    container.innerHTML = "<p>No games found :(.</p>";
     document.getElementById("paginationControls").innerHTML = "";
     return;
   }
