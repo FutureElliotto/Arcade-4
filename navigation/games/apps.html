@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Title</title>
+    <title>Apps</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
+
+    <style>
+        /* Hides the dropdown completely */
+        #categorySelect {
+            display: none;
+        }
+    </style>
 </head>
 
-<!-- Set the JSON URL here -->
 <body data-json="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f50fae4/navigation/games/apps.json">
 
     <!-- Search -->
@@ -20,17 +26,38 @@
         <input type="text" id="searchBar" placeholder="Search games..." oninput="applyFilters()">
     </div>
 
-        <label style="margin-left: 15px;">
-            <input type="checkbox" id="showFavorites" onchange="applyFilters()"> Show Favorites Only
-        </label>
-    </div>
+    <label style="margin-left: 15px;">
+        <input type="checkbox" id="showFavorites" onchange="applyFilters()"> Show Favorites Only
+    </label>
 
+    <!-- Category + Favorites Filter -->
+    <div class="category-container">
+        <select id="categorySelect" onchange="applyFilters()">
+            <option value="All">All</option>
+            <option value="Popular">Popular</option>
+            <option value="New">New</option>
+            <option value="2D">2D</option>
+            <option value="3D">3D</option>
+            <option value="Flash">Flash</option>
+            <option value="Idle">Idle</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Multi Player">Multi Player</option>
+            <option value="One Button">One Button</option>
+            <option value="Platformer">Platformer</option>
+            <option value="Puzzle">Puzzle</option>
+            <option value="Retro">Retro</option>
+            <option value="Rhythm">Rhythm</option>
+            <option value="Shooter">Shooter</option>
+            <option value="Sports">Sports</option>
+            <option value="Tower Defence">Tower Defence</option>
+        </select>
+    </div>
+    
     <!-- Game Cards -->
     <div id="gameButtons" class="game-buttons-container"></div>
 
     <!-- Pagination Controls -->
     <div class="pagination" id="paginationControls"></div>
-
 
 </body>
 </html>
