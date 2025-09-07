@@ -5,7 +5,7 @@
         "Whatever",
         "Etc.",
         "egassem sdrawkcab.",
-        "retsis ym tib ecno esoom A .esoom citsejam eht gnidulcnI ,slamina yrruf gnitseretni inam dnA metsys enohpelet lufrednow eht,sekal ilevol eht ees dna rey siht nedeewS ni yadiloh a iert ton iW.",
+        "retsis ym tib ecno esoom A .esoom citsejam eht gnidulcnI ,slamina yrruf gnitseretni inam dnA ,metsys enohpelet lufrednow ehT ,sekal ilevol eht eeS ?rey siht nedeewS ni yadiloh a iert ton iW",
         "LOL",
         "You got games on your phone?",
         "Teeth are just tiny hardened bats sleeping upside down.",
@@ -15,12 +15,12 @@
         "WE MUST SURVIVE.",
         "Build a better mousetrap and get smarter mice.",
         "Block one site and two more shall take its place.",
-        "Lorem ipsum dolor sit amet, adipiscing consequat adipiscing sit amet. In tortor dolor, sollicitudin quis urna vitae, rutrum selecrelico dolor. Ut facilisis ornare lacus, ut dictum felis aliquam ut. Omnino interdum fit cum cura. Non est aequum, non solum, sed nec refert quis sit terra. Sed vestibulum a tellus non semper. Aliquam a neque euismod dolor dapibus aliquet ultricies ut nibh. Sed eget auctor ante. Aliquam dictum volutpat vestibulum. Putasti ovum paschale futurum. Nullo modo",
+        "Lorem ipsum dolor sit amet, adipiscing consequat adipiscing sit amet...",
         "check steam",
         "We are all E G G",
         "Cephalopod Conundrums",
         "SOMETHING WONDERFUL HAS HAPPNED",
-        "herding cats",
+        "Me when get",
         "As seen on TV!",
         "Kind of dragon free!",
         "One of a kind!",
@@ -33,7 +33,11 @@
         "Cogito ergo sum!",
         "and then a skeleton popped out!",
         "I miss the cheese chain",
-        "Cow Tools!",
+        "Deltarune Tomorrow",
+        "Cow tools",
+        "Your sister knows"
+        "Grammy warned you not to talk to the wind, but you went ahead and talked to the wind, didn't you? Grammy warned you!"
+        "SEE HOW THE SERFS WORK THE GROUND"
     ];
 
     // Function to display a random quote
