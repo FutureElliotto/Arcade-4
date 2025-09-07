@@ -9,25 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet">
-
-    <style>
-        /* Hides the dropdown completely */
-        #categorySelect {
-            display: none;
-        }
-    </style>
 </head>
-
-<body data-json="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f50fae4/navigation/games/apps.json">
+<body>
 
     <!-- Search -->
     <div class="search-container">
         <input type="text" id="searchBar" placeholder="Search games..." oninput="applyFilters()">
     </div>
-
-    <label style="margin-left: 15px;">
-        <input type="checkbox" id="showFavorites" onchange="applyFilters()"> Show Favorites Only
-    </label>
 
     <!-- Category + Favorites Filter -->
     <div class="category-container">
@@ -50,8 +38,12 @@
             <option value="Sports">Sports</option>
             <option value="Tower Defence">Tower Defence</option>
         </select>
+
+        <label style="margin-left: 15px;">
+            <input type="checkbox" id="showFavorites" onchange="applyFilters()"> Show Favorites Only
+        </label>
     </div>
-    
+
     <!-- Game Cards -->
     <div id="gameButtons" class="game-buttons-container"></div>
 

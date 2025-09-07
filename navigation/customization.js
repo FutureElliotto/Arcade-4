@@ -57,6 +57,7 @@ function changeTextColor(color) {
   const oldStyle = document.getElementById('normal-text-style');
   if (oldStyle) oldStyle.remove();
 
+  // Create new style for normal text + pagination + paragraphs
   const style = document.createElement('style');
   style.id = 'normal-text-style';
   style.innerHTML = `
@@ -64,13 +65,34 @@ function changeTextColor(color) {
     select,
     li a:not(.active),
     #searchBar:not(:focus),
-    .game-title {
+    .game-title,
+    p,
+    .pagination button {
       color: ${color} !important;
     }
   `;
   document.head.appendChild(style);
+
+  // Dynamically update outlines ONLY if they are not transparent or none
+  document.querySelectorAll('*').forEach(el => {
+    const computedStyle = window.getComputedStyle(el);
+    const outlineColor = computedStyle.outlineColor;
+    const outlineStyle = computedStyle.outlineStyle;
+
+    // Check if outline exists and is not transparent or "none"
+    if (
+      outlineStyle !== 'none' &&
+      outlineColor !== 'rgba(0, 0, 0, 0)' && // transparent
+      outlineColor !== 'transparent'
+    ) {
+      el.style.outlineColor = color;
+    }
+  });
+
+  // Save to localStorage for persistence
   localStorage.setItem('textColor', color);
 }
+
 
 
 function changeSelectedTextColor(color) {
