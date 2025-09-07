@@ -10,61 +10,64 @@ async function fetchApps() {
       "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f50fae4/navigation/games/apps.json"
     );
     appsData = await response.json();
-    filteredApps = [...appsData];
-    renderAppsPage();
+    filteredGames = [...appsData];
+    renderPage();
   } catch (error) {
-    console.error("Failed to load apps data:", error);
+    console.error("Failed to load games data:", error);
   }
 }
 
-function renderAppsPage() {
-  const container = document.getElementById("appsContainer");
+function renderPage() {
+  const container = document.getElementById("gameButtons");
   container.innerHTML = "";
 
-  const start = (currentAppsPage - 1) * appsPerPage;
-  const end = start + appsPerPage;
-  const appsToDisplay = filteredApps.slice(start, end);
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const gamesToDisplay = filteredGames.slice(start, end);
 
-  if (appsToDisplay.length === 0) {
+  if (gamesToDisplay.length === 0) {
     container.innerHTML = "<p>No apps found.</p>";
-    document.getElementById("appsPagination").innerHTML = "";
+    document.getElementById("paginationControls").innerHTML = "";
     return;
   }
 
-  appsToDisplay.forEach((app) => {
-    const appItem = document.createElement("div");
-    appItem.className = "game-button";
+  gamesToDisplay.forEach((game) => {
+    const gameItem = document.createElement("div");
+    gameItem.className = "game-button";
 
-    const isFavorite = appFavorites.includes(app.title);
+    const isFavorite = favorites.includes(game.title);
     const star = isFavorite ? "⭐" : "☆";
 
-    // Build onclick dynamically
+    // Build the onclick attribute dynamically
     let onclickCall = "";
-    if (Array.isArray(app.functions)) {
-      onclickCall = app.functions
+    if (Array.isArray(game.functions)) {
+      // Multiple custom functions from JSON
+      onclickCall = game.functions
         .map((fn) => {
           const params = fn.params.map((p) => `'${p}'`).join(",");
           return `${fn.name}(${params})`;
         })
         .join(";");
     } else {
-      onclickCall = `handleGameClick('${app.url}', '${app.mode}')`;
+      // Fallback: default behavior
+      onclickCall = `handleGameClick('${game.url}', '${game.mode}')`;
     }
 
-    appItem.innerHTML = `
-      <button onclick="${onclickCall}" aria-label="${app.title}">
-        <img src="${app.image}" alt="${app.title}" loading="lazy">
+    // Create button and title with favorite toggle
+    gameItem.innerHTML = `
+      <button onclick="${onclickCall}" aria-label="${game.title}">
+        <img src="${game.image}" alt="${game.title}" loading="lazy">
       </button>
       <p class="game-title">
-        ${app.title}
-        <span class="favorite-icon" onclick="toggleAppFavorite('${app.title}')">${star}</span>
+        ${game.title}
+        <span class="favorite-icon" onclick="toggleFavorite('${game.title}')">${star}</span>
       </p>
     `;
 
-    container.appendChild(appItem);
+    container.appendChild(gameItem);
   });
 
-  renderAppsPagination();
+  renderPaginationControls();
 }
 
 function applyAppsFilter() {
@@ -115,5 +118,17 @@ function toggleAppFavorite(title) {
   renderAppsPage();
 }
 
-// ✅ Correct initialization
-fetchApps();
+/* === FUNCTIONS YOU CAN CALL DYNAMICALLY === */
+function handleGameClick(url, mode) {
+  console.log(`🎮 Opening ${url} in mode ${mode}`);
+  if (mode === "A") {
+    loadBlobContent(url);
+  } else if (mode === "B") {
+    changePageContent(url);
+  } else {
+    console.warn("Unknown mode, defaulting to Blob");
+    loadBlobContent(url);
+  }
+}
+
+window.onload = fetchGames;
