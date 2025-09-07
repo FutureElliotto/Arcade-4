@@ -29,7 +29,7 @@ function renderPage() {
   const gamesToDisplay = filteredGames.slice(start, end);
 
   if (gamesToDisplay.length === 0) {
-    container.innerHTML = "<p>No games found :(.</p>";
+    container.innerHTML = "<p>No games found.</p>";
     document.getElementById("paginationControls").innerHTML = "";
     return;
   }
@@ -122,7 +122,6 @@ function toggleFavorite(title) {
   renderPage();
 }
 
-/* === FUNCTIONS YOU CAN CALL DYNAMICALLY === */
 function handleGameClick(url, mode) {
   console.log(`🎮 Opening ${url} in mode ${mode}`);
   if (mode === "A") {
