@@ -10,7 +10,7 @@ async function fetchApps() {
       "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f50fae4/navigation/games/apps.json"
     );
     appsData = await response.json();
-    filteredGames = [...appsData];
+    filteredApps = [...appsData];
     renderPage();
   } catch (error) {
     console.error("Failed to load games data:", error);
@@ -18,12 +18,12 @@ async function fetchApps() {
 }
 
 function renderPage() {
-  const container = document.getElementById("gameButtons");
+  const container = document.getElementById("appsContainer");
   container.innerHTML = "";
 
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const gamesToDisplay = filteredGames.slice(start, end);
+  const start = (currentAppsPage - 1) * appsPerPage; // Use currentAppsPage
+  const end = start + appsPerPage;
+  const gamesToDisplay = filteredApps.slice(start, end);
 
   if (gamesToDisplay.length === 0) {
     container.innerHTML = "<p>No apps found.</p>";
@@ -35,7 +35,7 @@ function renderPage() {
     const gameItem = document.createElement("div");
     gameItem.className = "game-button";
 
-    const isFavorite = favorites.includes(game.title);
+    const isFavorite = appFavorites.includes(game.title); // Use appFavorites
     const star = isFavorite ? "⭐" : "☆";
 
     // Build the onclick attribute dynamically
