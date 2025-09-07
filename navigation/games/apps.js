@@ -1,108 +1,103 @@
 let appsData = [];
-let currentPage = 1;
-const itemsPerPage = 24;
-let filteredGames = [];
-let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+let currentAppsPage = 1;
+const appsPerPage = 24;
+let filteredApps = [];
+let appFavorites = JSON.parse(localStorage.getItem("appFavorites")) || [];
 
-async function fetchGames() {
+async function fetchApps() {
   try {
     const response = await fetch(
       "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4@f50fae4/navigation/games/apps.json"
     );
     appsData = await response.json();
-    filteredGames = [...appsData];
-    renderPage();
+    filteredApps = [...appsData];
+    renderAppsPage();
   } catch (error) {
-    console.error("Failed to load games data:", error);
+    console.error("Failed to load apps data:", error);
   }
 }
 
-function renderPage() {
-  const container = document.getElementById("gameButtons");
+function renderAppsPage() {
+  const container = document.getElementById("appsContainer");
   container.innerHTML = "";
 
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const gamesToDisplay = filteredGames.slice(start, end);
+  const start = (currentAppsPage - 1) * appsPerPage;
+  const end = start + appsPerPage;
+  const appsToDisplay = filteredApps.slice(start, end);
 
-  if (gamesToDisplay.length === 0) {
+  if (appsToDisplay.length === 0) {
     container.innerHTML = "<p>No apps found.</p>";
-    document.getElementById("paginationControls").innerHTML = "";
+    document.getElementById("appsPagination").innerHTML = "";
     return;
   }
 
-  gamesToDisplay.forEach((game) => {
-    const gameItem = document.createElement("div");
-    gameItem.className = "game-button";
+  appsToDisplay.forEach((app) => {
+    const appItem = document.createElement("div");
+    appItem.className = "game-button";
 
-    const isFavorite = favorites.includes(game.title);
+    const isFavorite = appFavorites.includes(app.title);
     const star = isFavorite ? "⭐" : "☆";
 
-    // Build the onclick attribute dynamically
+    // Build onclick dynamically
     let onclickCall = "";
-    if (Array.isArray(game.functions)) {
-      // Multiple custom functions from JSON
-      onclickCall = game.functions
+    if (Array.isArray(app.functions)) {
+      onclickCall = app.functions
         .map((fn) => {
           const params = fn.params.map((p) => `'${p}'`).join(",");
           return `${fn.name}(${params})`;
         })
         .join(";");
     } else {
-      // Fallback: default behavior
-      onclickCall = `handleGameClick('${game.url}', '${game.mode}')`;
+      onclickCall = `handleGameClick('${app.url}', '${app.mode}')`;
     }
 
-    // Create button and title with favorite toggle
-    gameItem.innerHTML = `
-      <button onclick="${onclickCall}" aria-label="${game.title}">
-        <img src="${game.image}" alt="${game.title}" loading="lazy">
+    appItem.innerHTML = `
+      <button onclick="${onclickCall}" aria-label="${app.title}">
+        <img src="${app.image}" alt="${app.title}" loading="lazy">
       </button>
       <p class="game-title">
-        ${game.title}
-        <span class="favorite-icon" onclick="toggleFavorite('${game.title}')">${star}</span>
+        ${app.title}
+        <span class="favorite-icon" onclick="toggleAppFavorite('${app.title}')">${star}</span>
       </p>
     `;
 
-    container.appendChild(gameItem);
+    container.appendChild(appItem);
   });
 
-  renderPaginationControls();
+  renderAppsPagination();
 }
 
-function applyFilters() {
-  const searchTerm = document.getElementById("searchBar").value.toLowerCase();
-  const selectedCategory = document.getElementById("categorySelect").value;
-  const showFavorites = document.getElementById("showFavorites").checked;
+function applyAppsFilter() {
+  const searchTerm = document.getElementById("appsSearch").value.toLowerCase();
+  const selectedCategory = document.getElementById("appsCategory").value;
+  const showFavorites = document.getElementById("appsShowFavorites").checked;
 
-  filteredGames = appsData.filter((game) => {
-    const matchSearch = game.title.toLowerCase().includes(searchTerm);
+  filteredApps = appsData.filter((app) => {
+    const matchSearch = app.title.toLowerCase().includes(searchTerm);
     const matchCategory =
       selectedCategory === "All" ||
-      (Array.isArray(game.category) && game.category.includes(selectedCategory)) ||
-      game.category === selectedCategory;
-    const matchFavorite = !showFavorites || favorites.includes(game.title);
+      (Array.isArray(app.category) && app.category.includes(selectedCategory)) ||
+      app.category === selectedCategory;
+    const matchFavorite = !showFavorites || appFavorites.includes(app.title);
     return matchSearch && matchCategory && matchFavorite;
   });
 
-  currentPage = 1;
-  renderPage();
+  currentAppsPage = 1;
+  renderAppsPage();
 }
 
-function renderPaginationControls() {
-  const totalPages = Math.ceil(filteredGames.length / itemsPerPage);
-  const pagination = document.getElementById("paginationControls");
+function renderAppsPagination() {
+  const totalPages = Math.ceil(filteredApps.length / appsPerPage);
+  const pagination = document.getElementById("appsPagination");
   pagination.innerHTML = "";
 
   for (let i = 1; i <= totalPages; i++) {
     const btn = document.createElement("button");
     btn.textContent = i;
-    if (i === currentPage) {
-      btn.classList.add("active-page");
-    }
+    if (i === currentAppsPage) btn.classList.add("active-page");
     btn.onclick = () => {
-      currentPage = i;
-      renderPage();
+      currentAppsPage = i;
+      renderAppsPage();
     };
     pagination.appendChild(btn);
   }
@@ -110,27 +105,15 @@ function renderPaginationControls() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function toggleFavorite(title) {
-  if (favorites.includes(title)) {
-    favorites = favorites.filter((fav) => fav !== title);
+function toggleAppFavorite(title) {
+  if (appFavorites.includes(title)) {
+    appFavorites = appFavorites.filter((fav) => fav !== title);
   } else {
-    favorites.push(title);
+    appFavorites.push(title);
   }
-  localStorage.setItem("favorites", JSON.stringify(favorites));
-  renderPage();
+  localStorage.setItem("appFavorites", JSON.stringify(appFavorites));
+  renderAppsPage();
 }
 
-/* === FUNCTIONS YOU CAN CALL DYNAMICALLY === */
-function handleGameClick(url, mode) {
-  console.log(`🎮 Opening ${url} in mode ${mode}`);
-  if (mode === "A") {
-    loadBlobContent(url);
-  } else if (mode === "B") {
-    changePageContent(url);
-  } else {
-    console.warn("Unknown mode, defaulting to Blob");
-    loadBlobContent(url);
-  }
-}
-
-window.onload = fetchGames;
+// ✅ Correct initialization
+fetchApps();
