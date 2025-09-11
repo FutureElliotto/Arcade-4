@@ -115,7 +115,7 @@
         ],
         "mode": "A"
     },
-	{
+    {
         "title": "Battle Mage",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/battle_mage.svg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/battlemage.html",
@@ -189,7 +189,7 @@
         ],
         "mode": "A"
     },
-	    {
+    {
         "title": "Bloxorz",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/bloxorz.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@latest/flash/bloxorz/index.html",
@@ -201,7 +201,7 @@
         ],
         "mode": "A"
     },
-		{
+    {
         "title": "Burrito Bison",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/burrito_bison.jpg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@latest/flash/burrito_bison/index.html",
@@ -212,8 +212,7 @@
         ],
         "mode": "A"
     },
-   },
-		{
+    {
         "title": "Burrito Bison Revenge",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/burrito_bison_revenge.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@latest/flash/burrito_bison_revenge/index.html",
