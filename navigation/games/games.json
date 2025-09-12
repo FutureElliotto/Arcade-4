@@ -369,6 +369,7 @@
         "category": [
             "2D",
             "Platformer",
+            "New",
             "Puzzle"
         ],
         "mode": "A"
@@ -376,7 +377,7 @@
     {
         "title": "Earthbound",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/earthbound.jpg",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/earthbound/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/emulatorjs/earthbound/index.html",
         "category": [
             "2D",
             "New",
@@ -417,7 +418,7 @@
     },
     {
         "title": "Fireboy And Water Girl 1",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fire_boy_and_watergirl_1.png",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fireboy_and_watergirl_1.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/fire_boy_and_water_girl_1/index.html",
         "category": [
             "2D",
@@ -552,7 +553,7 @@
     {
         "title": "Geometry Wave",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/geometry_wave.png",
-        "url": "hhttps://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/geometry_wave.html",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/geometry_wave.html",
         "category": [
             "2D",
             "New",
@@ -567,6 +568,7 @@
         "category": [
             "2D",
             "New",
+            "Multi Player",
             "Platformer"
         ],
         "mode": "A"
@@ -698,6 +700,40 @@
         "mode": "A"
     },
     {
+        "title": "Mallard Madness",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/mallard_madness.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/mallard_madness_1.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Mallard Madness 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/mallard_madness_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/mallard_madness_2.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Mario Bros Classic",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/mario_bros_classic.webp",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/mario_bros.html",
+        "category": [
+            "2D",
+            "Retro",
+            "New",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Minecraft",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/Minecraft.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/minecraft.html",
@@ -725,6 +761,19 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/MIRRФЯЯIM.html",
         "category": [
             "2D",
+            "Platformer",
+            "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Ms Pac Man",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/ms_pac_man.jpg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/ms_pacman.html",
+        "category": [
+            "2D",
+            "Retro",
+            "New",
             "Platformer",
             "Puzzle"
         ],
@@ -924,6 +973,86 @@
         "mode": "A"
     },
     {
+        "title": "Pokemon Diamond",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pokemon_diamond.jpg",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/emulatorjs/pokemon/diamond/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Pokemon Emerald",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pokemon_emerald.jpg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/pokemon/emerald/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Pokemon Fire Red",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fire_red.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/pokemon/fire_red/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Pokemon Leaf Green",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pokemon_leafgreen.jpg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/pokemon/leaf_green/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Pokemon Platinum",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pokemon_platinum.jpg",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/emulatorjs/pokemon/platinum/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Pokemon Ruby",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pokemon_ruby.jpg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/pokemon/ruby/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Pokemon Sapphire",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pokemon_sapphire.jpg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/pokemon/sapphire/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Pokemon Soul Silver",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pokemon_soul_silver.png",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/emulatorjs/pokemon/soul_silver/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
+        ]
+    },
+    {
         "title": "Pong",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pong.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/pong.html",
@@ -1058,6 +1187,18 @@
         ]
     },
     {
+        "title": "Rotational",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/rotational.svg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/Rotational.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer",
+            "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Run",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/run.jpg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/run_1/index.html",
@@ -1134,6 +1275,26 @@
         ]
     },
     {
+        "title": "Slime Smash Ultimate",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/slime_smash.svg",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/slime_smash_ultimate.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ]
+    },
+    {
+        "title": "Sling Drift",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/sling_drift.svg",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/sling_drift.html",
+        "category": [
+            "2D",
+            "New",
+			"One Button"
+        ]
+    },
+    {
         "title": "Slope",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/slope.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/slope.html",
@@ -1163,6 +1324,17 @@
         ]
     },
     {
+        "title": "Stack",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/stack.jpg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/stack.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle",
+			"One Button"
+        ]
+    },
+    {
         "title": "Stickman Hook",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/stickmanhook.jpg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/stickman_hook.html",
@@ -1170,6 +1342,17 @@
             "2D",
             "One Button",
             "Platformer"
+        ]
+    },
+    {
+        "title": "Suika Game",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/suika_game.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/suika_game.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle",
+			"One Button"
         ]
     },
     {
@@ -1245,6 +1428,16 @@
         ]
     },
     {
+        "title": "Uno",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/uno.png",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/uno.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle"
+        ]
+    },
+    {
         "title": "Vectoid TD 3D",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/vectoid_3d_td.svg",
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/vectoid_TD_3D.html",
@@ -1275,16 +1468,6 @@
         ]
     },
     {
-        "title": "Vex 6",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/vex_6.jpeg",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/vex_6/vex_6.html",
-        "category": [
-            "2D",
-            "Platformer"
-        ],
-        "mode": "A"
-    },
-    {
         "title": "Vex 8",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/vex_8.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/vex_8/index.html",
@@ -1303,6 +1486,16 @@
             "2D",
             "Flash",
             "Sports",
+            "Puzzle"
+        ]
+    },
+    {
+        "title": "Zenith",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/zenith.svg",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/zenith.html",
+        "category": [
+            "2D",
+            "New",
             "Puzzle"
         ]
     },
