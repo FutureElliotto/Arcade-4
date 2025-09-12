@@ -443,32 +443,6 @@
         "mode": "A"
     },
     {
-        "title": "Fireboy And Water Girl 3",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fireboy_and_watergirl_3.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/fire_boy_and_water_girl_3/index.html",
-        "category": [
-            "2D",
-            "New",
-            "Platformer",
-            "Puzzle",
-            "Flash"
-        ],
-        "mode": "A"
-    },
-    {
-        "title": "Fireboy And Water Girl 4",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fireboy_and_watergirl_4.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/fire_boy_and_water_girl_4/index.html",
-        "category": [
-            "2D",
-            "New",
-            "Platformer",
-            "Puzzle",
-            "Flash"
-        ],
-        "mode": "A"
-    },
-    {
         "title": "Flappy Bird",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/flappy-bird.jpg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/flappybird.html",
@@ -1197,6 +1171,17 @@
             "Puzzle"
         ],
         "mode": "A"
+    },
+    {
+        "title": "Rubber Bandit",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/rubber_bandit.svg",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/rubber_bandit.html",
+        "category": [
+            "2D",
+            "New",
+            "Shooter",
+			"Platformer"
+        ]
     },
     {
         "title": "Run",
