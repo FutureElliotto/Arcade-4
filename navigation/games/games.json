@@ -713,7 +713,7 @@
     {
         "title": "Mallard Madness 2",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/mallard_madness_2.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/mallard_madness_2.html",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/mallard_madness_2.html",
         "category": [
             "2D",
             "New",
@@ -724,7 +724,7 @@
     {
         "title": "Mario Bros Classic",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/mario_bros_classic.webp",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/mario_bros.html",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/mario_bros.html",
         "category": [
             "2D",
             "Retro",
@@ -994,7 +994,7 @@
     },
     {
         "title": "Pokemon Fire Red",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fire_red.png",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pokemon_fire_red.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/pokemon/fire_red/index.html",
         "category": [
             "2D",
@@ -1276,7 +1276,7 @@
     },
     {
         "title": "Slime Smash Ultimate",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/slime_smash.svg",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/slime_smash.png",
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/slime_smash_ultimate.html",
         "category": [
             "2D",
@@ -1286,7 +1286,7 @@
     },
     {
         "title": "Sling Drift",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/sling_drift.svg",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/sling_drift.png",
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/sling_drift.html",
         "category": [
             "2D",
@@ -1328,7 +1328,7 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/stack.jpg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/stack.html",
         "category": [
-            "2D",
+            "3D",
             "New",
             "Puzzle",
 			"One Button"
@@ -1496,6 +1496,7 @@
         "category": [
             "2D",
             "New",
+            "Multi Player",
             "Puzzle"
         ]
     },
