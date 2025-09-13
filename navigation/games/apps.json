@@ -63,7 +63,7 @@
             {
                 "name": "appendScript",
                 "params": [
-                    "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/apps/spotify/scripts.js"
+                    "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@3d1f72d/apps/spotify/scripts.js"
                 ]
             }
         ]
