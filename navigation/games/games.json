@@ -1351,6 +1351,28 @@
         ]
     },
     {
+        "title": "Super Mario All Stars",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/marioallstars.webp",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/mario_all_stars/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro",
+            "Platformer"
+        ]
+    },
+    {
+        "title": "Super Mario World",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/marioworld.jpg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/super_mario_world/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro",
+            "Platformer"
+        ]
+    },
+    {
         "title": "Super Meat Boy",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/super_meat_boy.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/super_meat_boy/index.html",
