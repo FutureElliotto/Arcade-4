@@ -68,6 +68,7 @@
         "category": [
             "2D",
             "New",
+            "Rhythm",
             "Puzzle"
         ]
     },
@@ -84,7 +85,7 @@
     {
         "title": "Arena",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/arena.svg",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/arena.html",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/arena.html",
         "category": [
             "2D",
             "New",
@@ -265,6 +266,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/connect_4.html",
         "category": [
             "2D",
+            "Multi Player",
             "New",
             "Puzzle"
         ]
@@ -293,7 +295,7 @@
     {
         "title": "Cut The Rope",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/cut_the_rope.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/cut_the_rope.html",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/cut_the_rope.html",
         "category": 
 		[
             "2D",
@@ -503,7 +505,7 @@
     {
         "title": "Fancy Pants Adventure",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fancy_pants.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/fancy_pants/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/fancy_pants_adventure_1/index.html",
         "category": [
             "2D",
             "Platformer",
@@ -649,7 +651,7 @@
     },
     {
         "title": "Golf Islands",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/golf_island.png",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/golf_islands.png",
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/golf_island.html",
         "category": [
             "2D",
@@ -691,6 +693,16 @@
             "Flash"
         ],
         "mode": "A"
+    },
+    {
+        "title": "Hole.io",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/hole_io.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/holeio/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Multi Player"
+        ]
     },
     {
         "title": "House Of Hazards",
@@ -1445,7 +1457,7 @@
     {
         "title": "Star Seeker",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/star_seeker.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/star_seeker.html",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/star_seeker.html",
         "category": [
             "2D",
             "New",
@@ -1465,7 +1477,7 @@
     {
         "title": "Submersible",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/submersible.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/submersible.html",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/submersible.html",
         "category": [
             "2D",
             "New",
@@ -1546,7 +1558,7 @@
     },
     {
         "title": "Terminus",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/terminus.svg",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/terminus.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/terminus.html",
         "category": [
             "2D",
