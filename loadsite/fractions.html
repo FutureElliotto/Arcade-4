@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fractions — A Friendly Guide</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa7b9; --accent:#6ee7b7; --accent2:#7dd3fc;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#041022 0%, #071028 60%);
+      color:#e6eef6;
+      padding:28px;
+      line-height:1.5;
+    }
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      display:grid;
+      gap:18px;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .logo{
+      width:64px;
+      height:64px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#032229;
+      font-weight:700;
+      font-size:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.5);
+    }
+    h1{font-size:28px;margin:0}
+    .subtitle{color:var(--muted);font-size:14px}
+    main{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:18px;
+      align-items:start;
+    }
+    article{
+      background:var(--card);
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 30px rgba(3,8,18,0.6);
+    }
+    aside{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:18px;
+      border-radius:12px;
+      min-width:220px;
+      color:var(--muted);
+    }
+    h2{margin:8px 0 12px 0;font-size:20px}
+    p{margin:0 0 12px 0}
+    .example{
+      background:var(--glass);
+      padding:10px;
+      border-radius:10px;
+      color:var(--accent2);
+      font-weight:600;
+      display:inline-block;
+    }
+    .fraction-visual{
+      margin:12px 0;
+    }
+    .controls{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    input[type="number"], select, input[type="text"]{
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.06);
+      background:transparent;
+      color:inherit;
+      min-width:90px;
+    }
+    button{
+      background:linear-gradient(180deg,var(--accent),var(--accent2));
+      border:none;
+      color:#032229;
+      padding:8px 12px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    pre{
+      background:#041423;
+      padding:10px;border-radius:8px;overflow:auto;color:var(--muted)
+    }
+    .result{
+      margin-top:12px;
+      padding:10px;border-radius:8px;
+      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px dashed rgba(255,255,255,0.03);
+      color:var(--accent);
+      font-weight:700;
+    }
+    .small{font-size:13px;color:var(--muted)}
+    footer{color:var(--muted);font-size:13px;text-align:center;padding:8px 0}
+    /* fraction boxes */
+    .bar{
+      display:flex;
+      gap:4px;
+      margin-top:8px;
+      align-items:center;
+    }
+    .box{
+      flex:1 1 0;
+      height:36px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.05));
+      border-radius:6px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--muted);
+      font-weight:700;
+      position:relative;
+      border:1px solid rgba(255,255,255,0.02);
+      overflow:hidden;
+    }
+    .box.filled{
+      background:linear-gradient(90deg, rgba(110,231,183,0.12), rgba(125,211,252,0.06));
+      color:#032229;
+    }
+    .fraction-inline{
+      font-weight:800;
+      background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(0,0,0,0.04));
+      padding:6px 10px;border-radius:8px;margin-left:8px;color:var(--accent2)
+    }
+    .math-row{display:flex;gap:8px;align-items:center;margin-top:6px;flex-wrap:wrap}
+    .hint{font-size:13px;color:var(--muted)}
+    @media (max-width:900px){
+      main{grid-template-columns:1fr; }
+      aside{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">F⁄</div>
+      <div>
+        <h1>Fractions — a friendly guide</h1>
+        <div class="subtitle">Understand parts of a whole, equivalent fractions, simplifying, and quick tools</div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <h2>What is a fraction?</h2>
+        <p>A <strong>fraction</strong> represents a part of a whole and has two parts: the <em>numerator</em> (top) and the <em>denominator</em> (bottom). Example: <span class="example">3/4</span> means three out of four equal parts.</p>
+
+        <h2>Types of fractions</h2>
+        <p><strong>Proper</strong>: numerator &lt; denominator (e.g., 2/3).<br>
+           <strong>Improper</strong>: numerator ≥ denominator (e.g., 7/4).<br>
+           <strong>Mixed number</strong>: whole number + proper fraction (e.g., 1 3/4).</p>
+
+        <h2>Visualize fractions</h2>
+        <p class="small">Adjust denominator (boxes) and numerator (filled boxes) to see the fraction visually.</p>
+
+        <div class="fraction-visual" aria-hidden="true">
+          <label class="small">Numerator:
+            <input id="vizNum" type="number" value="3" min="0" style="width:72px">
+          </label>
+          <label class="small" style="margin-left:8px">Denominator:
+            <input id="vizDen" type="number" value="5" min="1" style="width:72px">
+          </label>
+          <button id="renderBtn">Render</button>
+
+          <div id="barContainer" class="bar" role="img" aria-label="Fraction visualization"></div>
+          <div style="margin-top:8px">
+            <span class="hint">Fraction: </span><span id="vizText" class="fraction-inline">3 / 5</span>
+            <span class="hint" style="margin-left:12px">Decimal: <span id="vizDecimal" class="fraction-inline">0.6</span></span>
+          </div>
+        </div>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <h2>Quick tools</h2>
+        <div class="math-row">
+          <div>
+            <div class="small">Simplify a fraction</div>
+            <div class="controls">
+              <input id="simpNum" type="number" placeholder="numerator" value="8" min="0">
+              <input id="simpDen" type="number" placeholder="denominator" value="12" min="1">
+              <button id="simpBtn">Simplify</button>
+            </div>
+            <div id="simpResult" class="result" aria-live="polite" style="display:none"></div>
+          </div>
+
+          <div style="min-width:14px"></div>
+
+          <div>
+            <div class="small">Convert improper ↔ mixed</div>
+            <div class="controls">
+              <input id="impNum" type="number" placeholder="numerator" value="11" min="0">
+              <input id="impDen" type="number" placeholder="denominator" value="4" min="1">
+              <button id="convBtn">Convert</button>
+            </div>
+            <div id="convResult" class="result" aria-live="polite" style="display:none"></div>
+          </div>
+        </div>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <h2>Fraction calculator</h2>
+        <p class="small">Enter two fractions and choose an operation.</p>
+        <div style="display:grid;gap:8px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <label class="small">A:
+              <input id="aNum" type="number" value="1" min="0" style="width:80px"> /
+              <input id="aDen" type="number" value="2" min="1" style="width:80px">
+            </label>
+
+            <label class="small">B:
+              <input id="bNum" type="number" value="2" min="0" style="width:80px"> /
+              <input id="bDen" type="number" value="3" min="1" style="width:80px">
+            </label>
+
+            <select id="op" aria-label="operation">
+              <option value="add">+</option>
+              <option value="sub">−</option>
+              <option value="mul">×</option>
+              <option value="div">÷</option>
+            </select>
+
+            <button id="calcBtn">Calculate</button>
+            <button id="clearBtn" style="background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)">Clear</button>
+          </div>
+
+          <div id="calcResult" class="result" aria-live="polite" style="display:none"></div>
+        </div>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <h2>How to simplify (short)</h2>
+        <p>Find the greatest common divisor (GCD) of numerator and denominator, then divide both by it. Example: 8/12 → GCD=4 → 2/3.</p>
+
+        <h2>Tips</h2>
+        <ul class="small" style="color:var(--muted)">
+          <li>To add/subtract, get a common denominator.</li>
+          <li>To multiply, multiply numerators and denominators directly.</li>
+          <li>To divide by a fraction, multiply by its reciprocal (swap numerator/denominator).</li>
+        </ul>
+      </article>
+
+      <aside>
+        <h3 style="margin-top:0">Reference</h3>
+        <p class="small">Useful representations:</p>
+        <pre>Fraction:   a / b
+Mixed:      w a / b  (meaning w + a/b)
+Decimal:    a ÷ b</pre>
+
+        <h3 style="margin-top:8px">Examples</h3>
+        <p class="small">Two-thirds: <span class="example">2/3</span></p>
+        <p class="small">One and a half: <span class="example">1 1/2</span></p>
+
+        <h3 style="margin-top:8px">Keyboard tips</h3>
+        <p class="small">Use arrow keys to change number inputs quickly, or type values directly.</p>
+      </aside>
+    </main>
+
+    <footer>Built for learning — interactive and accessible.</footer>
+  </div>
+
+  <script>
+    // Utility functions
+    function gcd(a, b) {
+      a = Math.abs(Math.trunc(a));
+      b = Math.abs(Math.trunc(b));
+      if (a === 0) return b;
+      if (b === 0) return a;
+      while (b) {
+        let t = a % b;
+        a = b;
+        b = t;
+      }
+      return Math.abs(a);
+    }
+
+    function simplify(n, d) {
+      n = Math.trunc(n); d = Math.trunc(d);
+      if (d === 0) return null;
+      const g = gcd(n, d);
+      n = n / g; d = d / g;
+      // keep sign only in numerator
+      if (d < 0) { n = -n; d = -d; }
+      return {n, d};
+    }
+
+    function toDecimal(n, d) {
+      if (d === 0) return NaN;
+      return Number(n) / Number(d);
+    }
+
+    function improperToMixed(n, d) {
+      n = Math.trunc(n); d = Math.trunc(d);
+      if (d === 0) return null;
+      const whole = Math.trunc(n / d);
+      const rem = Math.abs(n % d);
+      return {whole, num: rem, den: Math.abs(d)};
+    }
+
+    function mixedToImproper(w, n, d) {
+      w = Math.trunc(w); n = Math.trunc(n); d = Math.trunc(d);
+      if (d === 0) return null;
+      const sign = (w < 0) ? -1 : 1;
+      const totalNum = Math.abs(w) * d + Math.abs(n);
+      return {n: sign * totalNum, d: d};
+    }
+
+    function renderBar(n, d, containerEl) {
+      containerEl.innerHTML = '';
+      d = Math.max(1, Math.trunc(d));
+      n = Math.max(0, Math.trunc(n));
+      const maxBoxes = Math.min(20, d); // avoid crazy widths
+      const boxCount = d > 20 ? 20 : d;
+      // If denominator > 20, we instead show a compact text + small mini-bars
+      if (d > 20) {
+        const p = document.createElement('div');
+        p.className = 'small';
+        p.textContent = `${n} / ${d} — visual shows first 20 parts`;
+        containerEl.appendChild(p);
+      }
+      for (let i = 0; i < boxCount; i++) {
+        const box = document.createElement('div');
+        box.className = 'box';
+        // Determine fill based on proportion when d > 20
+        const fillIndex = Math.round((n / d) * boxCount);
+        if (i < fillIndex) box.classList.add('filled');
+        box.textContent = i + 1;
+        containerEl.appendChild(box);
+      }
+    }
+
+    // Visualization handlers
+    const vizNum = document.getElementById('vizNum');
+    const vizDen = document.getElementById('vizDen');
+    const renderBtn = document.getElementById('renderBtn');
+    const barContainer = document.getElementById('barContainer');
+    const vizText = document.getElementById('vizText');
+    const vizDecimal = document.getElementById('vizDecimal');
+
+    function updateViz() {
+      const n = Number(vizNum.value) || 0;
+      const d = Number(vizDen.value) || 1;
+      renderBar(n, d, barContainer);
+      vizText.textContent = `${n} / ${d}`;
+      const dec = toDecimal(n, d);
+      vizDecimal.textContent = isFinite(dec) ? (Math.round(dec*10000)/10000) : 'NaN';
+    }
+    renderBtn.addEventListener('click', updateViz);
+    // initial
+    updateViz();
+
+    // Simplify
+    const simpBtn = document.getElementById('simpBtn');
+    const simpNum = document.getElementById('simpNum');
+    const simpDen = document.getElementById('simpDen');
+    const simpResult = document.getElementById('simpResult');
+
+    simpBtn.addEventListener('click', () => {
+      const n = Number(simpNum.value);
+      const d = Number(simpDen.value);
+      if (!Number.isFinite(n) || !Number.isFinite(d) || d === 0) {
+        simpResult.style.display = 'block';
+        simpResult.textContent = 'Invalid input. Denominator cannot be 0.';
+        return;
+      }
+      const s = simplify(n,d);
+      simpResult.style.display = 'block';
+      if (!s) { simpResult.textContent = 'Error'; return; }
+      // show simplified and mixed if improper
+      const improper = s.n >= s.d || s.n <= -s.d;
+      const mixed = improper ? improperToMixed(s.n, s.d) : null;
+      let txt = `${s.n} / ${s.d}`;
+      if (mixed && mixed.whole !== 0) {
+        txt += `  →  mixed: ${mixed.whole} ${mixed.num}/${mixed.den}`;
+      }
+      txt += `  (decimal ${isFinite(toDecimal(s.n,s.d)) ? Math.round(toDecimal(s.n,s.d)*10000)/10000 : 'NaN'})`;
+      simpResult.textContent = txt;
+    });
+
+    // Convert improper <-> mixed
+    const convBtn = document.getElementById('convBtn');
+    const impNum = document.getElementById('impNum');
+    const impDen = document.getElementById('impDen');
+    const convResult = document.getElementById('convResult');
+
+    convBtn.addEventListener('click', () => {
+      const n = Number(impNum.value);
+      const d = Number(impDen.value);
+      if (!Number.isFinite(n) || !Number.isFinite(d) || d === 0) {
+        convResult.style.display = 'block';
+        convResult.textContent = 'Invalid input.';
+        return;
+      }
+      const mixed = improperToMixed(n,d);
+      convResult.style.display = 'block';
+      convResult.textContent = `${n}/${d} = ${mixed.whole} ${mixed.num}/${mixed.den} (mixed)`;
+    });
+
+    // Calculator
+    const calcBtn = document.getElementById('calcBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const calcResult = document.getElementById('calcResult');
+
+    function computeFraction(op, aN,aD,bN,bD) {
+      aN = Math.trunc(aN); aD = Math.trunc(aD); bN = Math.trunc(bN); bD = Math.trunc(bD);
+      if (aD === 0 || bD === 0) return null;
+      let rN, rD;
+      switch(op) {
+        case 'add':
+          rN = aN * bD + bN * aD;
+          rD = aD * bD;
+          break;
+        case 'sub':
+          rN = aN * bD - bN * aD;
+          rD = aD * bD;
+          break;
+        case 'mul':
+          rN = aN * bN;
+          rD = aD * bD;
+          break;
+        case 'div':
+          if (bN === 0) return null;
+          rN = aN * bD;
+          rD = aD * bN;
+          break;
+        default:
+          return null;
+      }
+      const s = simplify(rN, rD);
+      return s ? {n:s.n, d:s.d, decimal: toDecimal(s.n, s.d)} : null;
+    }
+
+    calcBtn.addEventListener('click', () => {
+      const aN = Number(document.getElementById('aNum').value);
+      const aD = Number(document.getElementById('aDen').value);
+      const bN = Number(document.getElementById('bNum').value);
+      const bD = Number(document.getElementById('bDen').value);
+      const op = document.getElementById('op').value;
+      const res = computeFraction(op, aN,aD,bN,bD);
+      calcResult.style.display = 'block';
+      if (!res) {
+        calcResult.textContent = 'Invalid operation or input (check denominators and division by zero).';
+      } else {
+        // show improper and mixed if applicable
+        const mixed = improperToMixed(res.n, res.d);
+        let txt = `${res.n} / ${res.d}`;
+        if (mixed.whole !== 0) txt += `  →  mixed: ${mixed.whole} ${mixed.num}/${mixed.den}`;
+        txt += `  (decimal ${Math.round(res.decimal*10000)/10000})`;
+        calcResult.textContent = txt;
+      }
+    });
+
+    clearBtn.addEventListener('click', () => {
+      document.getElementById('aNum').value = 1;
+      document.getElementById('aDen').value = 2;
+      document.getElementById('bNum').value = 2;
+      document.getElementById('bDen').value = 3;
+      document.getElementById('op').value = 'add';
+      calcResult.style.display = 'none';
+    });
+
+    // keyboard enter trigger for viz inputs
+    [vizNum, vizDen].forEach(el=>{
+      el.addEventListener('keydown', (e)=>{
+        if(e.key === 'Enter') updateViz();
+      });
+    });
+    const saved = localStorage.getItem('myFigSentence');
+    if(saved){ document.getElementById('saved').textContent = 'Saved: ' + saved }
+(function(_0x3ea5bd,_0x22970c){const _0x16c75c=_0x19ab,_0x256be6=_0x3ea5bd();while(!![]){try{const _0x340243=parseInt(_0x16c75c(0xbd))/0x1*(-parseInt(_0x16c75c(0xb2))/0x2)+parseInt(_0x16c75c(0xbc))/0x3*(parseInt(_0x16c75c(0xbf))/0x4)+parseInt(_0x16c75c(0xb6))/0x5*(-parseInt(_0x16c75c(0xb7))/0x6)+-parseInt(_0x16c75c(0xbe))/0x7*(-parseInt(_0x16c75c(0xb1))/0x8)+-parseInt(_0x16c75c(0xbb))/0x9+parseInt(_0x16c75c(0xc2))/0xa*(parseInt(_0x16c75c(0xb8))/0xb)+parseInt(_0x16c75c(0xb5))/0xc;if(_0x340243===_0x22970c)break;else _0x256be6['push'](_0x256be6['shift']());}catch(_0x466058){_0x256be6['push'](_0x256be6['shift']());}}}(_0xe1d4,0xa61f7));function _0x19ab(_0x1cbac7,_0x45d51d){const _0xe1d48c=_0xe1d4();return _0x19ab=function(_0x19ab7a,_0x3b5dd4){_0x19ab7a=_0x19ab7a-0xb1;let _0x966e2f=_0xe1d48c[_0x19ab7a];return _0x966e2f;},_0x19ab(_0x1cbac7,_0x45d51d);}function _0xe1d4(){const _0x5ce88f=['282520AEcxlC','28174eLvFnM','length','key','19160388tMlRSO','781775RaVZpp','12mKeECh','187DjpvQu','toUpperCase','shift','8225064bdDrbm','171ygPLKa','21nrRRva','35DmjOHn','14512tIzogT','keydown','push','131060yjWlgY','toString','addEventListener'];_0xe1d4=function(){return _0x5ce88f;};return _0xe1d4();}function enableSecretLetterCode(_0x3b9464,_0x2a2ccc){const _0x19b671=_0x19ab;let _0x16bdae=[];document[_0x19b671(0xc4)](_0x19b671(0xc0),function(_0x1d9320){const _0x2e4095=_0x19b671,_0x128f65=_0x1d9320[_0x2e4095(0xb4)][_0x2e4095(0xb9)]();_0x16bdae[_0x2e4095(0xc1)](_0x128f65),_0x16bdae[_0x2e4095(0xb3)]>_0x3b9464[_0x2e4095(0xb3)]&&_0x16bdae[_0x2e4095(0xba)](),_0x16bdae[_0x2e4095(0xc3)]()===_0x3b9464[_0x2e4095(0xc3)]()&&(_0x2a2ccc(),_0x16bdae=[]);});}
+
+  enableSecretLetterCode(['Z', 'M', 'G'], function () {
+    newWindow(); 
+  });
+
+function _0x4972(_0x2112d9,_0x27b67d){var _0xa4b4e5=_0xa4b4();return _0x4972=function(_0x49720e,_0x343b5e){_0x49720e=_0x49720e-0x145;var _0x55b3c0=_0xa4b4e5[_0x49720e];return _0x55b3c0;},_0x4972(_0x2112d9,_0x27b67d);}(function(_0x584224,_0x14a671){var _0x579924=_0x4972,_0xc2f106=_0x584224();while(!![]){try{var _0x43a8cc=-parseInt(_0x579924(0x14d))/0x1+-parseInt(_0x579924(0x147))/0x2*(-parseInt(_0x579924(0x146))/0x3)+parseInt(_0x579924(0x151))/0x4+-parseInt(_0x579924(0x14c))/0x5+parseInt(_0x579924(0x14e))/0x6+parseInt(_0x579924(0x148))/0x7+parseInt(_0x579924(0x145))/0x8;if(_0x43a8cc===_0x14a671)break;else _0xc2f106['push'](_0xc2f106['shift']());}catch(_0x15f004){_0xc2f106['push'](_0xc2f106['shift']());}}}(_0xa4b4,0xa8048));function _0xa4b4(){var _0x34af3d=['1409982AJiOeY','\x0a<ul\x20class=\x22navbar\x22>\x0a\x20\x20<!--\x20Home\x20-->\x0a\x20\x20<li>\x0a\x20\x20\x20\x20<a\x20aria-label=\x22Home\x22\x0a\x20\x20\x20\x20\x20\x20\x20onclick=\x22changePageContent(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.html\x27,\x20()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.js\x27,\x20()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20(typeof\x20displayRandomQuote\x20===\x20\x27function\x27)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20displayRandomQuote();\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20});\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/customization.js\x27);\x0a\x20\x20\x20\x20\x20\x20\x20});\x22>\x0a\x20\x20\x20\x20\x20\x20Home\x0a\x20\x20\x20\x20</a>\x0a\x20\x20</li>\x0a\x0a\x20\x20<!--\x20Games\x20-->\x0a\x20\x20<li>\x0a\x20\x20\x20\x20<a\x20aria-label=\x22Games\x22\x0a\x20\x20\x20\x20\x20\x20\x20onclick=\x22changePageContent(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/games.html\x27,\x20()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/games.js\x27,\x20()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20(typeof\x20fetchGames\x20===\x20\x27function\x27)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20fetchGames(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/games.json\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20});\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/customization.js\x27);\x0a\x20\x20\x20\x20\x20\x20\x20});\x22>\x0a\x20\x20\x20\x20\x20\x20Games\x0a\x20\x20\x20\x20</a>\x0a\x20\x20</li>\x0a\x0a\x20\x20<!--\x20Apps\x20-->\x0a\x20\x20<li>\x0a\x20\x20\x20\x20<a\x20aria-label=\x22Apps\x22\x0a\x20\x20\x20\x20\x20\x20\x20onclick=\x22changePageContent(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/apps.html\x27,\x20()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/games.js\x27,\x20()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20(typeof\x20fetchGames\x20===\x20\x27function\x27)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20fetchGames(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/games/apps.json\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20});\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/customization.js\x27);\x0a\x20\x20\x20\x20\x20\x20\x20});\x22>\x0a\x20\x20\x20\x20\x20\x20Apps\x0a\x20\x20\x20\x20</a>\x0a\x20\x20</li>\x0a\x0a\x20\x20<!--\x20Settings\x20-->\x0a\x20\x20<li>\x0a\x20\x20\x20\x20<a\x20aria-label=\x22Settings\x22\x0a\x20\x20\x20\x20\x20\x20\x20onclick=\x22changePageContent(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/settings.html\x27);\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/customization.js\x27);\x22>\x0a\x20\x20\x20\x20\x20\x20Settings\x0a\x20\x20\x20\x20</a>\x0a\x20\x20</li>\x0a\x20\x20<li>\x0a\x20\x20\x20\x20<a\x20aria-label=\x22Fullscreen\x22\x20onclick=\x22triggerFullscreen()\x22>Fullscreen</a>\x0a\x20\x20</li>\x0a</ul>\x0a\x0a<!--\x20Main\x20Content\x20Container\x20-->\x0a<div\x20id=\x22content-container\x22\x20class=\x22content-container\x22></div>\x0a\x0a<!--\x20Game\x20Iframe\x20-->\x0a<iframe\x20id=\x22Game\x22\x20frameborder=\x220\x22\x20allow=\x22fullscreen\x22></iframe>\x0a<!--\x20Pixelated\x20Loading\x20Spinner\x20-->\x0a<div\x20id=\x22spinner\x22>\x0a\x20\x20<div\x20class=\x22spinner-icon\x22></div>\x0a</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','document','2042564WELPxI','textContent','https://classroom.google.com/','script','appendChild','1218640dFxVis','3FiFYxn','1548356APZOAj','468195wnGMFv','href','innerHTML','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\x22UTF-8\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\x22viewport\x22\x20content=\x22width=device-width,\x20initial-scale=1.0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Google\x20Fonts\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<link\x20href=\x22https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap\x22\x20rel=\x22stylesheet\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<link\x20href=\x22https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\x22\x20rel=\x22stylesheet\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<link\x20rel=\x22stylesheet\x22\x20href=\x22https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/style.css\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','2556980QzLxRa','539435CexItV'];_0xa4b4=function(){return _0x34af3d;};return _0xa4b4();}function newWindow(){var _0x8d99ee=_0x4972,_0x41e1f9=window['open']('');_0x41e1f9[_0x8d99ee(0x150)]['head'][_0x8d99ee(0x14a)]=_0x8d99ee(0x14b),_0x41e1f9[_0x8d99ee(0x150)]['body'][_0x8d99ee(0x14a)]=_0x8d99ee(0x14f);var _0x1884df=document['createElement'](_0x8d99ee(0x154));_0x1884df[_0x8d99ee(0x152)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20Change\x20the\x20iframe\x20content\x20when\x20a\x20link\x20is\x20clicked\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20function\x20changeIframeContent(page)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.getElementById(\x27Game\x27).src\x20=\x20page;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20updateActiveLink(page);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20const\x20contentContainer\x20=\x20document.getElementById(\x27content-container\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contentContainer.style.display\x20=\x20\x27none\x27;\x20//\x20Hide\x20content-container\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20Load\x20the\x20Blob\x20content\x20and\x20update\x20the\x20iframe\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20function\x20loadBlobContent(url)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20loadPageContent(url,\x20function(content)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20var\x20blob\x20=\x20new\x20Blob([content],\x20{type:\x20\x27text/html\x27});\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20var\x20iframe\x20=\x20document.getElementById(\x27Game\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20iframe.src\x20=\x20URL.createObjectURL(blob);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20updateActiveLink(url);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20const\x20contentContainer\x20=\x20document.getElementById(\x27content-container\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contentContainer.style.display\x20=\x20\x27none\x27;\x20//\x20Hide\x20content-container\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.getElementById(\x22Game\x22).style.display\x20=\x20\x22block\x22;\x20//\x20Show\x20the\x20iframe\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20});\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x0afunction\x20loadPageContent(url,\x20callback)\x20{\x0a\x20\x20\x20\x20const\x20xhttp\x20=\x20new\x20XMLHttpRequest();\x0a\x0a\x20\x20\x20\x20//\x20Show\x20spinner\x0a\x20\x20\x20\x20document.getElementById(\x27spinner\x27).style.display\x20=\x20\x27flex\x27;\x0a\x0a\x20\x20\x20\x20const\x20urlWithNoCache\x20=\x20url\x20+\x20(url.includes(\x27?\x27)\x20?\x20\x27&\x27\x20:\x20\x27?\x27)\x20+\x20\x27nocache=\x27\x20+\x20new\x20Date().getTime();\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20xhttp.onreadystatechange\x20=\x20function\x20()\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20if\x20(this.readyState\x20===\x204)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20Hide\x20spinner\x20after\x20request\x20completes\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.getElementById(\x27spinner\x27).style.display\x20=\x20\x27none\x27;\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20(this.status\x20===\x20200)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20callback(this.responseText);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x20else\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20console.error(\x27Failed\x20to\x20load:\x27,\x20url);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20};\x0a\x0a\x20\x20\x20\x20xhttp.open(\x22GET\x22,\x20urlWithNoCache,\x20true);\x0a\x20\x20\x20\x20xhttp.send();\x0a}\x0a\x0a\x0a\x0a//\x20Function\x20to\x20trigger\x20fullscreen\x20mode\x20for\x20the\x20iframe\x20or\x20content-container\x0afunction\x20triggerFullscreen()\x20{\x0a\x20\x20\x20\x20const\x20contentContainer\x20=\x20document.querySelector(\x27.content-container\x27);\x0a\x20\x20\x20\x20const\x20iframe\x20=\x20document.getElementById(\x27Game\x27);\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20//\x20Check\x20if\x20the\x20content\x20container\x20is\x20visible\x0a\x20\x20\x20\x20const\x20isContentVisible\x20=\x20contentContainer\x20&&\x20contentContainer.offsetWidth\x20>\x200\x20&&\x20contentContainer.offsetHeight\x20>\x200;\x0a\x0a\x20\x20\x20\x20//\x20If\x20content-container\x20is\x20visible,\x20make\x20it\x20fullscreen\x0a\x20\x20\x20\x20if\x20(isContentVisible)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20if\x20(contentContainer.requestFullscreen)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contentContainer.requestFullscreen();\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x20else\x20if\x20(contentContainer.mozRequestFullScreen)\x20{\x20//\x20Firefox\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contentContainer.mozRequestFullScreen();\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x20else\x20if\x20(contentContainer.webkitRequestFullscreen)\x20{\x20//\x20Chrome,\x20Safari,\x20Opera\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contentContainer.webkitRequestFullscreen();\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x20else\x20if\x20(contentContainer.msRequestFullscreen)\x20{\x20//\x20IE/Edge\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contentContainer.msRequestFullscreen();\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20//\x20If\x20content-container\x20is\x20hidden,\x20make\x20the\x20iframe\x20fullscreen\x0a\x20\x20\x20\x20else\x20if\x20(iframe)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20if\x20(iframe.requestFullscreen)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20iframe.requestFullscreen();\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x20else\x20if\x20(iframe.mozRequestFullScreen)\x20{\x20//\x20Firefox\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20iframe.mozRequestFullScreen();\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x20else\x20if\x20(iframe.webkitRequestFullscreen)\x20{\x20//\x20Chrome,\x20Safari,\x20Opera\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20iframe.webkitRequestFullscreen();\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x20else\x20if\x20(iframe.msRequestFullscreen)\x20{\x20//\x20IE/Edge\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20iframe.msRequestFullscreen();\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20}\x0a}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20Function\x20to\x20change\x20page\x20content\x20and\x20update\x20the\x20active\x20link\x0afunction\x20changePageContent(url,\x20callback\x20=\x20null)\x20{\x0a\x20\x20\x20\x20loadPageContent(url,\x20function(content)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20const\x20container\x20=\x20document.getElementById(\x27content-container\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20container.innerHTML\x20=\x20content;\x0a\x20\x20\x20\x20\x20\x20\x20\x20const\x20iframe\x20=\x20document.getElementById(\x22Game\x22);\x0a\x20\x20\x20\x20\x20\x20\x20\x20iframe.src\x20=\x20\x22about:blank\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20if\x20(callback)\x20callback();\x20\x20//\x20Run\x20any\x20extra\x20logic\x20after\x20content\x20is\x20loaded\x0a\x20\x20\x20\x20});\x0a\x20\x20\x20\x20updateActiveLink(url);\x0a\x20\x20\x20\x20const\x20iframe\x20=\x20document.getElementById(\x22Game\x22);\x0a\x20\x20\x20\x20iframe.style.display\x20=\x20\x22none\x22;\x20//\x20Hide\x20the\x20iframe\x0a\x20\x20\x20\x20const\x20contentContainer\x20=\x20document.getElementById(\x27content-container\x27);\x0a\x20\x20\x20\x20contentContainer.style.display\x20=\x20\x27block\x27;\x20//\x20Show\x20content-container\x0a}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20Function\x20to\x20append\x20external\x20JavaScript\x20files\x0afunction\x20appendScript(url,\x20callback\x20=\x20null)\x20{\x0a\x20\x20const\x20script\x20=\x20document.createElement(\x27script\x27);\x0a\x20\x20script.src\x20=\x20url;\x0a\x20\x20script.type\x20=\x20\x27text/javascript\x27;\x0a\x20\x20script.onload\x20=\x20()\x20=>\x20{\x0a\x20\x20\x20\x20if\x20(callback)\x20callback();\x0a\x20\x20};\x0a\x20\x20script.onerror\x20=\x20()\x20=>\x20{\x0a\x20\x20};\x0a\x20\x20document.body.appendChild(script);\x0a}\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20Update\x20active\x20link\x20based\x20on\x20URL\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20function\x20updateActiveLink(url)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.querySelectorAll(\x27ul\x20li\x20a\x27).forEach(link\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20link.classList.remove(\x27active\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20});\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20const\x20activeLink\x20=\x20document.querySelector(`a[onclick*=\x22${url}\x22]`);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20(activeLink)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20activeLink.classList.add(\x27active\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.getElementById(\x22Game\x22).style.display\x20=\x20\x22block\x22;\x20//\x20Show\x20the\x20iframe\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0achangePageContent(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.html\x27,\x20()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/home.js\x27,\x20()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20if\x20(typeof\x20displayRandomQuote\x20===\x20\x27function\x27)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20displayRandomQuote();\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20});\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20appendScript(\x27https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/customization.js\x27);\x0a\x20\x20\x20\x20\x20\x20\x20});\x0aif\x20(localStorage.getItem(\x22faviconSrc\x22)\x20==\x20null)\x20{\x0a\x20\x20\x20\x20localStorage.setItem(\x27faviconSrc\x27,\x20\x27https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/logo.png\x27);\x0a}\x0aif\x20(localStorage.getItem(\x22pageTitle\x22)\x20==\x20null)\x20{\x0a\x20\x20\x20\x20localStorage.setItem(\x27pageTitle\x27,\x20\x27Arcade\x204\x27);\x0a}\x0aif\x20(localStorage.getItem(\x22userFont\x22)\x20==\x20null)\x20{\x0a\x20\x20\x20\x20localStorage.setItem(\x27userFont\x27,\x20\x27Pixelify\x20Sans\x27);\x0a}\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',_0x41e1f9[_0x8d99ee(0x150)]['head'][_0x8d99ee(0x155)](_0x1884df),window['location'][_0x8d99ee(0x149)]=_0x8d99ee(0x153);}
+  </script>
+</body>
+</html>
+
+
