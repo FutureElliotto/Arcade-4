@@ -651,8 +651,8 @@
     },
     {
         "title": "Golf Islands",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/golf_islands.png",
-        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/golf_island.html",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/golf_island.png",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/golf_islands.html",
         "category": [
             "2D",
             "New",
@@ -702,6 +702,22 @@
             "3D",
             "New",
             "Multi Player"
+        ]
+        "mode": "A",
+        "functions": [
+            {
+                "name": "handleGameClick",
+                "params": [
+                    "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/holeio/index.html",
+                    "B"
+                ]
+            },
+            {
+                "name": "appendScript",
+                "params": [
+                    "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games/unity/holeio/game.js"
+                ]
+            }
         ]
     },
     {
