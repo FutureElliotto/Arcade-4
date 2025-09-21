@@ -713,7 +713,7 @@
       {
         "name": "appendScript",
         "params": [
-          "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games@e1d9eef/unity/holeio/game.js"
+          "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games/unity/holeio/game.js"
         ]
       }
     ]
