@@ -4,8 +4,8 @@
 Click a couple of times, then enter the site’s code (**Z, M, G** by default) in order — not all at once — and the games should load.
 
 ## Hosting the site
-Copy any of the html files in the loadsite folder
-They all have different disguises but should load the site when previous instructions followed
+Copy any of the html files in the loadsite folder.
+They all have different disguises but should load the site when previous instructions followed.
 Replace the letters in the `enableSecretLetterCode` function to change the entry code.  
 Paste the code into any website builder with an HTML embed, such as:
 - [Google Sites](https://sites.google.com)  
