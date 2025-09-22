@@ -1,6 +1,19 @@
 # Arcade-4
 
-##  Credits
+## How to Use the Site
+Click a couple of times, then enter the site’s code (**Z, M, G** by default) in order — not all at once — and the games should load.
+
+## Customizing the Code
+Replace the letters in the `enableSecretLetterCode` function to change the entry code.  
+Paste the code into any website builder with an HTML embed, such as:
+- sites.google.com
+- [Google Sites](https://sites.google.com)  
+- [Wix](https://Wix.com)  
+- [Webflow](https://Webflow.com)  
+- [Tiiny.host](https://Tiiny.host)  
+- [Static.app](https://static.app)
+
+## Credits
 - [123CCODER](https://scratch.mit.edu/users/123CCODER/)
 - [1dat_doodles](https://scratch.mit.edu/users/1dat_doodles/)
 - [a456pur](https://github.com/a456pur)
