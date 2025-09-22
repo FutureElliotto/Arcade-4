@@ -53,7 +53,7 @@
 - [TheTrendyToad](https://scratch.mit.edu/users/TheTrendyToad/)
 - [TimMcCool](https://scratch.mit.edu/users/TimMcCool/)
 - [twoplayergames.org](https://twoplayergames.org)
-- [UrkiMimi]([https://penguinmod.com/profile?user=UrkiMimi](https://penguinmod.com/profile?user=urkimimi))
+- [UrkiMimi](https://penguinmod.com/profile?user=urkimimi)
 - [VinCrafts](https://scratch.mit.edu/users/VinCrafts/)
 - [Vino11](https://scratch.mit.edu/users/Vino11/)
 - [Yoshihome](https://scratch.mit.edu/users/Yoshihome/)
