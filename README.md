@@ -6,7 +6,6 @@ Click a couple of times, then enter the site’s code (**Z, M, G** by default) i
 ## Customizing the Code
 Replace the letters in the `enableSecretLetterCode` function to change the entry code.  
 Paste the code into any website builder with an HTML embed, such as:
-- sites.google.com
 - [Google Sites](https://sites.google.com)  
 - [Wix](https://Wix.com)  
 - [Webflow](https://Webflow.com)  
