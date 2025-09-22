@@ -1,9 +1,6 @@
 # Arcade-4
 
-## 🎮 Credits
-
-Special thanks to all the amazing creators and contributors:
-
+##  Credits
 - [123CCODER](https://scratch.mit.edu/users/123CCODER/)
 - [1dat_doodles](https://scratch.mit.edu/users/1dat_doodles/)
 - [a456pur](https://github.com/a456pur)
@@ -61,4 +58,3 @@ Special thanks to all the amazing creators and contributors:
 - [Vino11](https://scratch.mit.edu/users/Vino11/)
 - [Yoshihome](https://scratch.mit.edu/users/Yoshihome/)
 - [YousefIbrahimismail](https://github.com/YousefIbrahimismail)
-ers/TimMcCool)
