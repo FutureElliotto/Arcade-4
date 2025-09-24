@@ -137,7 +137,7 @@
   {
     "title": "Basket Bros",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/basketbros.jpg",
-    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/basketbros.html",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/basket_bros.html",
     "category": [
       "Popular",
       "2D",
@@ -678,6 +678,17 @@
     "mode": "A"
   },
   {
+    "title": "Grapple pig",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/grapple_pig.svg",
+    "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/grapple_pig.html",
+    "category": [
+      "2D",
+      "New",
+      "Platformer"
+    ],
+    "mode": "A"
+  },
+  {
     "title": "Gyruss",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/gyruss.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/gyruss.html",
@@ -1081,7 +1092,7 @@
   },
   {
     "title": "Paper Minecraft",
-    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/paper_minecraft.png",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/paper_minecraft.svg",
     "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/paper_minecraft.html",
     "category": [
       "2D",
@@ -1847,7 +1858,7 @@
   {
     "title": "Tunnel Rush",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/tunnelrush.jpg",
-    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/tunnelrush/index.html",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/tunnel_rush/index.html",
     "category": [
       "Popular",
       "3D"
