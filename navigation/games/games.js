@@ -63,18 +63,17 @@ function renderGameItem(container, game) {
   if (Array.isArray(game.functions)) {
     onclickCall = game.functions
       .map((fn) => {
-        const params = fn.params.map((p) => `'${p}'`).join(",");
+        const params = fn.params.map((p) => JSON.stringify(p)).join(",");
         return `${fn.name}(${params})`;
       })
       .join(";");
   } else {
-    // Pass custom HTML if exists
-    const customHTML = game.customHTML ? "`" + game.customHTML + "`" : "''";
-    onclickCall = `handleGameClick('${game.url || ""}', '${game.mode}', ${customHTML})`;
+    // ✅ Safe embedding of custom HTML
+    onclickCall = `handleGameClick(${JSON.stringify(game.url || "")}, ${JSON.stringify(game.mode)}, ${JSON.stringify(game.customHTML || "")})`;
   }
 
   gameItem.innerHTML = `
-    <button onclick=${onclickCall} aria-label="${game.title}">
+    <button onclick="${onclickCall}" aria-label="${game.title}">
       <img src="${game.image}" alt="${game.title}" loading="lazy">
     </button>
     <p class="game-title">
