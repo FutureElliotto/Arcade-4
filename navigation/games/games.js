@@ -3,6 +3,7 @@ let currentPage = 1;
 const itemsPerPage = 24;
 let filteredGames = [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+let customApps = JSON.parse(localStorage.getItem("customApps")) || [];
 
 // ✅ Fetch games from a dynamic JSON URL
 async function fetchGames(jsonUrl) {
@@ -10,13 +11,16 @@ async function fetchGames(jsonUrl) {
     const response = await fetch(jsonUrl);
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
-    appsData = await response.json();
+    const loadedApps = await response.json();
+    // Merge stored custom apps into the list
+    appsData = [...loadedApps, ...customApps];
     filteredGames = [...appsData];
     renderPage();
   } catch (error) {
     console.error("❌ Failed to load games data:", error);
     const container = document.getElementById("gameButtons");
-    if (container) container.innerHTML = "<p>Failed to load games. Please try again.</p>";
+    if (container)
+      container.innerHTML = "<p>Failed to load games. Please try again.</p>";
   }
 }
 
@@ -28,89 +32,58 @@ function renderPage() {
   const end = start + itemsPerPage;
   const gamesToDisplay = filteredGames.slice(start, end);
 
-  // ✅ If no games found, reset page count to 1 and stop rendering pagination
+  // ✅ If no games found, reset page count to 1
   if (gamesToDisplay.length === 0) {
     currentPage = 1; // <-- Reset page count
     const freshGames = filteredGames.slice(0, itemsPerPage);
 
     if (freshGames.length === 0) {
-      // ✅ Still no games at all → show message
       container.innerHTML = "<p>No games found.</p>";
       document.getElementById("paginationControls").innerHTML = "";
       return;
     }
 
-    // ✅ If there ARE games on the first page, render them
-    freshGames.forEach((game) => {
-      const gameItem = document.createElement("div");
-      gameItem.className = "game-button";
-
-      const isFavorite = favorites.includes(game.title);
-      const star = isFavorite ? "⭐" : "☆";
-
-      let onclickCall = "";
-      if (Array.isArray(game.functions)) {
-        onclickCall = game.functions
-          .map((fn) => {
-            const params = fn.params.map((p) => `'${p}'`).join(",");
-            return `${fn.name}(${params})`;
-          })
-          .join(";");
-      } else {
-        onclickCall = `handleGameClick('${game.url}', '${game.mode}')`;
-      }
-
-      gameItem.innerHTML = `
-        <button onclick="${onclickCall}" aria-label="${game.title}">
-          <img src="${game.image}" alt="${game.title}" loading="lazy">
-        </button>
-        <p class="game-title">
-          ${game.title}
-          <span class="favorite-icon" onclick="toggleFavorite('${game.title}')">${star}</span>
-        </p>
-      `;
-
-      container.appendChild(gameItem);
-    });
-
+    freshGames.forEach((game) => renderGameItem(container, game));
     renderPaginationControls();
     return;
   }
 
-  // ✅ Normal rendering if games exist on the current page
-  gamesToDisplay.forEach((game) => {
-    const gameItem = document.createElement("div");
-    gameItem.className = "game-button";
-
-    const isFavorite = favorites.includes(game.title);
-    const star = isFavorite ? "⭐" : "☆";
-
-    let onclickCall = "";
-    if (Array.isArray(game.functions)) {
-      onclickCall = game.functions
-        .map((fn) => {
-          const params = fn.params.map((p) => `'${p}'`).join(",");
-          return `${fn.name}(${params})`;
-        })
-        .join(";");
-    } else {
-      onclickCall = `handleGameClick('${game.url}', '${game.mode}')`;
-    }
-
-    gameItem.innerHTML = `
-      <button onclick="${onclickCall}" aria-label="${game.title}">
-        <img src="${game.image}" alt="${game.title}" loading="lazy">
-      </button>
-      <p class="game-title">
-        ${game.title}
-        <span class="favorite-icon" onclick="toggleFavorite('${game.title}')">${star}</span>
-      </p>
-    `;
-
-    container.appendChild(gameItem);
-  });
-
+  gamesToDisplay.forEach((game) => renderGameItem(container, game));
   renderPaginationControls();
+}
+
+function renderGameItem(container, game) {
+  const gameItem = document.createElement("div");
+  gameItem.className = "game-button";
+
+  const isFavorite = favorites.includes(game.title);
+  const star = isFavorite ? "⭐" : "☆";
+
+  let onclickCall = "";
+  if (Array.isArray(game.functions)) {
+    onclickCall = game.functions
+      .map((fn) => {
+        const params = fn.params.map((p) => `'${p}'`).join(",");
+        return `${fn.name}(${params})`;
+      })
+      .join(";");
+  } else {
+    // Pass custom HTML if exists
+    const customHTML = game.customHTML ? "`" + game.customHTML + "`" : "''";
+    onclickCall = `handleGameClick('${game.url || ""}', '${game.mode}', ${customHTML})`;
+  }
+
+  gameItem.innerHTML = `
+    <button onclick=${onclickCall} aria-label="${game.title}">
+      <img src="${game.image}" alt="${game.title}" loading="lazy">
+    </button>
+    <p class="game-title">
+      ${game.title}
+      <span class="favorite-icon" onclick="toggleFavorite('${game.title}')">${star}</span>
+    </p>
+  `;
+
+  container.appendChild(gameItem);
 }
 
 function applyFilters() {
@@ -163,14 +136,54 @@ function toggleFavorite(title) {
   renderPage();
 }
 
-function handleGameClick(url, mode) {
-  console.log(`🎮 Opening ${url} in mode ${mode}`);
+function handleGameClick(url, mode, customHTML = "") {
+  console.log(`🎮 Opening ${url || "custom HTML"} in mode ${mode}`);
+
   if (mode === "A") {
     loadBlobContent(url);
   } else if (mode === "B") {
     changePageContent(url);
+  } else if (mode === "CUSTOM" && customHTML) {
+    loadCustomHTML(customHTML);
   } else {
     console.warn("Unknown mode, defaulting to Blob");
     loadBlobContent(url);
   }
+}
+
+function addCustomApp() {
+  const title = document.getElementById("customTitle").value.trim();
+  const image = document.getElementById("customImage").value.trim();
+  const htmlCode = document.getElementById("customHTML").value.trim();
+
+  if (!title || !htmlCode) {
+    alert("Please enter at least a title and HTML/iframe code.");
+    return;
+  }
+
+  let embeddedHTML = "";
+  if (htmlCode.startsWith("<")) {
+    embeddedHTML = htmlCode;
+  } else {
+    embeddedHTML = `<iframe src="${htmlCode}" style="width:100%;height:100%;border:0;"></iframe>`;
+  }
+
+  const newApp = {
+    title,
+    image: image || "https://via.placeholder.com/150x150?text=App",
+    customHTML: embeddedHTML,
+    category: ["Custom"],
+    mode: "CUSTOM",
+  };
+
+  customApps.push(newApp);
+  localStorage.setItem("customApps", JSON.stringify(customApps));
+
+  appsData.push(newApp);
+  filteredGames = [...appsData];
+  renderPage();
+
+  document.getElementById("customTitle").value = "";
+  document.getElementById("customImage").value = "";
+  document.getElementById("customHTML").value = "";
 }
