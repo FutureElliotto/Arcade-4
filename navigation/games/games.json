@@ -375,7 +375,7 @@
   {
     "title": "Deltarune",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/deltarune.png",
-    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/deltarune/index.html",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4@main/deltarune/index.html",
     "category": [
       "2D"
     ]
@@ -895,6 +895,17 @@
     "category": [
       "2D",
       "Retro",
+      "Platformer"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Kaboom Cavern",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/kaboom_cavern.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/kaboom_cavern.html",
+    "category": [
+      "2D",
+      "New",
       "Platformer"
     ],
     "mode": "A"
@@ -2036,9 +2047,18 @@
     "mode": "A"
   },
   {
+    "title": "Undertale",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/under_tale.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/undertale/index.html",
+    "category": [
+      "New",
+      "2D"
+    ]
+  },
+  {
     "title": "Undertale Yellow",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/undertale_yellow.png",
-    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/undertale-yellow/index.html",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4@main/undertale-yellow/index.html",
     "category": [
       "2D"
     ]
@@ -2096,17 +2116,6 @@
     "title": "Vex 3",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/vex_3.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/vex_3/index.html",
-    "category": [
-      "2D",
-      "New",
-      "Platformer"
-    ],
-    "mode": "A"
-  },
-  {
-    "title": "Vex 4",
-    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/vex_4.png",
-    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/vex_4/index.html",
     "category": [
       "2D",
       "New",
