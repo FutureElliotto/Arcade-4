@@ -38,11 +38,11 @@
         "Your sister knows",
         "Grammy warned you not to talk to the wind, but you went ahead and talked to the wind, didn't you? Grammy warned you!",
         "SEE HOW THE SERFS WORK THE GROUND",
-        "B E H I N D  Y O U",
+        "B E H I N D   Y O U",
         "THIS IS THE GREATEST PLAAAAAN!",
         "I Can Has Cheezburger?",
         "DARK, DARKER, YET DARKER, THE DARKNESS KEEPS GROWING, THE SHADOWS CUTTING DEEPER, PHOTON READINGS NEGATIVE, THIS NEXT EXPERIMENT, SEEMS VERY, VERY INTERESTING, WHAT DO YOU TWO THINK?",
-        "G R E A T E R  T H A N  L I F E"
+        "G R E A T E R   T H A N   L I F E"
     ];
 
     // Function to display a random quote
