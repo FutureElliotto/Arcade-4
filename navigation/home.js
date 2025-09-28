@@ -5,7 +5,7 @@
         "Whatever",
         "Etc.",
         "egassem sdrawkcab.",
-        "Lorem ipsum dolor sit amet.",
+        "retsis ym tib ecno esøøm A .esøøm kitsejam eht gnidulcni ,slamina yrruf gnitseretni inäm dna ,metsys enøhpelet lufrëdnøw eht ,sekal ilevøl eht ees ,?rëy siht nedewS ni yadiløh a iert tøn iW",
         "LOL",
         "You got games on your phone?",
         "Teeth are just tiny hardened bats sleeping upside down.",
@@ -15,7 +15,7 @@
         "WE MUST SURVIVE.",
         "Build a better mousetrap and get smarter mice.",
         "Block one site and two more shall take its place.",
-        "Lorem ipsum dolor sit amet, adipiscing consequat adipiscing sit amet...",
+        "Lorem ipsum dolor sit amet, adipiscing consequat adipiscing sit amet",
         "check steam",
         "We are all E G G",
         "Cephalopod Conundrums",
@@ -37,7 +37,12 @@
         "Cow tools",
         "Your sister knows",
         "Grammy warned you not to talk to the wind, but you went ahead and talked to the wind, didn't you? Grammy warned you!",
-        "SEE HOW THE SERFS WORK THE GROUND"
+        "SEE HOW THE SERFS WORK THE GROUND",
+        "B E H I N D   Y O U",
+        "THIS IS THE GREATEST PLAAAAAN!",
+        "I Can Has Cheezburger?",
+        "DARK, DARKER, YET DARKER, THE DARKNESS KEEPS GROWING, THE SHADOWS CUTTING DEEPER, PHOTON READINGS NEGATIVE, THIS NEXT EXPERIMENT, SEEMS VERY, VERY INTERESTING, WHAT DO YOU TWO THINK?",
+        "G R E A T E R   T H A N   L I F E"
     ];
 
     // Function to display a random quote
