@@ -38,7 +38,6 @@
     "category": [
       "2D",
       "Flash",
-      "New",
       "Platformer"
     ]
   },
@@ -49,7 +48,6 @@
     "category": [
       "2D",
       "Flash",
-      "New",
       "Platformer"
     ]
   },
@@ -276,7 +274,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/cactus_mccoy/index.html",
     "category": [
       "2D",
-      "New",
       "Flash"
     ],
     "mode": "A"
@@ -287,7 +284,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/cactus_mccoy_2/index.html",
     "category": [
       "2D",
-      "New",
       "Flash"
     ],
     "mode": "A"
@@ -415,7 +411,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/doodle_god/index.html",
     "category": [
       "2D",
-      "New",
       "Flash",
       "Puzzle"
     ]
@@ -426,7 +421,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/doodle_god_2/index.html",
     "category": [
       "2D",
-      "New",
       "Flash",
       "Puzzle"
     ]
@@ -448,7 +442,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/drive_mad/index.html",
     "category": [
       "Popular",
-      "New",
       "3D",
       "One Button"
     ],
@@ -544,7 +537,6 @@
     "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/dunk_shot.html",
     "category": [
       "2D",
-      "New",
       "Sports",
       "Mobile"
     ],
@@ -595,7 +587,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/fill_1.html",
     "category": [
       "2D",
-      "New",
       "Puzzle"
     ],
     "mode": "A"
@@ -606,7 +597,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/fill_2.html",
     "category": [
       "2D",
-      "New",
       "Puzzle"
     ],
     "mode": "A"
@@ -681,12 +671,132 @@
   {
     "title": "Friday Night Funkin",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF.png",
-    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/FNF/index.html",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/friday_night_funkin/index.html",
     "category": [
       "Popular",
       "2D",
-      "Rhythm",
-      "Flash"
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin B-Sides",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_b_sides.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-FNF-mods/bsides/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin Hit Single Real",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_hit_single.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/hits/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin Indie Cross",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_indie_cross.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-FNF-mods/indie/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin Neo",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_neo.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-FNF-mods/neo/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin Sarvente's Mid-Fight Masses",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_mid_fight_masses.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/sarventes/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin vs. Hatsune Miku",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_v_miku.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/miku/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "FFriday Night Funkin vs. Hex",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_v_hex.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/hex/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin Vs. Sonic.Exe",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_sonicexe.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/sonic.exe/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin vs. Tricky",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_v_tricky.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/tricky/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin vs. Whitty",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_v_whitty.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/whitty/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Friday Night Funkin Soft",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_soft.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/soft/index.html",
+    "category": [
+      "New",
+      "2D",
+      "Rhythm"
     ],
     "mode": "A"
   },
@@ -826,7 +936,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/hex.html",
     "category": [
       "2D",
-      "New",
       "Puzzle"
     ],
     "mode": "A"
@@ -862,6 +971,16 @@
       "2D",
       "Puzzle",
       "Platformer"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Iron Snout",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/iron_snout.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/iron_snout/index.html",
+    "category": [
+      "New",
+      "2D"
     ],
     "mode": "A"
   },
@@ -905,7 +1024,6 @@
     "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/kaboom_cavern.html",
     "category": [
       "2D",
-      "New",
       "Platformer"
     ],
     "mode": "A"
@@ -949,7 +1067,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/learn_to_fly_idle/index.html",
     "category": [
       "2D",
-      "New",
       "Idle",
       "Puzzle",
       "Flash"
@@ -962,7 +1079,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/lemon_maze.html",
     "category": [
       "2D",
-      "New",
       "Puzzle"
     ],
     "mode": "A"
@@ -1047,7 +1163,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/monkey_mart/index.html",
     "category": [
       "2D",
-      "New",
       "Popular"
     ],
     "mode": "A"
@@ -1057,8 +1172,7 @@
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/monster_miners.svg",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/monster_miners.html",
     "category": [
-      "2D",
-      "New"
+      "2D"
     ],
     "mode": "A"
   },
@@ -1084,6 +1198,30 @@
     "mode": "A"
   },
   {
+    "title": "Neon switch",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/neon_switch_1.svg",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/neon_switch_1.html",
+    "category": [
+      "2D",
+      "New",
+      "Platformer",
+      "Puzzle"
+    ],
+    "mode": "A"
+  },
+  {
+    "title": "Neon switch 2",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/neon_switch_2.svg",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/neon_switch_2.html",
+    "category": [
+      "2D",
+      "New",
+      "Platformer",
+      "Puzzle"
+    ],
+    "mode": "A"
+  },
+  },
     "title": "Ovo",
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/ovo.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/ovo/index.html",
@@ -1374,10 +1512,19 @@
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/polar_panic.svg",
     "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/polar_panic.html",
     "category": [
-      "2D",
-      "New"
-    ],
+      "2D"
+    ],_
     "mode": "A"
+  },
+  {
+    "title": "Polytrack",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/polytrack.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/poly_track/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Sports"
+    ]
   },
   {
     "title": "Pong",
@@ -1539,7 +1686,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/ring_peril.html",
     "category": [
       "2D",
-      "New",
       "Puzzle"
     ]
   },
@@ -2051,7 +2197,6 @@
     "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/under_tale.png",
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4@762d220/undertale/index.html",
     "category": [
-      "New",
       "2D"
     ]
   },
@@ -2118,7 +2263,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/vex_3/index.html",
     "category": [
       "2D",
-      "New",
       "Platformer"
     ],
     "mode": "A"
@@ -2129,7 +2273,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/vex_5/index.html",
     "category": [
       "2D",
-      "New",
       "Platformer"
     ],
     "mode": "A"
@@ -2140,7 +2283,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/vex_6/index.html",
     "category": [
       "2D",
-      "New",
       "Platformer"
     ],
     "mode": "A"
@@ -2151,7 +2293,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/vex_7/index.html",
     "category": [
       "2D",
-      "New",
       "Platformer"
     ],
     "mode": "A"
@@ -2166,6 +2307,102 @@
       "Platformer"
     ],
     "mode": "A"
+  },
+  {
+    "title": "Wheely",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_1/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Flash",
+      "Platformer",
+      "Puzzle"
+    ]
+  },
+  {
+    "title": "Wheely 2",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely_2.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_2/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Flash",
+      "Platformer",
+      "Puzzle"
+    ]
+  },
+  {
+    "title": "Wheely 3",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely_3.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_3/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Flash",
+      "Platformer",
+      "Puzzle"
+    ]
+  },
+  {
+    "title": "Wheely 4",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely_4.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_4/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Flash",
+      "Platformer",
+      "Puzzle"
+    ]
+  },
+  {
+    "title": "Wheely 5",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely_5.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_5/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Flash",
+      "Platformer",
+      "Puzzle"
+    ]
+  },
+  {
+    "title": "Wheely 6",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely_6.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_6/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Flash",
+      "Platformer",
+      "Puzzle"
+    ]
+  },
+  {
+    "title": "Wheely 7",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely_7.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_7/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Flash",
+      "Platformer",
+      "Puzzle"
+    ]
+  },
+  {
+    "title": "Wheely 8",
+    "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely_8.png",
+    "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_8/index.html",
+    "category": [
+      "2D",
+      "New",
+      "Flash",
+      "Platformer",
+      "Puzzle"
+    ]
   },
   {
     "title": "Wonderputt",
@@ -2194,7 +2431,6 @@
     "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/zrist.html",
     "category": [
       "2D",
-      "New",
       "Platformer"
     ],
     "mode": "A"
