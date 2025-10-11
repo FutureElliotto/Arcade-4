@@ -24,6 +24,7 @@ Paste the code into any website builder with an HTML embed, such as:
 - [ArnoHu](https://scratch.mit.edu/users/ArnoHu/)
 - [Awesome-llama](https://scratch.mit.edu/users/Awesome-llama/)
 - [Burnedpopcorn](https://github.com/burnedpopcorn)
+- [c1tcher](https://github.com/waycrosspublicmedia)
 - [Chipm0nk](https://scratch.mit.edu/users/Chipm0nk/)
 - [ChuckSploder](https://scratch.mit.edu/users/ChuckSploder/)
 - [cloter](https://scratch.mit.edu/users/cloter/)
