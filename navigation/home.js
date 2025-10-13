@@ -50,14 +50,18 @@
         "If we don't have a game, request it"
     ];
 
-    function displayRandomQuote() {
-        const quoteElement = document.getElementById("test");
-        const q = quotes[Math.floor(Math.random() * quotes.length)];
-        quoteElement.style.opacity = "0";
-        setTimeout(() => {
-            quoteElement.innerHTML = q;
-            quoteElement.style.animation = "none";
-            void quoteElement.offsetWidth;
-            quoteElement.style.animation = "fadeIn 1.2s ease forwards";
-        }, 150);
-    }
+function displayRandomQuote() {
+  const quoteElement = document.getElementById("test");
+  const q = quotes[Math.floor(Math.random() * quotes.length)];
+
+  // Instantly hide the current text
+  quoteElement.style.opacity = "0";
+  quoteElement.style.animation = "none";
+  
+  // Force browser to recognize the reset
+  void quoteElement.offsetWidth;
+
+  // Update text and restart fade animation
+  quoteElement.innerHTML = q;
+  quoteElement.style.animation = "fadeIn 1.2s ease forwards";
+}
