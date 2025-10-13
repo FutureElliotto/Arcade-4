@@ -722,6 +722,18 @@
         "mode": "A"
     },
     {
+        "title": "DUNGEONS",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/dungeons.png",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/DUNGEONS.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer",
+            "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Dunk Shot",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/dunk_shot.png",
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/dunk_shot.html",
@@ -855,6 +867,139 @@
             "2D",
             "One Button",
             "Mobile"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnac 1",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnac_1.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/candy/1/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnac 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnac_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/candy/2/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf 1",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_1.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/1/index.html",
+        "category": [
+            "Popular",
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/2/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf 3",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_3.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/3/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf 4",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_4.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/4/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf 4 Halloween",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_4_halloween.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/4-halloween/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf 5",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_5.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/sl/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf 5",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_5.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/sl/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf 6",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_6.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/ps/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf Ultimate Custom night",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_ucn.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/ucn/index.html",
+        "category": [
+            "New",
+            "2D",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Fnaf World",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_world.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/w/index.html",
+        "category": [
+            "New",
+            "2D",
+            "RPG"
         ],
         "mode": "A"
     },
@@ -1051,6 +1196,30 @@
         "category": [
             "2D",
             "Multi Player",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Ghosts And Goblins",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/ghosts_and_goblins.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/ghosts_and_goblins/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Ghouls And Ghosts",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/ghouls_and_ghosts.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/ghouls_and_ghosts/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro",
             "Platformer"
         ],
         "mode": "A"
