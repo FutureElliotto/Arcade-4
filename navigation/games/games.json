@@ -34,7 +34,7 @@
     {
         "title": "2Doom",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/2doom.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/2doom.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/2doom/index.html",
         "category": [
             "2D",
             "New",
@@ -168,7 +168,7 @@
     {
         "title": "Baldi’s Basics",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/baldi.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/baldi.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/baldi/index.html",
         "category": [
             "3D",
             "New",
@@ -590,6 +590,30 @@
             "Flash",
             "Puzzle"
         ]
+    },
+    {
+        "title": "Doom",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/doom.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/doom/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Retro",
+            "Shooter"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Doom 64",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/doom_64.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/doom_64/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Retro",
+            "Shooter"
+        ],
+        "mode": "A"
     },
     {
         "title": "Drift Boss",
