@@ -184,6 +184,11 @@ function resetToDefault() {
 
 
 // On page load
+const stylesheet = document.createElement("link");
+stylesheet.rel = "stylesheet"; 
+stylesheet.type = "text/css"; 
+stylesheet.href = "https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Comic+Neue&family=Courier+Prime&family=Press+Start+2P&family=VT323&family=Orbitron:wght@400;700&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Patrick+Hand&family=Russo+One&display=swap"; 
+document.head.appendChild(stylesheet);
 const savedTheme = localStorage.getItem('themeBg');
 if (savedTheme) changetheme(savedTheme);
 
