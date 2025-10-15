@@ -1470,6 +1470,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/lemonoids_halloween.html",
         "category": [
             "2D",
+            "New",
             "Shooter"
         ],
         "mode": "A"
@@ -1480,7 +1481,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/lemonoids.html",
         "category": [
             "2D",
-            "New",
             "Shooter"
         ],
         "mode": "A"
@@ -2204,6 +2204,17 @@
         ]
     },
     {
+        "title": "Slender",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/slender.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/slender/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Puzzle",
+            "Horror"
+        ]
+    },
+    {
         "title": "Slime Smash Ultimate",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/slime_smash.png",
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/slime_smash_ultimate.html",
@@ -2340,6 +2351,17 @@
         ]
     },
     {
+        "title": "Spooky Dash",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/spooky_dash.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/spooky_dash.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer",
+            "Rhythm"
+        ]
+    },
+    {
         "title": "Stack",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/stack.jpg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/stack.html",
@@ -2449,6 +2471,15 @@
         ]
     },
     {
+        "title": "Terminus",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/terminus.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/terminus.html",
+        "category": [
+            "2D",
+            "Shooter"
+        ]
+    },
+    {
         "title": "Tetris",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/tetris.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/tetris.html",
@@ -2459,12 +2490,14 @@
         ]
     },
     {
-        "title": "Terminus",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/terminus.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/terminus.html",
+        "title": "That’s Not My Neighbor",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/that_is_not_my_neighbor.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/thats-not-my-neighbor/index.html",
         "category": [
             "2D",
-            "Shooter"
+            "New",
+            "Puzzle",
+            "Horror"
         ]
     },
     {
