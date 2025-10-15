@@ -960,17 +960,6 @@
         "mode": "A"
     },
     {
-        "title": "Fnaf 5",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_5.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/sl/index.html",
-        "category": [
-            "New",
-            "2D",
-            "Horror"
-        ],
-        "mode": "A"
-    },
-    {
         "title": "Fnaf 6",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_6.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/ps/index.html",
@@ -1075,7 +1064,7 @@
         "mode": "A"
     },
     {
-        "title": "FFriday Night Funkin vs. Hex",
+        "title": "Friday Night Funkin vs. Hex",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_v_hex.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/hex/index.html",
         "category": [
@@ -1246,6 +1235,28 @@
         "mode": "A"
     },
     {
+        "title": "Granny",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/granny.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/granny_1/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Granny 3",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/granny_3.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/granny_3/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Horror"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Grapple pig",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/grapple_pig.svg",
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/grapple_pig.html",
@@ -1263,6 +1274,17 @@
             "2D",
             "Retro",
             "Shooter"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Halloween Clicker",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/halloween_clicker.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/halloween_clicker.html",
+        "category": [
+            "2D",
+            "New",
+            "Idle"
         ],
         "mode": "A"
     },
@@ -1376,6 +1398,18 @@
         "mode": "A"
     },
     {
+        "title": "Kirby 64",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/kirby_64.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/emulatorjs/kirby_64/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Horror",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Learn To fly",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/learn_to_fly.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/flash/learn_to_fly/index.html",
@@ -1431,12 +1465,34 @@
         "mode": "A"
     },
     {
+        "title": "Lemonoids Halloween",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/lemonoids_halloween.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/lemonoids_halloween.html",
+        "category": [
+            "2D",
+            "Shooter"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Lemonoids",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/lemonoids.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/lemonoids.html",
         "category": [
             "2D",
+            "New",
             "Shooter"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Magic Cat Academy",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/magic_cat_academy.png",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/magic_cat_academy.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle"
         ],
         "mode": "A"
     },
@@ -1546,7 +1602,7 @@
     },
     {
         "title": "Neon switch",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/neon_switch_1.png",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/neon_switch.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/neon_switch_1.html",
         "category": [
             "2D",
