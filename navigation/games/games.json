@@ -2501,6 +2501,17 @@
         ]
     },
     {
+        "title": "THE ????? LOOP",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/THE_______LOOP.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/THE_______LOOP.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle",
+            "Platformer"
+        ]
+    },
+    {
         "title": "The Impossible Quiz",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/impossible_quiz.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/the_impossible_quiz/index.html",
@@ -2561,6 +2572,38 @@
         ]
     },
     {
+        "title": "The Loop",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/the_loop.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/the_loop.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle",
+            "Platformer"
+        ]
+    },
+    {
+        "title": "The Rotation Principle",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/the_rotation_principle.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/the_rotation_principle.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle"
+        ]
+    },
+    {
+        "title": "The Second Loop",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/the_second_loop.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/the_second_loop.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle",
+            "Platformer"
+        ]
+    },
+    {
         "title": "The World's Hardest Game",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/worlds_hardest_game.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/world\\'s_hardest_game/index.html",
@@ -2588,6 +2631,16 @@
             "2D",
             "Flash",
             "Platformer"
+        ]
+    },
+    {
+        "title": "They Are Coming",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/they_are_coming.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/they_are_coming/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Shooter"
         ]
     },
     {
@@ -2631,6 +2684,16 @@
             "3D"
         ],
         "mode": "A"
+    },
+    {
+        "title": "Ultrakill",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/ultrakill.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/ultrakill/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Shooter"
+        ]
     },
     {
         "title": "Undertale",
@@ -2839,6 +2902,16 @@
         ]
     },
     {
+        "title": "Witching Hour",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/witching_hour.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/witching_hour.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ]
+    },
+    {
         "title": "Wonderputt",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/Wonderputt.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wonderputt/index.html",
@@ -2847,6 +2920,16 @@
             "Flash",
             "Sports",
             "Puzzle"
+        ]
+    },
+    {
+        "title": "Yume Nikki",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/yume_nikki.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/yume-nikki/index.html",
+        "category": [
+            "2D",
+            "New",
+            "RPG"
         ]
     },
     {
