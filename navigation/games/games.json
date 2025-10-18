@@ -2420,6 +2420,17 @@
         ]
     },
     {
+        "title": "Super Castlevania",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/super_castlevania.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/super_castlevania/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro",
+            "Platformer"
+        ]
+    },
+    {
         "title": "Super Mario 63",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/SuperMario63.webp",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/super-mario-63/index.html",
@@ -2636,7 +2647,7 @@
     {
         "title": "They Are Coming",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/they_are_coming.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/they_are_coming/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/javascript/they_are_coming/index.html",
         "category": [
             "2D",
             "New",
