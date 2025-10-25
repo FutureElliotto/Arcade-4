@@ -594,7 +594,7 @@
     {
         "title": "Doom",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/doom.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/doom/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@b2066cd/javascript/doom/index.html",
         "category": [
             "3D",
             "New",
@@ -2647,7 +2647,7 @@
     {
         "title": "They Are Coming",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/they_are_coming.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@ecce556/javascript/they_are_coming/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/they_are_coming/index.html",
         "category": [
             "2D",
             "New",
@@ -2699,7 +2699,7 @@
     {
         "title": "Ultrakill",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/ultrakill.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/ultrakill/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4@6491fac/ultrakill/index.html",
         "category": [
             "3D",
             "New",
