@@ -5,22 +5,26 @@
 To host your own version of **Arcade-4**:
 
 1. Copy **any** of the HTML files from the `loadsite` folder.  
-   - Each one has a different disguise (appearance) but all load the site once unlocked.  
+   - Each one has a different disguise but all load the games once the code (z. m, g by default) is entered.  
 2. Locate this function in the code:
 
    ```js
    enableSecretLetterCode("Z", "M", "G");
-3. Replace the letters in the function to change the entry code.  
+3. You can replace the letters in the function to change the entry code.  
 4. Paste the code into any website builder with an HTML embed, such as:
 - [Google Sites](https://sites.google.com)  
 - [Weebly](https://www.weebly.com/)  
 - [Tiiny.host](https://Tiiny.host)  
 
 ## Demo Links
-It is heavily recommended you make your oun with the previously mentioned instructions
-- [Google Sites](https://sites.google.com)  
-- [Weebly](https://www.weebly.com/)  
-- [Tiiny.host](https://Tiiny.host)  
+It is **heavily recommended** you make your oun with the previously mentioned instructions
+- [https://sites.google.com/view/fractions-are-cool/home]([https://sites.google.com](https://sites.google.com/view/fractions-are-cool/home))  
+- [https://sites.google.com/view/parts-of-a-cell/home](https://sites.google.com/view/parts-of-a-cell/home)  
+- [https://sites.google.com/view/multiplication-tables-27/home](https://sites.google.com/view/multiplication-tables-27/home)
+- [https://sites.google.com/view/the-water-cycle-abc/the-water-cycle](https://sites.google.com/view/the-water-cycle-abc/the-water-cycle)  
+- [https://sites.google.com/view/negative-numbers/negative-numbers](https://sites.google.com/view/negative-numbers/negative-numbers)  
+- [https://sites.google.com/view/interactive-geometry-quiz/interactive-geometry-quiz](https://sites.google.com/view/interactive-geometry-quiz/interactive-geometry-quiz)  
+- [https://sites.google.com/view/chemical-reactions-2025/chemical-reactions](https://sites.google.com/view/chemical-reactions-2025/chemical-reactions)  
 
 ## Credits
 - [0014049](https://scratch.mit.edu/users/0014049/)
