@@ -1,18 +1,26 @@
 # Arcade-4
 
-## How to Use the Site
-Click a couple of times, then enter the site’s code (**Z, M, G** by default) in order — not all at once — and the games should load.
+**Arcade-4** is a web-based collection of classic and modern browser games, designed to be easily hosted and customized.
 
-## Hosting the site
-Copy any of the html files in the loadsite folder.
-They all have different disguises but should load the site when previous instructions followed.
-Replace the letters in the `enableSecretLetterCode` function to change the entry code.  
-Paste the code into any website builder with an HTML embed, such as:
+To host your own version of **Arcade-4**:
+
+1. Copy **any** of the HTML files from the `loadsite` folder.  
+   - Each one has a different disguise (appearance) but all load the site once unlocked.  
+2. Locate this function in the code:
+
+   ```js
+   enableSecretLetterCode("Z", "M", "G");
+3. Replace the letters in the function to change the entry code.  
+4. Paste the code into any website builder with an HTML embed, such as:
 - [Google Sites](https://sites.google.com)  
-- [Wix](https://Wix.com)  
-- [Webflow](https://Webflow.com)  
+- [Weebly](https://www.weebly.com/)  
 - [Tiiny.host](https://Tiiny.host)  
-- [Static.app](https://static.app)
+
+## Demo Links
+It is heavily recommended you make your oun with the previously mentioned instructions
+- [Google Sites](https://sites.google.com)  
+- [Weebly](https://www.weebly.com/)  
+- [Tiiny.host](https://Tiiny.host)  
 
 ## Credits
 - [0014049](https://scratch.mit.edu/users/0014049/)
