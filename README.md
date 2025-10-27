@@ -1,6 +1,6 @@
 # Arcade-4
 
-**Arcade-4** is a web-based collection of classic and modern browser games, designed to be easily hosted and customized.
+**Arcade-4** is a web-based collection of classic and modern browser games, designed to be easily hosted and customizable.
 
 To host your own version of **Arcade-4**:
 
