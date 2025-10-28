@@ -17,8 +17,8 @@ To host your own version of **Arcade 4**:
 - [Tiiny.host](https://Tiiny.host)  
 
 ## Demo Links
-It is **heavily recommended** you make your own with the previously mentioned instructions
-- [https://sites.google.com/view/fractions-are-cool/home]([https://sites.google.com](https://sites.google.com/view/fractions-are-cool/home))  
+It is **heavily recommended** you host your own with the previously mentioned instructions
+- [https://sites.google.com/view/fractions-are-cool/home](https://sites.google.com/view/fractions-are-cool/home)
 - [https://sites.google.com/view/parts-of-a-cell/home](https://sites.google.com/view/parts-of-a-cell/home)  
 - [https://sites.google.com/view/multiplication-tables-27/home](https://sites.google.com/view/multiplication-tables-27/home)
 - [https://sites.google.com/view/the-water-cycle-abc/the-water-cycle](https://sites.google.com/view/the-water-cycle-abc/the-water-cycle)  
