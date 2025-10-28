@@ -18,6 +18,24 @@
         "mode": "A"
     },
     {
+        "title": "Espresso",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/apps/espresso.svg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games/apps/espresso.html",
+        "category": [
+            "App"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Get More Math!",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/apps/get_more_math.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games/apps/get_more_math.html",
+        "category": [
+            "App"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Ghostery Search",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/apps/ghosterysearch.svg",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games/apps/ghosterysearch_2.html",
@@ -72,6 +90,15 @@
         "title": "Time Vortex",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/apps/time_vortex.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games/apps/time_vortex.html",
+        "category": [
+            "App"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Wayground",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/apps/wayground.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-Games/apps/wayground.html",
         "category": [
             "App"
         ],
