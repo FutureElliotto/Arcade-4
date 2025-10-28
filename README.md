@@ -7,10 +7,12 @@
            
 **Arcade 4** is a web-based collection of classic and modern browser games, designed to be easily hosted and customizable.
 
-To host your own **Arcade 4** link:
+## How to Use the Site
+Click a couple of times, then enter the site’s entry code (**Z, M, G** by default) in order — not all at once — and the games should load.
 
+## Hosting the site
 1. Copy **any** of the HTML files from the `loadsite` folder.  
-   - Each one has a different disguise but all should load the games once the code (z. m, g by default) is entered.  
+   - Each one has a different disguise but all should load the games once the entry code is entered.  
 2. Locate this function in the code:
 
    ```js
