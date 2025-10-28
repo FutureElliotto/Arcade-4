@@ -1,11 +1,11 @@
-# Arcade-4
+# Arcade 4
 
-**Arcade-4** is a web-based collection of classic and modern browser games, designed to be easily hosted and customizable.
+**Arcade 4** is a web-based collection of classic and modern browser games, designed to be easily hosted and customizable.
 
-To host your own version of **Arcade-4**:
+To host your own version of **Arcade 4**:
 
 1. Copy **any** of the HTML files from the `loadsite` folder.  
-   - Each one has a different disguise but all load the games once the code (z. m, g by default) is entered.  
+   - Each one has a different disguise but all should load the games once the code (z. m, g by default) is entered.  
 2. Locate this function in the code:
 
    ```js
@@ -17,7 +17,7 @@ To host your own version of **Arcade-4**:
 - [Tiiny.host](https://Tiiny.host)  
 
 ## Demo Links
-It is **heavily recommended** you make your oun with the previously mentioned instructions
+It is **heavily recommended** you make your own with the previously mentioned instructions
 - [https://sites.google.com/view/fractions-are-cool/home]([https://sites.google.com](https://sites.google.com/view/fractions-are-cool/home))  
 - [https://sites.google.com/view/parts-of-a-cell/home](https://sites.google.com/view/parts-of-a-cell/home)  
 - [https://sites.google.com/view/multiplication-tables-27/home](https://sites.google.com/view/multiplication-tables-27/home)
