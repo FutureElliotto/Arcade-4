@@ -1,5 +1,10 @@
-# Arcade 4
-
+<div align="center">
+        <a href="https://github.com/FutureElliotto/arcade-4" target="_blank">
+        <img src="https://raw.githubusercontent.com/FutureElliotto/arcade-4-images/refs/heads/main/backgrounds/arcade_4_title.png" 
+        alt="title"
+    </a>
+</div>
+           
 **Arcade 4** is a web-based collection of classic and modern browser games, designed to be easily hosted and customizable.
 
 To host your own version of **Arcade 4**:
