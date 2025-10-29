@@ -1,4 +1,4 @@
-    var quotes = [
+    const quotes = [
         "The quick brown fox jumps over the lazy dog.",
         "Look out! There are llamas!",
         "No, really, don't get up.",
@@ -41,15 +41,27 @@
         "B E H I N D   Y O U",
         "THIS IS THE GREATEST PLAAAAAN!",
         "I Can Has Cheezburger?",
-        "DARK, DARKER, YET DARKER, THE DARKNESS KEEPS GROWING, THE SHADOWS CUTTING DEEPER, PHOTON READINGS NEGATIVE, THIS NEXT EXPERIMENT, SEEMS VERY, VERY INTERESTING, WHAT DO YOU TWO THINK?",
-        "G R E A T E R   T H A N   L I F E"
+        "DARK DARKER YET DARKER THE DARKNESS KEEPS GROWING THE SHADOWS CUTTING DEEPER PHOTON READINGS NEGATIVE THIS NEXT EXPERIMENT SEEMS VERY VERY INTERESTING",
+        "G R E A T E R   T H A N   L I F E",
+        "Why you drive on a parkway and park in a driveway",
+        "Emergency Frog Situation",
+        "EUGENE! not again",
+        "Me when games are unblocked",
+        "If we don't have a game, request it"
     ];
 
-    // Function to display a random quote
-    function displayRandomQuote() {
-        var q = quotes[Math.floor(Math.random() * quotes.length)];
-        document.getElementById("test").innerHTML = q;
-    }
+function displayRandomQuote() {
+  const quoteElement = document.getElementById("test");
+  const q = quotes[Math.floor(Math.random() * quotes.length)];
 
-    // Display a random quote on page load
-    window.onload = displayRandomQuote;
+  // Instantly hide the current text
+  quoteElement.style.opacity = "0";
+  quoteElement.style.animation = "none";
+  
+  // Force browser to recognize the reset
+  void quoteElement.offsetWidth;
+
+  // Update text and restart fade animation
+  quoteElement.innerHTML = q;
+  quoteElement.style.animation = "fadeIn 1.2s ease forwards";
+}

@@ -7,10 +7,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css?family=Pixelify+Sans" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/customization.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Comic+Neue&family=Courier+Prime&family=Press+Start+2P&family=VT323&family=Orbitron:wght@400;700&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Patrick+Hand&family=Russo+One&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4/navigation/customization.js"></script>
 </head>
 <body>
 
@@ -19,6 +18,7 @@
     onchange="cloakpage(this.options[this.selectedIndex].getAttribute('title'), this.options[this.selectedIndex].getAttribute('data-src'));">
     <option disabled selected value> -- Cloak -- </option>
     <option title="Arcade 4" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/logo.png">None</option>
+    <option title="Play Blooket | Blooket" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/blooket.ico">Blooket</option>
     <option title="My Apps" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/classlink.ico">Classlink</option>
     <option title="Edpuzzle" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/edpuzzle.png">Edpuzzle</option>
     <option title="Get More Math!" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/get_more_math.png">Get More Math</option>
@@ -27,14 +27,18 @@
     <option title="Google Docs" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/docs.ico">Google Docs</option>
     <option title="Google Slides" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/slides.ico">Google Slides</option>
     <option title="IXL | Dashboard" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/ixl.png">IXL</option>
+    <option title="Dashboard | Khan Academy" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/khan.ico">Khan Academy</option>
+    <option title="[Online Testing] - Online Testing" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/linkit.png">Linkit</option>
+    <option title="For Students - Enter Your Code | Wayground (Formerly Quizizz)" data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/favicon/wayground.ico">Wayground</option>
   </select>
 
   <!-- Background Theme Dropdown -->
   <select id="backgroundDropdown" name="backgroundDropdown"
     onchange="changetheme(this.options[this.selectedIndex].getAttribute('data-src'));">
     <option disabled selected value> -- Background -- </option>
-    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/void_theme.png">Arcade Dark(default)</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/void_theme.png">Arcade Dark (default)</option>
     <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/void_light_theme.jpg">Arcade Light</option>
+    <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/apollo_theme.gif">Apollo</option>
     <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/duck_math_theme.png">Duck Math</option>
     <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/bliss_theme.jpg">Bliss (Windows XP)</option>
     <option data-src="https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/backgrounds/frutiger_aero_1_theme.png">Frutiger Aero</option>
@@ -46,34 +50,42 @@
   <!-- Font Dropdown -->
   <select id="fontDropdown" name="fontDropdown" onchange="changeFont(this.value);">
     <option disabled selected value> -- Font -- </option>
-    <option value="Pixelify Sans, sans-serif">Pixelify Sans (default)</option>
+    <option value="'Pixelify Sans', sans-serif">Pixelify Sans (default)</option>
+    <option value="'Comic Sans', cursive">Comic Sans</option>
+    <option value="'Courier New', monospace">Courier New</option>
+    <option value="'VT323', monospace">VT323</option>
+    <option value="'Orbitron', sans-serif">Orbitron</option>
+    <option value="'Patrick Hand', cursive">Patrick Hand</option>
+    <option value="'Russo One', sans-serif">Russo One</option>
+    <option value="'Roboto', sans-serif">Roboto</option>
+    <option value="'Open Sans', sans-serif">Open Sans</option>
     <option value="Arial, sans-serif">Arial</option>
-    <option value="Courier Prime, monospace">Courier New</option>
-    <option value="Comic Neue, cursive">Comic Sans</option>
   </select>
+
   <!-- Text Color Picker -->
   <div>
     <h3>Change Normal Text Color</h3>
-<input
-  type="color"
-  id="textColorPicker1"
-  style="width: 25%;"
-  oninput="changeTextColor(this.value)"
-/>  </div>
-  <div>
-    <h3>Change selected Text Color</h3>
     <input
-  type="color"
-  id="textColorPicker2"
-  style="width: 25%;"
-  oninput="changeSelectedTextColor(this.value); changeFocusTextColor(this.value);  changeActiveTextColor(this.value);"
-/>
+      type="color"
+      id="textColorPicker1"
+      style="width: 25%;"
+      oninput="changeTextColor(this.value)"
+    />
   </div>
+
+  <div>
+    <h3>Change Selected Text Color</h3>
+    <input
+      type="color"
+      id="textColorPicker2"
+      style="width: 25%;"
+      oninput="changeSelectedTextColor(this.value); changeFocusTextColor(this.value); changeActiveTextColor(this.value);"
+    />
+  </div>
+
   <button id="resetButton" onclick="resetToDefault()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">
-  Reset to Default
-</button>
+    Reset to Default
+  </button>
+
 </body>
 </html>
-
-
-
