@@ -6,16 +6,8 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 async function fetchGames(jsonUrl) {
   try {
-    // Add cache-busting query param + disable browser cache
-    const response = await fetch(`${jsonUrl}?_=${Date.now()}`, {
-      cache: "no-store", // disables caching completely
-      headers: {
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        "Pragma": "no-cache",
-        "Expires": "0",
-      },
-    });
-
+const response = await fetch(`${jsonUrl}?_=${Date.now()}`, { cache: "no-store" });
+    
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
     appsData = await response.json();
