@@ -4,10 +4,18 @@ const itemsPerPage = 24;
 let filteredGames = [];
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-// ✅ Fetch games from a dynamic JSON URL
 async function fetchGames(jsonUrl) {
   try {
-    const response = await fetch(jsonUrl);
+    // Add cache-busting query param + disable browser cache
+    const response = await fetch(`${jsonUrl}?_=${Date.now()}`, {
+      cache: "no-store", // disables caching completely
+      headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+      },
+    });
+
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
     appsData = await response.json();
@@ -16,7 +24,8 @@ async function fetchGames(jsonUrl) {
   } catch (error) {
     console.error("❌ Failed to load games data:", error);
     const container = document.getElementById("gameButtons");
-    if (container) container.innerHTML = "<p>Failed to load games. Please try again.</p>";
+    if (container)
+      container.innerHTML = "<p>Failed to load games. Please try again.</p>";
   }
 }
 
