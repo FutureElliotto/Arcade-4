@@ -47,6 +47,11 @@
         "Emergency Frog Situation",
         "EUGENE! not again",
         "Me when games are unblocked",
+        "But wait, here comes the parasympathetic nervous system with the chair!",
+        "But the music of its crying, never dead, ever dying,",
+        "This is not your grave but you are welcome in it",
+        "Remember! Reality is an illusion, the universe is a hologram, buy gold! bye",
+        "mr. skinny legs wants to find you",
         "If we don't have a game, request it"
     ];
 
