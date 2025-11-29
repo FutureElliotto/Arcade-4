@@ -171,8 +171,8 @@
             "Retro",
             "Shooter"
         ]
-    },    
-	{
+    },
+    {
         "title": "Awesome Tanks",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/awesome_tanks.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/awesome_tanks/index.html",
@@ -183,7 +183,7 @@
             "Flash"
         ]
     },
-	{
+    {
         "title": "Awesome Tanks 2",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/awesome_tanks_2.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/awesome_tanks_2/index.html",
@@ -227,7 +227,7 @@
         ],
         "mode": "A"
     },
-	}
+    {
         "title": "Basketball Legends",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/basketball_legends.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/basketball_legends/index.html",
@@ -257,7 +257,7 @@
         ],
         "mode": "A"
     },
-    }
+    {
         "title": "Big Ice Tower Tiny Square",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/big_ice_tower_tiny_square.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/big_ice_tower_tiny_square/index.html",
@@ -267,7 +267,7 @@
             "Platformer"
         ]
     },
-    }
+    {
         "title": "Big Neon Tower VS Tiny Square",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/big_neon_tower_tiny_square.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/big_neon_tower_tiny_square/index.html",
@@ -277,7 +277,7 @@
             "Platformer"
         ]
     },
-    }
+    {
         "title": "Big Tower Tiny Square 2",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/big_tower_tiny_square_2.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/big_tower_tiny_square_2/index.html",
