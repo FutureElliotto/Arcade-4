@@ -37,7 +37,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/2doom/index.html",
         "category": [
             "2D",
-            "New",
             "Platformer",
             "Shooter"
         ],
@@ -71,6 +70,26 @@
             "2D",
             "Retro",
             "Platformer"
+        ]
+    },
+    {
+        "title": "Age of War",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/age_of_war.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/age_of_war/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Flash"
+        ]
+    },
+    {
+        "title": "Age of War 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/age_of_war_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/age_of_war_2/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Flash"
         ]
     },
     {
@@ -152,6 +171,28 @@
             "Retro",
             "Shooter"
         ]
+    },    
+	{
+        "title": "Awesome Tanks",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/awesome_tanks.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/awesome_tanks/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Shooter",
+            "Flash"
+        ]
+    },
+	{
+        "title": "Awesome Tanks 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/awesome_tanks_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/awesome_tanks_2/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Shooter",
+            "Flash"
+        ]
     },
     {
         "title": "Bad Piggies",
@@ -171,7 +212,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/baldi/index.html",
         "category": [
             "3D",
-            "New",
             "Puzzle"
         ],
         "mode": "A"
@@ -186,6 +226,17 @@
             "Sports"
         ],
         "mode": "A"
+    },
+	}
+        "title": "Basketball Legends",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/basketball_legends.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/basketball_legends/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Sports",
+            "Flash"
+        ]
     },
     {
         "title": "Battle Mage",
@@ -202,10 +253,39 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/bendy/index.html",
         "category": [
             "3D",
-            "New",
             "Horror"
         ],
         "mode": "A"
+    },
+    }
+        "title": "Big Ice Tower Tiny Square",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/big_ice_tower_tiny_square.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/big_ice_tower_tiny_square/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ]
+    },
+    }
+        "title": "Big Neon Tower VS Tiny Square",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/big_neon_tower_tiny_square.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/big_neon_tower_tiny_square/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ]
+    },
+    }
+        "title": "Big Tower Tiny Square 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/big_tower_tiny_square_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/big_tower_tiny_square_2/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ]
     },
     {
         "title": "Bitlife",
@@ -289,7 +369,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/buckshot-roulette/index.html",
         "category": [
             "3D",
-            "New",
             "Puzzle",
             "Horror"
         ],
@@ -341,7 +420,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/candy_clicker.html",
         "category": [
             "2D",
-            "New",
             "Idle"
         ]
     },
@@ -351,7 +429,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/candy_crush.html",
         "category": [
             "2D",
-            "New",
             "Puzzle",
             "Mobile"
         ]
@@ -362,7 +439,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/candy_grabber.html",
         "category": [
             "2D",
-            "New",
             "Platformer"
         ]
     },
@@ -372,7 +448,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/carving_jack_o_lanterns.html",
         "category": [
             "2D",
-            "New",
             "Puzzle"
         ]
     },
@@ -382,7 +457,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/castlevania/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ]
@@ -393,7 +467,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/castlevania_2/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ]
@@ -404,7 +477,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/castlevania_3/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ]
@@ -415,7 +487,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/castlevania_64/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ]
@@ -426,7 +497,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/castlevania_sorrow/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ]
@@ -437,7 +507,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/castlevania_moon/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ]
@@ -462,6 +531,16 @@
         ]
     },
     {
+        "title": "Chessmo",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/chessmo.svg",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/chessmo.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle"
+        ]
+    },
+    {
         "title": "Connect 4",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/connect_4.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/connect_4.html",
@@ -481,6 +560,16 @@
             "Idle"
         ],
         "mode": "A"
+    },
+    {
+        "title": "Crossy Road",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/crossy_road.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/crossy_road/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ]
     },
     {
         "title": "CUBES",
@@ -518,7 +607,6 @@
         "category": [
             "2D",
             "Flash",
-            "New",
             "Tower Defence"
         ]
     },
@@ -539,6 +627,16 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4@762d220/deltarune/index.html",
         "category": [
             "2D",
+            "RPG"
+        ]
+    },
+    {
+        "title": "Deltatraveler",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/deltatraveler.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/deltatraveler/index.html",
+        "category": [
+            "2D",
+            "New",
             "RPG"
         ]
     },
@@ -597,7 +695,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@b2066cd/javascript/doom/index.html",
         "category": [
             "3D",
-            "New",
             "Retro",
             "Shooter"
         ],
@@ -609,7 +706,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/doom_64/index.html",
         "category": [
             "3D",
-            "New",
             "Retro",
             "Shooter"
         ],
@@ -727,7 +823,6 @@
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/DUNGEONS.html",
         "category": [
             "2D",
-            "New",
             "Platformer",
             "Puzzle"
         ],
@@ -743,6 +838,15 @@
             "Mobile"
         ],
         "mode": "A"
+    },
+    {
+        "title": "E.T",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/e_t.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/e_t/index.html",
+        "category": [
+            "2D",
+            "Retro"
+        ]
     },
     {
         "title": "Earthbound",
@@ -875,7 +979,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnac_1.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/candy/1/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -886,7 +989,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnac_2.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/candy/2/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -898,7 +1000,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/1/index.html",
         "category": [
             "Popular",
-            "New",
             "2D",
             "Horror"
         ],
@@ -909,7 +1010,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_2.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/2/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -920,7 +1020,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_3.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/3/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -931,7 +1030,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_4.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/4/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -942,7 +1040,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_4_halloween.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/4-halloween/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -953,7 +1050,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_5.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/sl/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -964,7 +1060,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_6.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/ps/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -975,7 +1070,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_ucn.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/ucn/index.html",
         "category": [
-            "New",
             "2D",
             "Horror"
         ],
@@ -986,7 +1080,6 @@
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/fnaf_world.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-fnaf/w/index.html",
         "category": [
-            "New",
             "2D",
             "RPG"
         ],
@@ -1195,7 +1288,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/ghosts_and_goblins/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ],
@@ -1207,7 +1299,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/ghouls_and_ghosts/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ],
@@ -1240,7 +1331,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/granny_1/index.html",
         "category": [
             "3D",
-            "New",
             "Horror"
         ],
         "mode": "A"
@@ -1251,7 +1341,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/granny_3/index.html",
         "category": [
             "3D",
-            "New",
             "Horror"
         ],
         "mode": "A"
@@ -1283,7 +1372,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/halloween_clicker.html",
         "category": [
             "2D",
-            "New",
             "Idle"
         ],
         "mode": "A"
@@ -1403,7 +1491,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/emulatorjs/kirby_64/index.html",
         "category": [
             "3D",
-            "New",
             "Horror",
             "Platformer"
         ],
@@ -1470,7 +1557,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/lemonoids_halloween.html",
         "category": [
             "2D",
-            "New",
             "Shooter"
         ],
         "mode": "A"
@@ -1491,7 +1577,6 @@
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/magic_cat_academy.html",
         "category": [
             "2D",
-            "New",
             "Puzzle"
         ],
         "mode": "A"
@@ -2209,7 +2294,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/slender/index.html",
         "category": [
             "3D",
-            "New",
             "Puzzle",
             "Horror"
         ]
@@ -2356,7 +2440,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/spooky_dash.html",
         "category": [
             "2D",
-            "New",
             "Platformer",
             "Rhythm"
         ]
@@ -2425,7 +2508,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/super_castlevania/index.html",
         "category": [
             "2D",
-            "New",
             "Retro",
             "Platformer"
         ]
@@ -2506,7 +2588,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/thats-not-my-neighbor/index.html",
         "category": [
             "2D",
-            "New",
             "Puzzle",
             "Horror"
         ]
@@ -2517,7 +2598,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/THE_______LOOP.html",
         "category": [
             "2D",
-            "New",
             "Puzzle",
             "Platformer"
         ]
@@ -2588,7 +2668,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/the_loop.html",
         "category": [
             "2D",
-            "New",
             "Puzzle",
             "Platformer"
         ]
@@ -2599,7 +2678,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/the_rotation_principle.html",
         "category": [
             "2D",
-            "New",
             "Puzzle"
         ]
     },
@@ -2609,7 +2687,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/the_second_loop.html",
         "category": [
             "2D",
-            "New",
             "Puzzle",
             "Platformer"
         ]
@@ -2650,7 +2727,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/they_are_coming/index.html",
         "category": [
             "2D",
-            "New",
             "Shooter"
         ]
     },
@@ -2702,7 +2778,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4@6491fac/ultrakill/index.html",
         "category": [
             "3D",
-            "New",
             "Shooter"
         ]
     },
@@ -2918,7 +2993,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/witching_hour.html",
         "category": [
             "2D",
-            "New",
             "Platformer"
         ]
     },
@@ -2939,7 +3013,6 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/yume-nikki/index.html",
         "category": [
             "2D",
-            "New",
             "RPG"
         ]
     },
