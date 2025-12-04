@@ -878,12 +878,57 @@
         "mode": "A"
     },
     {
+        "title": "Ecco The Dolphin",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/ecco_the_dolphin.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/ecco_the_dolphin/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Horror",
+            "Platformer",
+            "Retro"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Elemental Ultra",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/elementalultra.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/elementalultra.html",
         "category": [
             "2D",
             "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Escape Road",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/escape_road.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/escape_road/index.html",
+        "category": [
+            "New",
+            "3D"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Escape Road 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/escape_road_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/escape_road_2.html",
+        "category": [
+            "Popular",
+            "New",
+            "3D"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "F Zero",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/f_zero.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/f_zero/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro"
         ],
         "mode": "A"
     },
@@ -1147,6 +1192,27 @@
         "mode": "A"
     },
     {
+        "title": "Friday Night Funkin Soft",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_soft.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/soft/index.html",
+        "category": [
+            "2D",
+            "Rhythm"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Friday Night Funkin Spooky Mix",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_spooky_mix.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/spooky/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Rhythm"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Friday Night Funkin vs. Hatsune Miku",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_v_miku.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/miku/index.html",
@@ -1190,16 +1256,6 @@
         "title": "Friday Night Funkin vs. Whitty",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_v_whitty.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/whitty/index.html",
-        "category": [
-            "2D",
-            "Rhythm"
-        ],
-        "mode": "A"
-    },
-    {
-        "title": "Friday Night Funkin Soft",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/FNF_soft.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/-Arcade-4-FNF-mods2/soft/index.html",
         "category": [
             "2D",
             "Rhythm"
@@ -1268,6 +1324,19 @@
         "category": [
             "2D",
             "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Getaway Shootout",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/getaway_shootout.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/getaway_shootout/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Multiplayer",
+            "Shooter",
+            "Popular"
         ],
         "mode": "A"
     },
@@ -1438,6 +1507,18 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/iron_snout/index.html",
         "category": [
             "2D"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Jacksmith",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/jacksmith.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/jacksmith/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Flash",
+            "Platformer"
         ],
         "mode": "A"
     },
@@ -1613,12 +1694,60 @@
         "mode": "A"
     },
     {
-        "title": "Minecraft",
+        "title": "Metal Sonic Hyperdrive",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/metal_sonic_hyperdrive.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/metal_sonic_hyperdrive/index.html",
+        "category": [
+            "2D",
+            "Retro",
+            "New",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Metroid Fusion",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/metroid_fusion.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/metroid_fusion/index.html",
+        "category": [
+            "2D",
+            "Retro",
+            "New",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Metroid Zero Mission",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/metroid_zero_mission.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/metroid_zero_mission/index.html",
+        "category": [
+            "2D",
+            "Retro",
+            "New",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Minecraft 1.8",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/Minecraft.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/classroom6x/minecraft.html",
         "category": [
             "Popular",
             "3D",
+            "Multi Player"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Minecraft 1.12",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/Minecraft.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/minecraft1.12.html",
+        "category": [
+            "Popular",
+            "3D",
+            "New",
             "Multi Player"
         ],
         "mode": "A"
@@ -1667,10 +1796,20 @@
     {
         "title": "Mother 3",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/mother_3.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games@main/emulatorjs/mother_3/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/mother_3/index.html",
         "category": [
             "2D",
             "Retro"
+        ]
+    },
+    {
+        "title": "Mother Load",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/mother_load.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/mother_load/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Flash"
         ]
     },
     {
@@ -1680,6 +1819,18 @@
         "category": [
             "2D",
             "Retro",
+            "Platformer",
+            "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "N-gon",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/n_gon.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/n_gon/index.html",
+        "category": [
+            "2D",
+            "New",
             "Platformer",
             "Puzzle"
         ],
@@ -1708,6 +1859,29 @@
         "mode": "A"
     },
     {
+        "title": "New Super Mario Bros",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/new_super_mario.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/new_super_mario/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer",
+            "Retro"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Oh, Flip!",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/oh_flip.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/oh_flip/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Ovo",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/ovo.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/ovo/index.html",
@@ -1726,6 +1900,18 @@
             "Retro",
             "Platformer",
             "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Pac Xon",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pac_xon.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/pac_xon/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer",
+            "Flash"
         ],
         "mode": "A"
     },
@@ -1892,6 +2078,29 @@
         "category": [
             "2D",
             "Platformer"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Paper.io",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/paper_io.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/paper_io.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle",
+            "One Button"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "People Playground",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/people_playground.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/people-playground/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle"
         ],
         "mode": "A"
     },
@@ -2188,7 +2397,8 @@
         "category": [
             "2D",
             "Multi Player",
-            "Shooter"
+            "Shooter",
+            "Popular"
         ]
     },
     {
