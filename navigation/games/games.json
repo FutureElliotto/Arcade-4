@@ -1512,8 +1512,8 @@
     },
     {
         "title": "Jacksmith",
-        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/jacksmith.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/jacksmith/index.html",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/jack_smith.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/jack_smith/index.html",
         "category": [
             "2D",
             "New",
@@ -1713,6 +1713,7 @@
             "2D",
             "Retro",
             "New",
+            "Shooter",
             "Platformer"
         ],
         "mode": "A"
@@ -1725,6 +1726,7 @@
             "2D",
             "Retro",
             "New",
+            "Shooter",
             "Platformer"
         ],
         "mode": "A"
@@ -1827,7 +1829,7 @@
     {
         "title": "N-gon",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/n_gon.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/n_gon/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/n_gon/index.html",
         "category": [
             "2D",
             "New",
@@ -1861,7 +1863,7 @@
     {
         "title": "New Super Mario Bros",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/new_super_mario.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/turbowarp/new_super_mario/index.html",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/new_super_mario/index.html",
         "category": [
             "2D",
             "New",
@@ -2089,6 +2091,7 @@
             "2D",
             "New",
             "Puzzle",
+            "Multiplayer",
             "One Button"
         ],
         "mode": "A"
@@ -2103,6 +2106,26 @@
             "Puzzle"
         ],
         "mode": "A"
+    },
+    {
+        "title": "Pineapple Pursuit",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pineapple_pursuit.png",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/pineapple_pursuit.html",
+        "category": [
+            "2D",
+            "New",
+            "Shooter"
+        ]
+    },
+    {
+        "title": "Pineapple Pursuit 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/pineapple_pursuit_2.png",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/pineapple_pursuit_2.html",
+        "category": [
+            "2D",
+            "New",
+            "Shooter"
+        ]
     },
     {
         "title": "Pixel Shooter",
@@ -2308,6 +2331,16 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/retro_bowl/index.html",
         "category": [
             "2D",
+            "Sports"
+        ]
+    },
+    {
+        "title": "Retro Bowl College",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/retro_bowl_college.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/retro_bowl_college/index.html",
+        "category": [
+            "2D",
+            "New",
             "Sports"
         ]
     },
@@ -2627,6 +2660,48 @@
         ]
     },
     {
+        "title": "Snow Rider 3D",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/snow_rider_3d.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/unity/snow_rider_3d/index.html",
+        "category": [
+            "3D",
+            "New"
+        ]
+    },
+    {
+        "title": "Sonic 1",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/sonic_1.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/sonic_1/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Sonic 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/sonic_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/sonic_2/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer",
+            "Retro"
+        ]
+    },
+    {
+        "title": "Sonic 3",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/sonic_3.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/sonic_3/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Platformer",
+            "Retro"
+        ]
+    },
+    {
         "title": "Space Invaders",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/space-invaders.webp",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/space-invaders/index.html",
@@ -2652,6 +2727,18 @@
             "2D",
             "Platformer",
             "Rhythm"
+        ]
+    },
+    {
+        "title": "Sprunki",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/sprunki.png",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/sprunki.html",
+        "category": [
+            "2D",
+            "New",
+            "Popular",
+            "Rhythm",
+            "Horror"
         ]
     },
     {
@@ -2684,6 +2771,39 @@
         ]
     },
     {
+        "title": "Strike force Heroes 1",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/strike_force_heroes.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/strike_force_heroes/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Flash",
+            "Shooter"
+        ]
+    },
+    {
+        "title": "Strike force Heroes 2",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/strike_force_heroes_2.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/strike_force_heroes_2/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Flash",
+            "Shooter"
+        ]
+    },
+    {
+        "title": "Strike force Heroes 3",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/strike_force_heroes_3.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/strike_force_heroes_3/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Flash",
+            "Shooter"
+        ]
+    },
+    {
         "title": "Submersible",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/submersible.png",
         "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/turbowarp/submersible.html",
@@ -2700,6 +2820,17 @@
             "3D",
             "Platformer",
             "Popular"
+        ]
+    },
+    {
+        "title": "Sugar Sugar",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/sugar_sugar.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/sugar_sugar/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Puzzle",
+            "Flash"
         ]
     },
     {
@@ -2720,6 +2851,16 @@
             "2D",
             "Retro",
             "Platformer"
+        ]
+    },
+    {
+        "title": "Super Liquid Soccer",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/super_liquid_soccer.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/super_liquid_soccer/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Sports"
         ]
     },
     {
@@ -2759,6 +2900,18 @@
         "category": [
             "2D",
             "Flash",
+            "Platformer"
+        ]
+    },
+    {
+        "title": "Super Metroid",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/super_metroid.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/super_metroid/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro",
+            "Shooter",
             "Platformer"
         ]
     },
@@ -3110,6 +3263,41 @@
         "mode": "A"
     },
     {
+        "title": "WarioWare",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wario_ware.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/wario_ware/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro",
+            "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "WarioWare D.I.Y.",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wario_ware_DIY.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/wario_ware_DIY/index.html",
+        "category": [
+            "2D",
+            "New",
+            "Retro",
+            "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
+        "title": "Web Fishing",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/web_fishing.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/web-fishing/index.html",
+        "category": [
+            "3D",
+            "New",
+            "Puzzle"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Wheely",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/wheely.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/flash/wheely_1/index.html",
@@ -3218,6 +3406,17 @@
         ]
     },
     {
+        "title": "Yohoho.io",
+        "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/yohoho_io.png",
+        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/yohoho_io.html",
+        "category": [
+            "2D",
+            "New",
+            "Multiplayer"
+        ],
+        "mode": "A"
+    },
+    {
         "title": "Yume Nikki",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/yume_nikki.png",
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/web-port-arcade-4/yume-nikki/index.html",
@@ -3258,3 +3457,5 @@
         ]
     }
 ]
+
+
