@@ -845,6 +845,7 @@
         "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/emulatorjs/e_t/index.html",
         "category": [
             "2D",
+            "New",
             "Retro"
         ]
     },
@@ -1745,7 +1746,7 @@
     {
         "title": "Minecraft 1.12",
         "image": "https://cdn.jsdelivr.net/gh/FutureElliotto/arcade-4-images/games/Minecraft.png",
-        "url": "https://cdn.jsdelivr.net/gh/FutureElliotto/Arcade-4-games/javascript/minecraft1.12.html",
+        "url": "https://raw.githubusercontent.com/FutureElliotto/Arcade-4-Games/refs/heads/main/javascript/minecraft1.12.html",
         "category": [
             "Popular",
             "3D",
